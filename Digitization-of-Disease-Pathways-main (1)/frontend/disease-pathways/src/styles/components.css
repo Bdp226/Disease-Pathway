@@ -1,0 +1,408 @@
+/* ============================================
+
+/* Remove unwanted background highlighting on interactive states */
+
+
+/* Ensure text selection styling is completely disabled */
+.pain-point-card::selection,
+.pain-point-card *::selection,
+.stakeholder-card::selection,
+.stakeholder-card *::selection {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* Firefox-specific selection prevention */
+.pain-point-card::-moz-selection,
+.pain-point-card *::-moz-selection,
+.stakeholder-card::-moz-selection,
+.stakeholder-card *::-moz-selection {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* ============================================
+   BUTTON INTERACTION FIXES
+   ============================================ */
+
+/* Prevent text highlighting on all buttons */
+button,
+button:hover,
+button:focus,
+button:active {
+  outline: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR STYLES
+   ============================================ */
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #009999;
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #00ACC1;
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #009999 rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   LAYOUT ANIMATIONS
+   ============================================ */
+
+/* Pinterest container fade-in animation */
+.pinterest-container {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Pinterest grid fade-in animation */
+.pinterest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  animation: gridFadeIn 0.8s ease-out;
+}
+
+@keyframes gridFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Stage section spacing */
+.stage-section {
+  margin-bottom: 6rem;
+}
+
+/* ============================================
+   CARD COMPONENTS
+   ============================================ */
+
+/* Pain Point Cards - Optimized for performance */
+.pain-point-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow, border-color;
+}
+
+/* Stakeholder Cards hover effect */
+.stakeholder-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 153, 153, 0.3);
+}
+
+/* ============================================
+   MODAL STYLES
+   ============================================ */
+
+/* Modal slide-in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Modal content scrollbar */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #009999;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #00ACC1;
+}
+
+/* ============================================
+   DISEASE GRID STYLES
+   ============================================ */
+
+.disease-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.disease-card {
+  padding: 2rem;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid #000000; /* Updated to 1px as requested */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.disease-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: #009999;
+}
+
+/* ============================================
+   LOADING SPINNER
+   ============================================ */
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 153, 153, 0.3);
+  border-top: 3px solid #009999;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .pinterest-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .disease-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .pinterest-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .disease-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pain-point-card {
+    height: auto !important;
+    min-height: 280px; /* Increased for mobile as requested */
+  }
+  
+  /* Stack stakeholder cards vertically on mobile */
+  .stakeholder-section > div {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .stakeholder-card {
+    max-width: 100% !important;
+  }
+
+  /* Disease header responsive */
+  .disease-header-content {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    height: auto !important;
+  }
+  
+  .disease-header-content h1 {
+    font-size: 1.2rem !important;
+  }
+  
+  .disease-header-content .stage-info {
+    text-align: left !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Footer responsive adjustments */
+@media (max-width: 768px) {
+  footer div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+  
+  footer div[style*="justify-content: space-between"] {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  
+  /* Navbar responsive */
+  nav ul {
+    gap: 1.5rem !important;
+  }
+  
+  nav a span {
+    display: none;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  nav div:first-child {
+    font-size: 1.2rem !important;
+  }
+  
+  nav img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  .pain-point-card {
+    min-height: 320px; /* Taller cards for small screens */
+  }
+}
+/* Spinner animation for download button */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dialogFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Reduce repaints and reflows */
+.pain-point-card,
+.stakeholder-card,
+.disease-card {
+  contain: layout style paint;
+}
+
+/* GPU acceleration for smooth animations */
+.pain-point-card:hover,
+.stakeholder-card:hover,
+.disease-card:hover {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Prevent layout thrashing on mobile */
+@media (max-width: 768px) {
+  * {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+}
+
+/* ============================================
+   ADMIN DASHBOARD RESPONSIVENESS
+   ============================================ */
+
+.admin-layout {
+  display: flex;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.admin-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #009999, #00ACC1);
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, #ffffff 25%, #ffffff 75%, rgba(0, 153, 153, 0.05) 100%);
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+  .admin-sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+  .admin-sidebar button {
+    white-space: nowrap;
+    padding: 0.5rem 1rem !important;
+  }
+  .admin-main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,190 @@
+Types ,"Lung Cancer  Staging 
+",TNM Subset,Description  on Cancer Staging,Disease Extent ,"Conventional Treatment
+Portocol",Painpoints ,Solutions,,,,,Our Portfolio,Beyound SHS Portfolio
+,,,,,,,"Digitalization (AI, IoT, Blockchain, etc.)","Automation including into devices (e.g. for operation, intuitive HMIs, servicing, etc.)",Sensing,Clinical innovation/ new treatment/ new diagnostic technologies,Process innovation ,,
+Non- Small cell Lung cacer,Stage 0,Tis,"Abnormal cancer cell presence not spread to nearby tissue,carcinoma insitu not a cancer can progress to cancer",Very localized,"Curative intent, aiming to remove or destroy the abnormal localized lesion before invasive spread
+Surgery and photodynamic, electrocautery,cruosurgery or laser surgery for tumours in or near bronchus.
+
+https://www.cancer.gov/types/lung/patient/non-small-cell-lung-treatment-pdq#_554
+https://www.cancer.org/cancer/types/lung-cancer/treating-non-small-cell/by-stage.html?
+","Difficulty detecting and localizing very small asymptomatic lesions, limited biopsy adequacy, and challenges differentiating carcinoma in situ from early invasive disease may lead to diagnostic uncertainty, repeated investigations along side patient unwillgness for further investigation as it is asympyomatic.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8863104/","AI-assisted detection and characterization of subsolid/ground-glass nodules; digital MDT review of indeterminate lesions
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10997848/
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11994546/",,,,,NAETOM Alpha.Prime: NAEOTOM Alpha.Prime brings Quantum Technology and AI into clinical routine. ,
+,Stage IA,T1N0 M0,"Tumor or nodule size ? 3 cm, surrounded by lung/visceral pleura, or in lobar or more peripheral bronchus not involving lymph nodes",Localized,"The preferred option is surgery, such as wedge resection, segmental resection, sleeve resection, or lobectomy. Depending on tumor features and patient eligibility, surgery may be followed by targeted therapy, chemotherapy, or immunotherapy. For patients who cannot undergo surgery or do not choose surgery, external radiation therapy, especially stereotactic body radiation therapy (SBRT), may be used.","Difficulty diagnosing and localising small peripheral tumours: Stage IA–IB NSCLC lesions may be small, deeply located or predominantly ground-glass in appearance. These lesions can be difficult to access using conventional bronchoscopy and may provide inadequate or non-diagnostic biopsy samples. They may also be difficult to identify during minimally invasive surgery, resulting in repeat imaging, repeat biopsy or additional preoperative localisation procedures before definitive treatment.
+
+https://www.jtcvs.org/article/S0022-5223%2817%2930161-7/pdf
+","Automated 3D tumour segmentation and pleural-contact quantification: AI software automatically outlines the lung tumour on CT scans, creates a 3D model, and measures how much of the tumour is touching the pleura. This helps assess possible pleural invasion more consistently, pathology needed to be done for confirmation 
+
+https://pubmed.ncbi.nlm.nih.gov/25542401/",,,"Use CT-guided markers, dyes, radiotracers, navigational bronchoscopy with fluorescence or hybrid-room image-guided surgery to accurately locate small or deep lung nodules before resection. These techniques support successful minimally invasive removal and reduce failed localisation or conversion to open surgery.
+
+https://ccts.amegroups.org/article/view/49107/
+",,,
+,Stage IB,T2a N0 M0,"Tumor >3 cm but ?4 cm in greatest dimension.
+Invasion of the visceral pleura or adjacent lobe.
+Involvement of the main bronchus (not including the carina).
+Association with atelectasis or obstructive pneumonitis extending to the hilar region, involving part or all of the lung.",Localized,,,,,,"Post-operative ctDNA-based Minimal Residual Disease (MRD) testing: Adjuvant chemotherapy provides only a modest disease-free survival benefit in resected Stage IB disease, and no validated biomarker beyond stage/risk factors currently guides this decision. A systematic review found post-operative ctDNA detection is consistently associated with a high risk of recurrence, and MRD-positive patients are the most likely to benefit from adjuvant therapy, while MRD-negative patients have a low relapse risk regardless of treatment.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9830273/",,,"Guardant Reveal: Tissue-free, blood-only ctDNA test for detecting molecular residual disease and monitoring recurrence in resected early-stage (Stage II-III, and select Stage I) lung cancer, usable from about 3 weeks after surgery to help personalize adjuvant treatment decisions.
+
+https://guardanthealth.com/products/tests-for-patients-with-early-and-advanced-stage-cancer/"
+,Stage II A,T1 N1 M0,"Tumor or nodule size ? 3 cm, surrounded by lung/visceral pleura, or in lobar or more peripheral bronchus  involving ipsilateral intrapulmonary, peribronchial, or hilar lymph nodes, including direct extension. lymph nodes ",Localized to regional,"In NSCLC  Stage II: Surgical procedures like wedge resection, segmentectomy, sleeve resection, lobectomy, or pneumonectomy are considered. Surgery may be followed by chemotherapy, targeted therapy, immunotherapy, radiation therapy, or combined chemo-immunotherapy depending on tumor risk and biomarkers. In selected cases, chemotherapy or chemo-immunotherapy may be given before surgery, while external radiation therapy is used when surgery is not suitable.","Uncertainty in lymph-node staging: CT and PET-CT may fail to detect nodal metastases in radiologically normal lymph nodes. Consequently, patients with centrally located tumours, suspected N1 disease or other risk factors may require invasive nodal sampling using EBUS-TBNA, EUS or, in selected cases, mediastinoscopy. Coordinating and completing these additional procedures can delay definitive surgery or treatment planning.
+https://link.springer.com/article/10.1245/s10434-025-17035-z
+",,,,"Reflex NGS/PD-L1 biomarker testing at diagnosis: Ordering comprehensive genomic profiling and PD-L1 IHC automatically at the time of the diagnostic biopsy, rather than waiting for a post-surgical decision point, shortens time-to-results and enables timely initiation of biomarker-matched adjuvant therapy such as osimertinib in EGFR-mutant, resected Stage IB -IIIA disease (ADAURA trial: 5-year OS 88% vs. 78% with placebo).
+
+https://www.nejm.org/doi/full/10.1056/NEJMoa2304594
+
+",,"Attelica Solution: Seamlessly integrates immunoassay (IM) and clinical chemistry analysis—and infusing the process with industry-leading digitization, next-level sample-management automation, and AI-powered intelligence.
+
+https://www.siemens-healthineers.com/laboratory-diagnostics/clinical-chemistry-and-immunoassay-systems/atellica-solution-analyzers",
+,Stage II B,T2 N1 M0,"Tumor >3 cm but ?4 cm in greatest dimension.
+Invasion of the visceral pleura or adjacent lobe.
+Involvement of the main bronchus (not including the carina).
+Association with atelectasis or obstructive pneumonitis extending to the hilar region, involving part or all of the lung. 
+or
+Tumor >4 cm but ?5 cm in greatest dimension, with or without other T2a features.
+ involving ipsilateral intrapulmonary, peribronchial, or hilar lymph nodes, including direct extension. lymph nodes 
+",Localized to regional,,,,,,,,,
+,,T3 N0 M0,"Tumor >5 cm but ?7 cm Invasion of the parietal pleura or chest wall, pericardium, phrenic nerve, or azygos vein, thoracic nerve roots (e.g., T1, T2) or stellate ganglion and separate tumor nodule(s)present  in the same lobe as the primary tumor.",Localized to regional,,,,,,,,,
+,Stage IIIA,T1 N2 M0,"Tumor or nodule size ? 3 cm, surrounded by lung/visceral pleura, or in lobar or more peripheral bronchus and Metastasis to multiple ipsilateral mediastinal and/or subcarinal lymph node stations.",Locally Advanced,"Treatment depends on whether the tumor can be removed by surgery or not.
+1.If the tumor is operable, treatment may include chemotherapy, chemo-radiation, or chemo-immunotherapy before surgery, followed by surgery and sometimes additional chemotherapy, immunotherapy, targeted therapy, or radiation therapy after surgery.
+2.If the tumor is not operable, the main treatment is usually chemotherapy with radiation therapy, followed by immunotherapy in eligible patients. Radiation alone or palliative procedures such as internal radiation or laser therapy may be used to relieve symptoms.
+3. For special cases such as Pancoast tumors or tumors invading the chest wall, treatment may include a combination of chemotherapy, radiation therapy, and surgery, depending on whether complete removal is possible.","Delay in confirming the treatment approach:
+Determining whether a patient should undergo surgery, chemoradiotherapy, chemo-immunotherapy, or another treatment combination can be complex and time-consuming. Additional imaging, nodal biopsies, functional assessment, biomarker testing, and multidisciplinary review may be required, delaying treatment planning and risk assessment.
+
+/Mediastinal-staging decisions can vary between clinicians, and important factors such as tumour location, size, PET-CT findings or suspected N1 disease may be overlooked. This can lead to missed invasive nodal testing, incomplete staging and delays in selecting surgery or chemoradiotherapy.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10419653/","Digital decision-support tools embedding ESMO/NCCN mediastinal-staging algorithms:These tools combine patient information—such as tumour size and location, CT/PET-CT findings, suspected N1 disease and biopsy results—with guideline-based staging rules. The system can indicate whether imaging alone is sufficient or whether EBUS-TBNA, EUS, mediastinoscopy or additional lymph-node sampling should be considered. It may also flag incomplete or conflicting staging results
+
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11976788/",,,,,,
+,,T2 N2 M0,"Tumor >3 cm but ?4 cm in greatest dimension.
+Invasion of the visceral pleura or adjacent lobe.
+Involvement of the main bronchus (not including the carina).
+Association with atelectasis or obstructive pneumonitis extending to the hilar region, involving part or all of the lung and Metastasis to a multiple ipsilateral mediastinal or subcarinal lymph node station.
+or
+Tumor >4 cm but ?5 cm in greatest dimension, with or without other T2a features. Metastasis to a single ipsilateral mediastinal or subcarinal lymph node station.",Locally Advanced,,,,,,,,,
+,,T3 N1-2 M0,"Tumor >5 cm but ?7 cm in greatest dimension.
+Invasion of the parietal pleura or chest wall,pericardium, phrenic nerve, or azygos vein, thoracic nerve roots (e.g., T1, T2) or stellate ganglion,separate tumor nodule(s) present in the same lobe as the primary tumor. Metastazied to ipsilateral intrapulmonary, peribronchial, or hilar lymph nodes, including direct extension or single or multiple ipsilateral mediastinal or subcarinal lymph node station.",Locally Advanced,,,,,,,,,
+,Stage IIIB,T4 N0-2 M0,"Tumor >7 cm in greatest dimension.
+Invasion of the mediastinum, thymus, trachea, carina, recurrent laryngeal nerve, vagus nerve, esophagus, diaphragm, heart, great vessels, intrapericardial pulmonary arteries/veins, supra-aortic arteries, brachiocephalic veins, subclavian vessels, vertebral body, lamina, spinal canal, cervical nerve roots, or brachial plexus.
+Presence of separate tumor nodule(s) in a different ipsilateral lobe. and Metastasis to  ipsilateral intrapulmonary, peribronchial, or hilar lymph nodes, including direct extension or single or multiple ipsilateral mediastinal or subcarinal lymph node station.",Locally Advanced,"The treatment is non-surgical since, the disease is more locally advanced. The main approach is chemotherapy with external radiation therapy, followed by immunotherapy in eligible patients. In selected cases, targeted therapy or immunotherapy may be used before or after chemo-radiation based on tumor markers. If chemotherapy is not suitable, radiation alone may be used, and palliative treatments such as radiation, laser therapy, or internal radiation may help relieve symptoms and improve quality of life.","T4 tumors involving mediastinal structures (trachea, esophagus, great vessels, vertebral body, etc.) are usually treated non-surgically with concurrent chemoradiotherapy, which requires precise, structure-sparing radiotherapy planning; large treatment volumes near critical organs raise the risk of toxicity such as radiation pneumonitis and esophagitis.
+https://www.mdpi.com/2072-6694/16/6/1206",,,,,,,
+,,T1-4 N3 M0,Any Tumour size involving Metastasis to multiple ipsilateral mediastinal or subcarinal lymph node station.,Locally Advanced,,,,,,,,,
+,Stage III C,T3-4 N3 M0,"Tumor >5 cm but ?7 cm in greatest dimension.
+Invasion of the parietal pleura or chest wall,pericardium, phrenic nerve, or azygos vein, thoracic nerve roots (e.g., T1, T2) or stellate ganglion,separate tumor nodule(s) present in the same lobe as the primary tumor. or Tumor >7 cm in greatest dimension.
+Invasion of the mediastinum, thymus, trachea, carina, recurrent laryngeal nerve, vagus nerve, esophagus, diaphragm, heart, great vessels, intrapericardial pulmonary arteries/veins, supra-aortic arteries, brachiocephalic veins, subclavian vessels, vertebral body, lamina, spinal canal, cervical nerve roots, or brachial plexus.
+Presence of separate tumor nodule(s) in a different ipsilateral lobe.Metastasis to multiple ipsilateral mediastinal or subcarinal lymph node station.",Locally Advanced,,"Patients with Stage IIIC NSCLC may have asymptomatic brain metastases that are not detected by routine chest staging scans. Therefore, contrast-enhanced brain MRI is required before curative-intent chemoradiotherapy to confirm that the disease remains confined to the thorax.
+
+https://cris.maastrichtuniversity.nl/ws/portalfiles/portal/60889437/Hendriks_2019_screening_for_brain_metastases_in.pdf",,,,,,,
+,Stage IV,"Any T,Any N,Definetively  M1","Any Tumour size,Metastasis lymph nodes and metastasis distinct multiple organs",Metastatic,"Treatment is systemic and  disease control process.Treatment may include chemotherapy, targeted therapy, or immunotherapy, depending on tumor biomarkers, patient fitness, and prior treatment history. Combination chemotherapy may be followed by maintenance therapy to slow disease progression. The main aim is to control cancer growth, relieve symptoms, prolong survival, and maintain quality of life.","Insufficient tissue and biomarker-testing delays: Limited biopsy material and prolonged molecular or testing can delay selection of targeted therapy, immunotherapy or chemotherapy.
+
+https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(25)00149-4/abstract",,,,"Liquid biopsy/circulating tumour DNA; PET-CT for site selection:Provides minimally invasive genomic profiling and serial molecular tumour-burden assessment when tissue is limited or difficult to obtain. It complements, but does not replace, imaging and histopathological confirmation.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7373320/",,,"FoundationOne CDx / FoundationOne Liquid CDx: FDA-approved comprehensive genomic profiling assays analyzing hundreds of cancer-related genes and biomarkers from tumor tissue or blood to match metastatic NSCLC patients to targeted therapies and immunotherapies.
+
+https://www.foundationmedicine.com/test/foundationone-cdx"
+Small Cell Lung cancer,"Limited Stage 
+",_,"Disease is in the lung where it started and may have spread to nearby thoracic nodes, but is generally treatable within one tolerable radiation field",Limited thoracic ,"Concurrent platinum-etoposide chemotherapy with thoracic radiotherapy; durvalumab may be used after chemoradiation in eligible patients; prophylactic cranial irradiation may be considered in complete responders.
+
+https://www.cancer.gov/types/lung/patient/small-cell-lung-treatment-pdq#_480"," Determining whether all disease can be included safely within one radiotherapy field: Occult distant or brain metastases and difficulty determining whether bulky thoracic disease can fit safely within one radiation field may result in incorrect limited-stage classification and inappropriate chemoradiation planning.Highly sensitive to Radiation and chemotherapy 
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10203822/
+
+https://www.practicalradonc.org/article/s1879-8500%2820%2930053-9/fulltext",,,,"Early combined radiation-oncology/medical-oncology review to confirm RT-volume feasibility before committing to curative chemoradiotherapy: The team jointly evaluates disease extent, radiotherapy-volume feasibility and patient fitness for concurrent chemotherapy before treatment. This supports safe selection of patients for curative-intent chemoradiotherapy and timely consideration of alternative treatment when the disease cannot be adequately covered.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7968106/",,,
+,Extenxive Stage ,_,Disease has spread beyond the lung or thoracic nodal region beyound one treatable radiation field and  to other places in the body.,Metastatic,"First-line treatment includes platinum-based chemotherapy, such as carboplatin or cisplatin with etoposide, combined with immunotherapy like atezolizumab or durvalumab, followed by maintenance immunotherapy if eligible. Radiotherapy is mainly used for symptom control or selected cases, such as brain or bone metastases, spinal cord compression, airway obstruction, or thoracic consolidation. Early supportive and palliative care should be integrated.
+
+https://www.cancer.gov/types/lung/patient/small-cell-lung-treatment-pdq#_480","Accurately mapping rapidly progressive multiorgan disease:SCLC can progress quickly between diagnostic imaging and treatment. Small brain, liver, bone or adrenal metastases may initially be occult, and obtaining adequate tissue for confirmation or molecular evaluation may be difficult.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9464246/","PhenopyCell is an AI-powered pathology tool that analyzes routine diagnostic biopsy slides to predict response to first-line platinum-based chemotherapy in patients with extensive-stage small cell lung cancer (ES-SCLC) before treatment begins. It provides early risk stratification without requiring additional biopsies, enabling more personalized treatment selection. This approach may help identify patients who could benefit from alternative therapies or clinical trials, supporting individualized treatment planning rather than disease staging
+
+https://medicalxpress.com/news/2026-03-ai-tool-aggressive-small-cell.html#:~:text=Results%20of%20a%20new%20study%20conclude%20that%20a,chemotherapy%E2%80%94before%20treatment%20has%20begun%2C%20and%20without%20additional%20biopsies.",,,,,,
+Mapped with Treatment Stage ,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Treatment,Types ,"Lung Cancer  Staging 
+T-Tumour; N-Nodes;M-Metastasis",Description  on Cancer Staging,"Conventional 
+Portocol",Painpoints ,Solutions,,,,,Our Portfolio,Beyound SHS Portfolio,
+,Non - Small cell Lung cancer,,,,,"Digitalization (AI, IoT, Blockchain, etc.)","Automation including into devices (e.g. for operation, intuitive HMIs, servicing, etc.)",Sensing,Clinical innovation/ new treatment/ new diagnostic technologies,Process innovation ,,,
+,,Stage 0 - Carcinoma- insitu(pre- cancereous stage),"Abnormal cancer cell presence not spread to nearby tissue,carcinoma insitu not a cancer can progress to cancer",Surgical excision of the lesion ,"Emotional fear : Uncertainty-related anxiety about whether the lesion may progress into invasive cancer or early stage asymptomatic and need of treatment like surgery.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3880393/
+
+\Lack continous Followup on Precancerous lesion delay in treatment: Incomplete or absent surveillance after detection of early / suspicious lung lesions may delay clarification of malignancy risk and timely treatment planning.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7757426/",,,,,,,,
+,,"Stage 1-Early
+(T1-2 N0 M0)",Tumor or nodule is limited to organ of occuerence and tumor size ? 3cm,Surgical excision of the nodule or tumour," Confusion between Treatment options surgery and radiation: Patients who are elderly, medically unfit, or afraid of surgery may struggle to understand whether surgery or radiation is better for them.
+
+https://www.annalsthoracicsurgery.org/article/S0003-4975%2821%2900237-X/fulltext",,,,,,,,
+,,"Stage 2-Early
+(T1-2 N1 M0)
+(T3 N0 M0)",Tumor or nodule is limited to organ of occuerence and tumor size ? 3cm and metastasis to  lymphnodes or Tumor or nodule is limited to organ of occuerence and tumor size ? 7cm not involving lympnodes ,Surgical excision and radiotherapy for complete currative treatment,"Inadequate real-time imaging :During minimally invasive lung cancer surgery can compromise tumor localization, surgical accuracy, and preservation of healthy lung tissue
+
+https://www.scirp.org/journal/paperinformation?paperid=69669",,,,,,,,
+,,"Stage 3-Advance
+(T1-2 N2-3 M0)
+(T3 N1-3 M0)
+(T4 N0-3 M0)",Tumor or nodule is limited to organ of occuerence and tumor size ? 3cm and metastasis to nearby lymphnodes or Tumor or nodule is limited to organ of occuerence and tumor size  > 7cm with extensive lymphnode metastasis,,"Conventional radiotherapy often requires multiple treatment sessions over several weeks, resulting in frequent hospital visits, increased travel and waiting time, and a significant physical, emotional, and financial burden for patients, which may affect treatment adherence and quality of life.
+
+https://www.sciencedirect.com/science/article/pii/S2347562524002324",,,,,,,,
+,,"Stage 4-Advance
+(T1-4 N0-3 M1)
+(or every cancer with distant metastasis)
+https://www.physio-pedia.com/TNM_Staging_System","The cancer metastasized outside Chest cavity
+https://radiologyassistant.nl/chest/lung-cancer/tnm-classification-8th-edition-1
+
+https://www.cancer.gov/about-cancer/diagnosis-staging/staging",,Repeatative scan may be difficulty in case of advanced stage lung cancer: weak or breathless patients; transport to imaging can worsen discomfort; unclear necessity of repeated imaging when care goal is comfort; delays in reports may affect treatment or symptom decisions.,,,,,,,,
+,Small Cell Lung cancer,Limited -Early,"The cancer limited to one side of the lung area and spread to lymph node on the same side of the lung(Supraclavicular and mediastinal lymph nodes ) which can be treated with single field radiation 
+https://www.cancer.org/cancer/types/lung-cancer/detection-diagnosis-staging/staging-sclc.html",,"Image fusion difficulty:Planning often needs CT simulation, diagnostic CT, PET-CT, and sometimes MRI correlation. Matching these images can be challenging because patient position, breathing phase, tumor size, and scan timing may differ.
+
+\During radiotherapy planning, clinicians might find it difficult to target the tumor volume precisely and track volume changes in every session. This inaccurate planning can result in suboptimal clinical outcome.
+The individuality of every lung cancer case makes adaption of the right radiotherapy technique and highly precise dosage control challenging.
+
+https://tlcr.amegroups.org/article/view/41657/html
+https://aapm.onlinelibrary.wiley.com/doi/10.1118/1.2349696",,,,,,,,
+,,Extensive -Advance,"The cancer spread widely across lung including pleura and metasatized to multiple different organ 
+https://www.cancer.org/cancer/types/lung-cancer/detection-diagnosis-staging/staging-sclc.html",,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,

@@ -1,0 +1,292 @@
+Stage,Overview (scenario + tests/procedures overview),Stakeholders,Pain points,Solutions,,,,,,,SOURCES
+Stage,,,,"Digitalization (AI, IoT, Blockchain, etc.)","Automation including into devices (e.g. for operation, intuitive HMIs, servicing, etc.)",Sensing,Clinical innovation/ new treatment/ new diagnostic technologies,Process innovation ,Our portfolio coverage ,Ecosystem solutions beyond SHS,
+Prevention,"
+
+At this stage, the focus is on risk reduction before disease develops, combining lifestyle, digital health tools, screening and preventive medication to delay or avoid CAD onset. Early risk stratification is key.
+
+•	Lifestyle modification (diet, exercise, smoking cessation)
+•	Coronary CT Angiogram screening
+•	Wearables, fitness trackers, mobile apps
+•	Blood tests (high sensitivity Troponin, lipid profile)
+•	Blood pressure & lipid monitoring (AI-based tools, screening programs)
+•	Digital nutrition platforms
+•	Pharmacological prevention (aspirin, statins)","Patients & General Population - adopt healthier lifestyle choices.
+
+Primary Care Physicians (GPs) - conduct screenings, prescribe preventive meds.
+
+Public Health Authorities - design awareness campaigns.
+
+Technology Providers (wearables, apps) - track vitals & behaviors.
+
+Payers/Insurers - incentivize prevention programs.
+
+Dietitionist - provide specific guidance on healthy, balanced eating plans to help manage weight, cholesterol, and blood pressure
+
+Food and technology companies -  companies can promote heart health through product innovation 
+
+Community organizations - local organizations and nonprofits can provide resources and support to vulnerable populations to help them make healthier choices.
+
+",People who do not engage in physical activity and/ or are obese have a greater likelihood to develop CAD.  ,,,"Body fat monitoring and metabolic rate sensing integrated into wearable devices to track health progress and support weight loss programs through automated exercise adjustment.
+",,,,"Withings Body Comp: A smart scale that measures body fat, visceral fat, metabolic rate, and overall cardiovascular health metrics for personalized lifestyle feedback and early risk identification.
+https://www.withings.com/in/en/","https://www.sciencedirect.com/science/article/abs/pii/S2352648322000125 
+https://www.verywellhealth.com/amazon-halo-health-body-fat-percentage-5076811
+"
+,,,"Hypertension is a major risk factor for CAD, yet many patients remain unaware of it. Among those who are aware, nearly 50% do not reach guideline-recommended blood-pressure targets despite effective therapeutic options.",,,"Wearable devices with built-in sensors to monitor blood pressure throughout the day, offering immediate feedback and prompting action as needed.",Zilebesiran: Experimental small interfering RNA to lower blood pressure by impeding angiotensinogen synthesis.,,,"LiveMetric Band: A cuffless, FDA-cleared wristband providing continuous, real-time blood pressure monitoring to empower hypertension prevention and home monitoring.
+https://livemetric.com/","https://www.nejm.org/doi/full/10.1056/NEJMoa2208391
+https://newsroom.heart.org/news/single-dose-of-zilebesiran-safely-and-effectively-lowered-blood-pressure-for-six-months
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8942176/
+"
+,,,Diabetics are at a greater risk of slient coronary disease.,,,,"Coronary CT angiography for risk prediction at an individual level through early assessment of coronary anatomy and morphology, and initiating appropriate therapies in those with pathologies.
+",,"Siemens Healthineers SOMATOM X.ceed: SOMATOM X.ceed is a high-resolution, low-dose CT scanner designed for advanced cardiac and emergency imaging.
+https://www.siemens-healthineers.com/nl-be/computed-tomography/somatom/somatom-x-platform/somatom-x-ceed",,"https://pubmed.ncbi.nlm.nih.gov/36069510/
+https://www.ahajournals.org/doi/10.1161/JAHA.121.022879
+https://www.ncbi.nlm.nih.gov/books/NBK470279/"
+,,,"People with dyslipidemia are at a higher risk of atherosclerosis and CAD.
+",,,Sensing systems integrated into smart health devices to provide regular cholesterol and lipid monitoring for early detection and timely intervention.,,,"
+","CardioChek Plus by PTS Diagnostics: A portable, consumer-available device that analyzes lipid panels (cholesterol and triglycerides) from a small blood sample at home to enable early detection of cardiovascular risk.
+https://www.ptsdiagnostics.com/cardiochek-plus-analyzer/","https://www.verywellhealth.com/leqvio-vs-repatha-which-is-better-8660560#:~:text=Leqvio%20and%20Repatha%20are%20prescription,more%20frequent%20dosing%20than%20Leqvio.
+https://www1.racgp.org.au/ajgp/2023/june/new-frontiers-in-the-management-of-dyslipidaemia
+"
+,,,Smokers are predisposed to develop CAD due to increased formation of plaque in blood vessels.,,"Automation of smoking cessation programs using digital health tools, such as virtual coaching with real-time progress tracking.",,,,,"CoEHAR Digital Health Wearable Program: AI-enabled mobile health and wearable system that uses real-time feedback, progress tracking, and virtual coaching to deliver personalized smoking cessation programs.s
+https://www.coehar.org/coehar-digital-technologies-and-mobile-health-for-smoking-cessation-monitoring/",https://www.siemens-healthineers.com/en-in/digital-health-solutions
+,,,Individuals with a family history of CAD are more likely to develop the disease.,,,,"Polygenic Risk Scores (PRS) for predicting an individual's lifetime risk for CAD, thus improving awareness and personalization of preventive care.",,,"Allelica Polygenic Risk Score Testing: Cloud-based genetic testing for CAD risk using multi-ancestry PRS models, offered as a clinical-grade service for personalized risk assessment and preventive guidance through healthcare providers and research programs.
+https://au.allelica.com/","https://www.ahajournals.org/doi/10.1161/CIR.0000000000001077
+https:+L7+L8"
+Symptoms,"
+
+Patient awareness of angina or acute chest symptoms, supported by digital tools and early physician contact, enables faster entry into the care pathway.
+
+•	Wearables for vital sign monitoring (ECG, heart rate, oxygen saturation)
+•	Telemedicine Platforms
+•	Smartwatch ECG & alert systems
+•	Digital twin models for symptom analysis
+•	Facial thermal imaging
+","Patients - self-report symptoms, use wearables/smartwatches.
+
+Family/Caregivers - recognize warning signs, trigger emergency response.
+
+General Practitioners - initial triage and referral.
+
+Digital Health Platforms - symptom diary, remote alerts.
+
+Technology Providers (wearables, apps) - track vitals & behaviors.
+
+Paramedics- first medical personnel to arrive at the scene, trained to respond to emergency situations like heart attack
+
+Government health agencies - They set national guidelines and standards of care for managing acute coronary syndromes. ","Stable CAD silently progresses, revealing itself only under strain or as a heart attack",,,"Smart patches with integrated biosensors and AI powered analytics  for real-time cardiac monitoring and remote detection of abnormalities for timely intervention.
+",,,,"SmartCardia 7-Lead ECG Patch: Continuous, multi-lead ECG patch with cloud connectivity for live cardiac arrhythmia detection, patient deterioration monitoring, and automated clinician notifications.
+https://www.smartcardia.com/
+IDOVEN: AI-driven cloud platform for ECG analysis that enables early, remote detection of arrhythmias and silent myocardial ischemia using wearable or patch-based data.
+https://www.idoven.ai/",(https://wearable-technologies.com/news/december-2024-remote-health-with-smart-patches)
+,,,"Cardiovascular manifestations of patients with COVID-19 include heart failure, myocarditis, arrhythmia, and elevated troponin, which can mimic STEMI or NSTEMI myocardial infarction.","With a patient digital twin, physicians can analyze the development of various metabolic activities like increase in troponin levels over time and connect them with the symptoms. This can enable them to provide quick response and personalized therapy.",,,,,"SHS digital twin technology integrates real-time data from cardiac imaging (e.g., MRI, CT) and lab results (e.g., troponin levels) with patient-specific models to simulate disease progression helping medical practitioners to take appropriate countermeasures.
+https://www.siemens-healthineers.com/perspectives/patient-twin-johns-heart",,
+,,,"Delayed emergency call or response may exacerbate CAD outcomes, hindering timely intervention. ",,"An integrated emergency alert button on devices that activates a rapid dispatch of emergency services through AI-based emergency response systems.
+",,,,,"Bay Alarm Medical SOS Smartwatch: Wearable smartwatch with dedicated SOS emergency button that connects to 24/7 AI-powered monitoring centers; includes automatic fall detection, two-way communication, GPS location tracking, and rapid dispatch to emergency services or family contacts.
+https://www.bayalarmmedical.com/medical-alert-system/sos-smartwatch/",(https://solve.mit.edu/challenges/2024-global-health-challenge/solutions/85621)
+,,,Underdiagnosis in younger patients due to the perception that it is an older person's disease. ,,,"AI integrated smart watch or ring that continuously monitors vitals and ECG, alerting users on potential CAD risk in case of irregularities.",,,,"Leading AI-powered smartwatches like the Apple Watch, Samsung Galaxy Watch, Withings ScanWatch, and smart rings such as Oura, Ultrahuman Ring Air, and RingConn continuously monitor vitals and ECG, using AI to alert users to potential cardiac risk or irregularities in real time.?
+
+https://ringconn.com/",(https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-023-02350-w)
+,,,"Intermittent Jaw or Tooth Pain may signal referred pain from CAD, often overlooked due to its non-specific nature.",Facial Thermal Imaging: Infrared sensors can detect localized heat changes in the jaw area caused by ischemic pain referred from the heart.,,,,,,"Meditherm, Mobotix, and FLIR are providing medical-grade thermal imaging cameras widely used for non-contact temperature screening, inflammation detection, infection control, and adjunctive diagnostics in healthcare settings.
+https://meditherm.com/
+https://www.mobotix.com/en/products/thermographic-cameras
+https://www.flir.com/?srsltid=AfmBOooDyDbW-54j-74mbCzrnq3iQBliiZ1PHpb7gZyAsh16FPyTfTvV","(Kung M, Zeng J, Lin S, Yu X, Liu C, Shi M, Sun R, Yuan S, Lian X, Su X, Zhao Y, Zheng Z, Ji X. Prediction of coronary artery disease based on facial temperature information captured by non-contact infrared thermography. BMJ Health Care Inform. 2024 Jun 3;31(1):e100942. doi: 10.1136/bmjhci-2023-100942. PMID: 38830766; PMCID: PMC11149132.)"
+,,,"Urban vs. Rural Gaps - Patients in rural areas may face longer travel times or limited awareness of symptom significance, causing delays in diagnosis",Telemedicine Platforms: AI-powered telemedicine systems to connect rural patients with cardiologists for symptom evaluation and triage.,,,,,,`,"(Haleem A, Javaid M, Singh RP, Suman R. Telemedicine for healthcare: Capabilities, features, barriers, and applications. Sens Int. 2021;2:100117. doi: 10.1016/j.sintl.2021.100117. Epub 2021 Jul 24. PMID: 34806053; PMCID: PMC8590973.)"
+,,,"Pain in Non-Dominant Side e.g., discomfort in the right arm or shoulder may be dismissed, unlike left-sided symptoms.",,,,,"Smart Referrals: Develop systems where general practitioners can upload atypical pain cases to a central AI engine, receiving instant recommendations for further cardiac evaluation or treatment pathways.",,"EasyCLINIC's AI in Cardiology: AI-driven cardiology platform for heart scanning, ECG analysis, and echocardiography interpretation integrated with patient history; provides automated recommendations for GPs to triage cases and determine whether referral to cardiologists is needed.
+https://www.easyclinic.io/ai-in-cardiology-clinics/",(https://www.health.qld.gov.au/clinical-practice/innovation/smart-referrals)
+Diagnosis,"
+
+Diagnosis involves comprehensive evaluation using ECG-based tests, lab biomarkers, advanced imaging, and/or functional assessments to confirm CAD, determine severity, and guide treatment decisions. AI-enabled tools enhance accuracy and streamline interpretation.
+
+•	Electrocardiogram (ECG / EKG)
+•	Stress ECG / Exercise Treadmill Test
+•	Holter Monitoring (Ambulatory ECG)
+•	Echocardiography 
+•	Coronary CT Angiography (CCTA)
+•	Coronary Calcium Scoring (CT)
+•	Cardiac MRI (CMR)
+•	Myocardial Perfusion scans
+•	Invasive Coronary Angiography (Cardiac Catheterization)
+•	Fractional Flow Reserve (FFR – invasive, wire-based)
+•	Instantaneous Wave-Free Ratio (iFR)
+•	Non-invasive FFR-CT (Computed FFR)
+•	Quantitative Flow Ratio (QFR)
+•	Intravascular Ultrasound (IVUS)
+•	Blood Biomarkers (e.g., high-sensitivity Troponin, lipid profile)","Emergency Physicians - first contact, rule-in/rule-out ACS.
+
+Cardiologists - direct diagnosis using imaging/invasive tools.
+
+Radiologists - interpret CT/MRI scans.
+
+Lab Specialists - process biomarkers (troponin, lipid profile).
+
+Technology Providers (SHS, GE, etc.) - CT, MRI, AI algorithms.
+
+Patients - provide history, undergo tests.","
+Lab-based assays for cardiac enzymes can take a significant amount of time, hindering timely diagnosis.
+
+",,,,"High-sensitivity troponin testing at the point of care produces accurate results in a few minutes, aiding in optimizing the use of time and resources of busy laboratories.",,"SHS offers Atellica VTLi High-Sensitivity Troponin I assay, a point-of-care solution delivers accurate, clinically actionable high-sensitivity troponin I  results in 8 minutes. 
+https://www.siemens-healthineers.com/en-in/laboratory-diagnostics/assays-by-diseases-conditions/cardiac-assays/high-sensitivity-troponin-i-assay",,
+,,,"With 2D angiography, it can be difficult to evaluate plaque composition, vessel diameter, lesion length, severity, and determine stent size and type.
+",,,,"Intravascular ultrasound (IVUS) helps in imaging of the inner structure of the coronary vessel, measure luminal dimensions, evaluate plaque morphology, detect stent size, type, and stent landing.
+
+",,,"Terumo's OPUSWAVE Imaging System: Innovative systems combining IVUS with near-infrared spectroscopy (NIRS) or optical frequency domain imaging (OFDI) for simultaneous plaque structure and composition analysis. OPUSWAVE enables dual-mode imaging in a single catheter (FDA 2025), improving workflow and reducing costs. Other dual-modality intravascular imaging systems include Conavi Novasight Hybrid (IVUS+OCT), and Boston Scientific Polarisis/OptiCross platforms integrating advanced IVUS with evolving dual-mode capabilities.
+https://www.terumomedical.com/news-and-events/news/opuswave-510k.html
+https://www.conavi.com/novasight/
+https://www.bostonscientific.com/en-IN/products/imaging-systems/opticross-18-peripheral-imaging-catheter.html","(https://www.uscjournal.com/articles/intravascular-ultrasound-guided-versus-angiography-guided-percutaneous-coronary-0)
+"
+,,,Suspected CAD often leads to unnecessary invasive procedures without a definitive diagnosis.,,,,"Non-invasive multi-modal diagnosis by combining various imaging and diagnostic techniques (e.g., ECG, coronary CT angiography, MRI, ultrasound) with AI-driven analytics to provide a comprehensive, non-invasive evaluation.
+","
+
+
+","syngo Fusion Package enables a non-invasive, multi-modal diagnostic approach by combining  Coronary CT Angiography/MRI with fluoro images into a unified, AI-driven platform providing a comprehensive evaluation of CAD without the need for invasive procedures
+
+https://www.siemens-healthineers.com/en-in/angio/options-and-upgrades/clinical-software-applications/syngo-fusion-package","iCAD’s AI-powered Coronary CTA with iFR provides a non-invasive way to assess coronary stenosis severity, eliminating the need for adenosine and reducing unnecessary invasive procedures, making diagnosis faster, safer, and more comfortable for patients.","Market solution - Götberg, M., Christiansen, E. H., Gudmundsdottir, I. J., Sandhall, L., Danielewicz, M., Jakobsen, L., Olsson, S.-E., ... (2017). Instantaneous Wave-free Ratio versus Fractional Flow Reserve to Guide PCI. New England Journal of Medicine, 376(19), 1813–1823. https://doi.org/10.1056/NEJMoa1616540"
+,,,"During cardiac catheterization, there is a risk of blood clots, bruising, damage to the artery or area where the catheter was inserted. ",,,"Technologies such as electromagnets, robot, ultrasound, sensing, AR/VR, or AI can guide and enhance the precision and catheter navigation during interventional procudures.
+",,,,"BD - Sherlock 3CG+ Tip confirmation system: The BD Sherlock 3CG+ Tip Confirmation System streamlines PICC (Peripherally Inserted Central Catheter) line placement by combining ultrasound vessel assessment, catheter tip tracking, and ECG-based tip confirmation to verify accurate catheter positioning at the cavoatrial junction, eliminating the need for a confirmatory chest X-ray.
+https://www.bd.com/en-us/products-and-solutions/products/product-families/sherlock-3cg-plus-tip-confirmation-system",
+,,,Inexperience of the physician or subtle abnormalities may lead to misinterpretation of ECGs," AI-powered algorithms to analyze ECG data in real-time, detecting abnormalities like arrhythmias, ST-segment changes, or QT interval prolongation with high accuracy.
+",,,,,,"AliveCor’s Kardia AI Platform
+AliveCor’s Kardia AI Platform features the FDA-cleared Kardia 12L ECG System—a compact, AI-powered handheld device capable of detecting 35 cardiac conditions, including heart attack, with a reduced leadset for rapid and accessible clinical-grade ECG analysis in diverse care settings.
+(https://alivecor.com/press/press_release/alivecor-launches-kardia-12l-a-first-of-its-kind-ai-powered-12-lead-ecg-system)",
+,,,"Manual segmentation of Coronary CT Angiography scans is tedious, time-consuming and error prone because only 2D slices of the CT images are available after image acquisition. ","Automatic segmentation of coronary lumen arteries using 3D Dense-U-Net  offers rapid feature extraction and localization capabilities.  
+",,,,,"Siemens Healthineers syngo.CT CaScoring AI Module: AI Module quickly and accurately measures coronary artery calcium and visualizes plaque burden for each main artery, providing results that closely match expert radiologists and greatly speeding up the assessment process compared to manual methods.?
+https://www.siemens-healthineers.com/en-in/computed-tomography/ct-clinical-applications/syngo-ct-cascoring",,"Pan, LS., Li, CW., Su, SF. et al. Coronary artery segmentation under class imbalance using a U-Net based architecture on computed tomography angiography images. Sci Rep 11, 14493 (2021)"
+,,,"To determine which coronary arteries have the most severe blockage during a PCI, physicians look at the angiogram. However, the angiogram alone can’t tell which blockages are most seriously affecting blood flow.",,,,,"QFR technology applies 3D artery reconstruction and measurement of blood flow velocity to precisely identify and measure the severity of artery blockages and to facilitate the decision on which arteries to stent. Thus, unnecessary stenting could be reduced, leading to significantly improved outcomes for the patients.","QFR (Quantitative Flow Ratio) and vFFR (virtual Fractional Flow Reserve) are both methods used to assess the functional significance of coronary artery blockages, but they differ in how they are derived. SHS offers vFFR based reconstruction but not QFR.","Shanghai Pulse Medical Technology:Their software, AngioPlus Galley, is used for ?QFR (Murray law-based QFR) computation.
+
+https://en.pulse-imaging.com/col.jsp?id=137",
+,,,Accurate assessment of coronary artery lesions that may not be visually significant on angiography ,,,,,"Coronary flow reserve (CFR) is extremely useful in the diagnosis of microvascular CAD because visual assessment is impossible in such small vessels, leaving functional evaluation as the only choice for objective diagnoses.     ","Siemens Healthineers vFFR (Angiography-Derived Vessel FFR): vFFR is an angiographic method used to assess coronary physiology and calculate fractional flow reserve (FFR) values. The vFFR value indicates the significance of specific coronary lesions and shows where blood flow is limited. 
+https://www.siemens-healthineers.com/en-in/angio/options-and-upgrades/clinical-software-applications/angio-derived-ffr-measurement",,https://pmc.ncbi.nlm.nih.gov/articles/PMC10143565/
+,,,Heartbeat motion creates CT artifacts. (The heartbeat causes movement of coronary vessels and muscle tissue leading to potential artefacts in CT images and more challenging treatment planning.)," Dual source scanners have the advantage of increasing temporal resolution. This, coupled with automatic detection of the cardiac phase (extended diastolic phase upon medication) with the least motion, can avoid motion artefacts during cardiac scans.",,,,"
+","The Dual Source SOMATOM Force minimizes heartbeat motion artifacts with a 66 ms heart-rate independent temporal resolution and ultrafast acquisition, enabling high-quality, free-breathing cardiac CT imaging.
+
+https://www.siemens-healthineers.com/en-in/computed-tomography/dual-source-ct",,
+Treatment,"
+
+Treatment focuses on restoring blood flow and stabilizing disease through PCI, stenting, surgery, or pharmacological therapy, with emerging robotic and precision solutions.
+
+
+1) Lifestyle Modifications  (Non-procedural, foundation of CAD management)
+•	Diet changes (low saturated fat, Mediterranean diet)
+•	Regular exercise / cardiac rehab programs
+•	Smoking cessation
+•	Weight management
+•	Stress reduction, psychosocial support
+2) Pharmacotherapy (Medical Treatment)
+•	Antiplatelets (Aspirin, P2Y12 inhibitors like Clopidogrel)
+•	Statins (lipid-lowering)
+•	Beta-blockers
+•	ACE inhibitors / ARBs
+•	Calcium channel blockers, Nitrates (anti-anginal)
+•	Other lipid-lowering therapies (PCSK9 inhibitors, etc.)
+3) Interventions (Catheter-Based / Minimally Invasive)
+•	Percutaneous Coronary Intervention (PCI)
+•	Coronary Angioplasty (Balloon Angioplasty)
+•	Drug-Eluting Stents / Nanoparticle Stents
+•	Intravascular Lithotripsy (for calcified plaque)
+•	Robotic-Assisted PCI
+•	Brachytherapy (intracoronary radiation)
+•	Cardiac Catheterization (diagnostic, often gateway to PCI)
+4) Surgical Treatments
+•	Coronary Artery Bypass Grafting (CABG)
+•	Endarterectomy (plaque removal from artery wall)","Interventional Cardiologists - perform PCI/stenting.
+
+Cardiac Surgeons - perform CABG where indicated.
+
+Cath Lab Teams (nurses, technicians) - support interventions.
+
+Pharma Companies - provide drugs (antiplatelets, statins).
+
+Medical Device Companies (SHS, Medtronic, etc.) - supply stents, catheters, robotic PCI tools.
+
+Patients - adhere to acute and chronic therapies.
+
+Insurance Companies - provide insurance coverage to the patient","Most PCIs are performed manually, some of which can be complex and require high precision and skill.",,,,"Along with the physician’s clinical judgement and decision-making, robotic assisted PCIs can offer an advance in precision, safety, and value to the healthcare providers and organization.",,,"R-One Robotic System (Robocath):European alternative with 100% clinical success (R-EVOLUTION study) and 84.5% radiation reduction. Provides comparable performance with faster adoption timeline.
+https://eurointervention.pcronline.com/article/evaluation-of-the-r-one-robotic-system-for-percutaneous-coronary-intervention-the-r-evolution-study",
+,,,Hardened plaque build-up can even resist high-pressure balloons that makes reopening an artery complicated and potentially dangerous.,,,,"Intravascular lithotripsy allows to fracture the problematic calcium more easily, safely expand the artery, and optimally place a stent without unnecessary complications.
+",,,"Shockwave Medical, part of Johnson & Johnson MedTech, provides Intravascular Lithotripsy (IVL) technology that uses sonic pressure waves to safely break up calcium in coronary arteries for treating calcified coronary artery disease (CAD).
+
+https://shockwavemedical.com/en-eu/ivl-overview/",https://www.tctmd.com/news/fda-approves-shockwave-intravascular-lithotripsy-calcified-coronaries 
+,,,"In-stent restenosis and stent thrombosis are common complications after coronary stent implantation. 
+",,,,"Nanoparticle drug or gene eluting stents, or paclitaxel coated balloons to overcome restenosis, in-stent thrombosis and delayed endothelialization.
+",,,"Boston Scientific AGENT™, Medtronic IN.PACT Admiral™, and BD Lutonix™ are leading FDA-cleared paclitaxel-coated balloons designed to reduce restenosis and improve vessel healing in coronary and peripheral interventions.
+https://www.bostonscientific.com/us/en/healthcare-professionals/products/balloons-catheters-and-guidewires/drug-coated-balloons/agent-drug-coated-balloon/fp00000400.html
+https://www.medtronic.com/en-us/healthcare-professionals/products/cardiovascular/peripheral-drug-coated-balloons/inpact-admiral-drug-coated-balloon.html
+https://www.bd.com/en-in/products-and-solutions/products/product-families/lutonix-drug-coated-balloon-pta-catheters#overview",https://www.mdpi.com/1422-0067/19/2/424
+,,,Inefficient education and training may hinder achieving high-quality cardiovascular treatment standards.,AR/VR assistance to train physicians in interventional cardiology with a full immersion in clinical scenarios.,,,,,,"AR/VR platforms like Osso VR and Mentice deliver immersive, simulation-based training for interventional cardiology, enabling physicians to safely practice procedures and decision-making in realistic clinical scenarios.
+https://www.ossovr.com/
+https://www.mentice.com/interventional-cardiology-residents-and-fellows",https://clinicaltrials.gov/study/NCT04647253
+,,,Patients with refractory angina experience persistent chest pain due to coronary ischemia despite optimal medical therapy and are often not suitable candidates for further revascularization procedures.,,,,"Novel therapeutic approaches such as Enhanced External Counter Pulsation, Cardiac Shockwave Therapy, Transmyocardial Laser Revascularization, or gene and angiogenic cell therapy, increase myocardial perfusion through various mechanisms.",.,,"Novel therapeutic approaches to increase myocardial perfusion include commercialized EECP therapy systems like Vasomedical, Shockwave Medical’s cardiac shockwave (IVL) systems, and an expanding pipeline of cell and gene therapies under clinical development.
+http://www.vasomedical.com/eecp_therapy_systems.php
+https://shockwavemedical.com/en-eu/disease-states/cad-ivl/",https://www.ahajournals.org/doi/full/10.1161/CIRCINTERVENTIONS.120.009002
+,,,Lack of data integration between diagnostic and treatment modalities can disrupt workflow and lead to suboptimal procedural outcomes.,,,,,"CT-guided PCI allows seamless integration of diagnostic CT information in the cath lab, enhancing procedural planning and guidance, enabling a streamlined workflow and improved patient outcomes.","Nexaris Angio-CT: Nexaris Angio-CT is a hybrid interventional suite featuring Instant Fusion, which seamlessly integrates angiography and CT images. 
+https://www.siemens-healthineers.com/en-in/angio/nexaris-therapy-suites/nexaris-angio-ct",,
+Rehabilitation,"
+
+Post-treatment rehabilitation integrates exercise, psychological support, digital coaching, and structured programs to help patients return to daily life and reduce recurrence risk.
+
+
+
+•	Virtual cardiac rehabilitation (apps, home-based programs)
+•	Remote coaching & tele-rehab
+•	AI scheduler for rehab appointments
+•	VR / Exergames for physical training
+•	Psychological interventions (digital therapy, counseling)
+•	Palliative care assessments
+•	Left Ventricular Assist Device (LVAD) support
+•	Heart transplant evaluation","Patients - engage in rehab programs.
+
+Rehab Specialists / Physiotherapists - design exercise regimens.
+
+Psychologists - address stress/anxiety post-MI or surgery.
+
+Digital Health Providers - virtual rehab apps, wearables.
+
+Payers/Insurers - cover rehab program costs.
+
+Cardiologists - provides care related to cardiac problems and advises rehabilitation","Access to cardiac rehabilitation is limited due to a lack of center-based facilities and non-flexible schedules.
+",,,,,"Development of a hybrid rehabilitation program combining telerehabilitation and on-site activities, giving flexibility in participation.",,,"https://www.sciencedirect.com/science/article/pii/S09145087
+2100023X
+https://pubmed.ncbi.nlm.nih.gov/34958846/
+https://www.sciencedirect.com/science/article/pii/S247263032400044X"
+,,,"
+Delays in referral and initiation of cardiac rehabilitation programs.",,,,,"Decentralizing rehabilitation services through partnerships with community centers and local clinics, reducing the dependence on centralized cardiac rehab facilities.",,,"https://softechsupply.com/project-idea/automated-patient-appointment-management-web-application-with-iot?page=17
+https://ijariie.com/AdminUploadPdf/Modular_appointment_management_system_ijariie20064.pdf?srsltid=AfmBOopZgvvNhr5Z4V8hSVrBZD02l7TMObcGTXkA5lxGpvFN6x_TNAlR"
+,,,Cardiac rehabilitation participation and compliance rates are often low.,,Gamification of rehabilitation exercises to enhance patient motivation and adherence.,,,,,"MyHeartMate (RCT-Validated): Game-based secondary prevention app featuring a patient heart avatar requiring care through exercise, diet, medication, and stress reduction. 94.8% of participants engaged by tracking or completing missions; 26.8% engaged continuously for ?30 days. 
+https://solvechd.org.au/myheartmate/","https://www.empoweremr.com/blog/virtual-reality-rehabilitation
+https://www.sciencedirect.com/science/article/abs/pii/S0003999324013625
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9789284/"
+,,,"Denial, anxiety or depression can have a negative impact on the treatment results.",,,,"Virtual reality (VR) therapy sessions, guided by a counselor, to address mental health concerns.",,,"Virtual reality (VR) therapy sessions for mental health involve immersive, guided experiences—using platforms like XRHealth, PsyTech VR, and Corpus VR—where a counselor supports individuals as they work through anxiety, PTSD, phobias, or stress, with growing evidence for improved outcomes and several FDA-cleared or registered digital mental health products now available.
+https://www.xr.health/us/products/mental-health/
+https://psytechvr.com/
+https://corpusvr.com/","https://www.betterhelp.com/advice/therapy/virtual-reality-therapy-a-therapeutic-use-of-technology/
+https://www.xr.health/virtual-reality-exposure-therapy/#:~:text=Virtual%20Reality%20Exposure%20Therapy%20(VRET)%20is%20at%20the%20forefront%20of,therapy%20more%20effective%20and%20accessible."
+,,,Financial barriers to cardiac rehabilitation especially for uninsured patients or those in rural areas.,,,,Adoption of low-cost remote rehabilitation tools to make cardiac rehabilitation more affordable for a broader range of patients.,,,"Wearable Device-Assisted Home Cardiac Rehabilitation (Fitbit/Xiaomi/apple): Meta-analysis of 14 RCTs: wearable-assisted home Cardiac Rehabilitation achieved equivalent or superior cardiorespiratory fitness improvements vs center-based Cardiac Rehabilitation with no significant differences in adherence or quality of life. Fitbit Sense + real-time monitoring (Recoval system) showed peak VO? improvement comparable to center-based programs with reduced anxiety and improved QoL at 12 weeks.?
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9267864/","https://pmc.ncbi.nlm.nih.gov/articles/PMC9535743/
+https://www.sciencedirect.com/science/article/pii/S1532046418302259"
+,,,"Standardized care approaches may not accommodate each patient's unique needs, which may lead to unfavorable outcomes.","An AI based personalized program that evaluates patient data and tailors the rehabilitation plan, incorporating exercise, diet, and psychosocial support based on the patient's progress and needs.",,,,,,"TIMELY Platform (AI Post-Cardiac Event Management): Patient-centered app combining real-time wearable monitoring (3-lead ECG, blood pressure, activity trackers) with AI-driven analytics for personalized post-rehab care. Delivers tailored guidance on diet, stress management, weight loss, and exercise; AI detects early arrhythmias through pattern recognition (sleep changes, elevated stress correlate with electrical abnormalities). Personal push notifications and chatbot reinforcement maintain motivation. Clinicians receive automated alerts enabling direct early intervention for high-risk patients.
+https://www.timely-project.com/","https://pmc.ncbi.nlm.nih.gov/articles/PMC9502540/
+https://pubmed.ncbi.nlm.nih.gov/33040231/
+https://cordis.europa.eu/project/id/101080288/de"
+Follow-up,"Ongoing clinical monitoring and secondary prevention to reduce recurrence.
+
+
+•	Routine Clinical Checkups – Telemedicine consultations, outpatient visits, BP/lipid monitoring, ECG, echo
+•	Therapy Optimization – medication adherence, dose adjustments
+•	Digital Monitoring – wearables, telemedicine, remote dashboards, medication adherence tools.,
+•	Secondary Prevention – lifestyle management, risk factor control, psychological support
+
+","Patients - report symptoms, follow medication plan.
+
+Cardiologists & Primary Care Doctors - monitor progress, adjust treatment.
+
+Telemedicine Providers - support remote consultations.
+
+Pharmacists - reinforce medication adherence.
+
+Payers/Insurers - incentivize follow-up visits and adherence.",Patient might not follow the advised plan after getting discharged.,"Personal AI assistance to  keep a track of patient's activities, provide guidance, and ecourage adherence to the plan. ",,,,,,,
+,,,Patients from remote or rural areas may not go for follow-up appointments due to the associated travel distance and costs.,"Telemedicine enables virtual consultation with the physician via text, audio or video.",,,,,,,
+,,,Most of the damage after myocardial Infarction cannot be fully reversed.,,,,Stem cells might be beneficial for cardiac regeneration due to its self-renewal and differentiation capabilities.    ,,,,https://pmc.ncbi.nlm.nih.gov/articles/PMC10143565/
+,,,"Delayed detection of complications like arrhythmias, especially ventricular tachycardia and fibrillation, may be life threatening. ",,,"Digital twin for proactive management of CAD complications by receiving real-time data from wearables on heart rate and rhythm, blood pressure, and other cardiovascular indicators, allowing timely intervention.",,,,,
+,,,"Heart failure, a major complication of CAD, is often treated with medications which display limited efficacy in reversing disease progression.  ",,,,"Gene therapy techniques may allow regeneration of damaged heart tissue and improve cardiac function.
+",,,, https://www.nature.com/articles/d42473-023-00210-9           https://pmc.ncbi.nlm.nih.gov/articles/PMC6250586/
+,,,Complex medication regimens may lead to poor adherence and incorrect dosages. ,,An automatic pill dispenser can provide the right medication at the right time and also notify the patient via alerts.,,,,,,

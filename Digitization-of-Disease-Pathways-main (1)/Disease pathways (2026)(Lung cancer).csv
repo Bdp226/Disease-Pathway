@@ -1,0 +1,1057 @@
+Stage,Overview (scenario + tests/procedures overview),Stakeholders,Pain points,Solutions,,,,,,,SOURCES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Digitalization (AI, IoT, Blockchain, etc.)","Automation including into devices (e.g. for operation, intuitive HMIs, servicing, etc.)",Sensing,Clinical innovation/ new treatment/ new diagnostic technologies,Process innovation ,Our portfolio coverage ,Ecosystem solutions beyond SHS,Pain Points,Solutions,REMOVED SOLTUIONS,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Prevention,,"Patient – Undergoes screening, diagnosis, treatment, and follow-up.
+
+Family – Provides emotional, financial, and caregiving support.
+
+General Practitioner – Identifies risk factors and refers patients for screening and specialist care.
+
+Ministry of Health – Develops policies, screening programs, and prevention initiatives.
+
+Medical Device Companies – Develop diagnostic, screening, and AI-based healthcare solutions","Lung cancer is a leading cause of cancer cases and cancer deaths worldwide; most lung cancer patients are diagnosed in advanced stages (stage 3 or 4), where only palliative treatment is possible.
+
+https://www.siemens-healthineers.com/clinical-specialities/oncology/cancer-types/lung-cancer/lung-cancer-screening
+
+\In 2022, approximately 2.5 million new cases and 1.8 million deaths were reported, highlighting the urgent need for earlier detection and effective screening programs to improve survival outcomes.
+
+https://www.who.int/news-room/fact-sheets/detail/lung-cancer","AI/ML-based lung cancer risk prediction model: Machine learning model to predict lung cancer risk using electronic medical record data. Identifies high-risk patients earlier, improves screening coverage, supports early detection, especially among non-smokers and younger at-risk groups.
+
+https://www.sciencedirect.com/org/science/article/pii/S281717052400053X
+
+\AI-based end-to-end 3D deep learning model for low-dose CT screening: Detects suspicious lung cancer findings earlier, reduces false positives and false negatives, supports radiologists, improves screening accuracy and consistency.
+
+https://www.nature.com/articles/s41591-019-0447-x
+
+\IoT-enabled healthcare monitoring framework combined with AI (Deep Convolutional Neural Networks) for early lung cancer detection: The paper proposes an IoT-enabled healthcare monitoring framework combined with AI (Deep Convolutional Neural Networks) for early lung cancer detection. It uses patient monitoring data, feature selection algorithms, cloud storage, and AI-based analysis to identify lung nodules earlier and support physician decision-making.
+ 
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10052730",,,"Low dose CT for lung screening: Siemens Healthineers promotes the adoption of Low-Dose CT (LDCT) for lung cancer screening through clinical education, expert webinars, and evidence-based guidance. These initiatives support healthcare providers in implementing standardized LDCT screening programs for high-risk populations, enabling earlier detection while minimizing radiation exposure.
+
+https://www.siemens-healthineers.com/clinical-specialities/oncology/cancer-types/lung-cancer/lung-cancer-webinars
+https://events.siemens-healthineers.com/lung-cancer-pathway","Lung cancer prevention strategies : Smoking cessation interventions (primary prevention) and low-dose CT screening for early diagnosis of lung cancer (secondary prevention) in high-risk individuals, in addition to public awareness campaigns on lung cancer, its risk factors and maintenance of a healthy lifestyle, can enable timely curative therapy and thus long-term mortality reduction.
+
+https://www.siemens-healthineers.com/clinical-specialities/oncology/cancer-types/lung-cancer/lung-cancer-webinars
+","SOMATOM CT and Biograph PET/CT systems are now indicated for low dose lung cancer screening. Siemens offers the industry’s most comprehensive approach to low dose lung cancer screening.
+
+https://www.siemens-healthineers.com/en-us/computed-tomography/ct-lung-cancer-screening
+
+\AI- Rad Companion  Chest X-ray: detects and highlights lung nodules. After segmentation of lung nodules, the volume, maximum 2D and 3D diameter and tumour burden are automatically calculated.
+
+https://www.siemens-healthineers.com/digital-health-solutions/ai-rad-companion
+
+\AI- Rad Companion  Chest CT: AI-Rad Companion Chest CT includes the ability to provide lung lobe segmentation, lung lesion detection and measurements, heart segmentation and calcium detection, aorta segmentation and diameter measurements, as well as vertebra body segmentation and measurement. 
+
+https://www.siemens-healthineers.com/en-th/digital-health-solutions/digital-solutions-overview/clinical-decision-support/ai-rad-companion/chest-ct
+
+\NAEOTOM Alpha.Prime:  A new imaging standard to support clinicians in lesion detection, characterization, and treatment planning, AI-powered workflows speed up reading and scanning processes, Quantum Spectral Imaging and Quantum HD resolution in single source CT in clinical routine for the first time.
+Quantum Technology supports better visibility for tumor detection, characterization, and monitoring. Solutions for CT-guided interventions or Radiation therapy enable treatment planning, biopsies, or ablations.
+
+https://www.siemens-healthineers.com/en-in/computed-tomography/naeotom/naeotom-alpha-prime","Optellum- AI-based lung cancer risk prediction using EMR, demographics, smoking history and clinical data.
+Automatically access CT images and reports, and extract key information such as Lung-RADS
+
+https://optellum.com/lung-cancer-screening/
+
+\Qure.ai- Artificial Intelligence For Early Lung Cancer Detection- qLC-Suite, Helps in early detection and monitoring of lung nodules. Precise quantification, comprehensive characterization, and 3D visualization ensure no missed opportunities for early intervention.
+
+https://www.qure.ai/product/lung-nodule-management
+","Lung cancer screening - Siemens Healthineers
+https://www.who.int/news-room/fact-sheets/detail/lung-cancer","Lung Cancer Webinars - Siemens Healthineers
+https://www.sciencedirect.com/org/science/article/pii/S281717052400053X
+https://www.nature.com/articles/s41591-019-0447-x",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,"At this stage, the focus is on reducing lung cancer risk and enabling early detection before disease progresses, using lifestyle change, digital tools, screening, exposure monitoring, and public health interventions.
+
+
+ Early risk identification and timely low-dose CT screening are key.
+1. Smoking cessation and lifestyle modification.
+
+2. Low-dose CT screening for high-risk individuals.
+
+3. AI-based lung cancer risk prediction.
+
+4. Digital tools: apps, SMS reminders, virtual counselling
+5. Exposure monitoring: CO checker, air quality, radon testing
+6. Mobile screening units and CHW-led awareness
+7. Tobacco control and smoke-free policies",,"Lack of awareness, access challenges, cost concerns, travel time etc. are some barriers to lung cancer screening, especially in rural and remote regions.
+
+
+","Lung cancer screening with low-dose CT scans using a deep learning approach: They developed an AI/deep learning model called DeepScreener that analyzes LDCT scans and predicts whether lung cancer is present.
+
+https://arxiv.org/abs/1906.00240",,,"Low dose CT for lung screening: Siemens Healthineers promotes the adoption of Low-Dose CT (LDCT) for lung cancer screening through clinical education, expert webinars, and evidence-based guidance. These initiatives support healthcare providers in implementing standardized LDCT screening programs for high-risk populations, enabling earlier detection while minimizing radiation exposure.
+
+https://www.siemens-healthineers.com/clinical-specialities/oncology/cancer-types/lung-cancer/lung-cancer-webinars","Mobile screening units: To raise awareness, save time, costs and increase availability for high-risk patients in rural and remote areas, grassroots engagement along with deployment of mobile screening units can enable individuals to get examined within a few minutes and get certainty about the state of their lung health, without having to visit the hospital.
+
+https://www.siemens-healthineers.com/perspectives/lung-health-checks?sf165812207=1
+
+\Training CHWs, LCS coordinators: To address these challenges, sensitively engaging patients where they are at, including conducting high-quality Shared Decision Making (SDM) and training Lung Cancer Screening (LCS) coordinators, navigators, and Community Health Workers (CHW), can play a crucial role in guiding patients through the various barriers to accessing LCS
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11904607/#sec2
+",,,,"Lung health checks in car parks?
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11904607/#sec2",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Tobacco use accounts for 25% of all cancer deaths globally and is the primary cause of lung cancer.
+
+https://www.D5:G5who.int/europe/news/item/03-02-2021-world-cancer-day-know-the-facts-tobacco-and-alcohol-both-cause-cancer
+
+\Majority of preventable lung cancer cases are attributable to: Tobacco smoking (60–70%)
+
+https://www.who.int/news-room/fact-sheets/detail/lung-cancer
+
+\Cigarette smokers have a 10-fold or greater increased risk of developing lung cancer compared to those who have never smoked.
+.
+ Kasper, D. L., Fauci, A. S., Hauser, S. L., Longo, D. L., Jameson, J. L., & Loscalzo, J. (2018). Harrison's Principles of Internal Medicine 20/E (Vol. 1 & Vol. 2)(ebook). McGraw Hill Professional","Personalized quitting plan: An AI based virtual health worker can provide digital counselling services in real time to those trying to quit tobacco and offer a personalized quitting plan based on a series of interactive questions. It also recommends digital cessation programmes available in the country.
+
+https://www.who.int/europe/news/item/14-02-2021-meet-florence-who-s-digital-health-worker-who-can-help-you-quit-tobacco
+
+
+\Smartphone app-based smoking cessation digital therapeutic with portable carbon monoxide checker:Provides continuous counselling, reminders, relapse prevention, progress tracking, and objective smoking-status monitoring
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7067789/
+","Automated SMS reminders for smoking cessation support: Automated text message reminders provide continuous behavioural support, encourage medication and treatment adherence, reinforce healthy behaviours, and improve patient engagement. SMS-based interventions have been shown to enhance medical compliance and can support smoking cessation programmes as part of digital health interventions.
+
+https://www.sciencedirect.com/science/article/pii/S2214782918300022",,"Varenicline + nicotine replacement therapy for smoking cessation: Increases quit rates, reduces tobacco exposure, lowers future lung cancer risk.
+
+https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD009329.pub2/full","Tobacco control policies: Increasing excise taxes and prices on tobacco products, implementing plain packaging and/or large graphic health warnings on all tobacco packages, enacting and enforcing bans on tobacco advertising, promotion and sponsorship, sales control, smoking restrictions etc. are some key measures for primary prevention of lung cancer.
+
+https://www.who.int/europe/news/item/03-02-2021-world-cancer-day-know-the-facts-tobacco-and-alcohol-both-cause-cancer",,"Pelago Health- Digital health startup (formerly Quit Genius) that provides virtual tobacco cessation programs through employers and health plans. It combines: Behavioral coaching, Cognitive Behavioral Therapy (CBT), Telehealth consultations, Nicotine Replacement Therapy (NRT), Progress tracking through a mobile app.
+
+https://www.pelagohealth.com/what-we-treat/tobacco/
+
+\Pivot Health (Pivot Breathe) is a digital smoking cessation platform that combines- Mobile app–based coaching,Dedicated quit coaches, Nicotine replacement support, Carbon monoxide breath sensor for real-time biofeedback and motivation.
+
+ https://pivot.co/smoking-cessation
+
+
+","World Cancer Day: know the facts – tobacco and alcohol both cause cancer
+https://www.who.int/news-room/fact-sheets/detail/lung-cancer
+. Kasper, D. L., Fauci, A. S., Hauser, S. L., Longo, D. L., Jameson, J. L., & Loscalzo, J. (2018). Harrison's Principles of Internal Medicine 20/E (Vol. 1 & Vol. 2)(ebook). McGraw Hill Professional","WHO report on cancer: setting priorities, investing wisely and providing care for all
+https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD009329.pub2/full
+https://www.sciencedirect.com/science/article/pii/S2214782918300022
+Meet Florence, WHO’s digital health worker who can help you quit tobacco
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7067789/",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Environmental tobacco smoke (ETS) or secondhand smoke can increase the risk of lung cancer development.
+
+https://www.cdc.gov/tobacco/data_statistics/fact_sheets/secondhand_smoke/health_effects/index.htm","Secondhand smoking survey instrument: With a brief, validated online survey instrument, the exposure to ETS can be assessed. Data from this can be used for evaluation of exposure profile based on the secondhand smoke exposure scale, risk calculation, creating smoke free areas in all indoor workplaces, public places, public transport, and implementing effective mass media campaigns to educate the public about the harms of smoking and ETS.5,9 
+
+https://www.who.int/publications/i/item/9789240001299
+https://www.tobaccopreventioncessation.com/The-Secondhand-Smoke-Exposure-Scale-SHSES-A-hair-nicotine-validated-tool-for-assessing-exposure-to-secondhand-smoke-among-elderly-adults-in-primary-care,69850,0,2.html
+",,"Off-the-shelf computer components and the Dylos DC1700 air quality monitor- The paper describes a system that uses air-quality sensors to detect secondhand tobacco smoke (SHS) in real time, with data transmitted remotely to a web platform for monitoring and feedback. It combines environmental sensing, wireless communication, cloud-based monitoring, and data visualization.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC6751989/",,,,,"Centers for Disease Control and Prevention. (2021, June 14). Health effects of secondhand smoke. Centers for Disease Control and Prevention. 
+
+Retrieved November 29, 2022, from https://www.cdc.gov/tobacco/data_statistics/fact_sheets/secondhand_smoke/health_effects/index.htm ","WHO report on cancer: setting priorities, investing wisely and providing care for all
+https://doi.org/10.18332/tpc/69850","IQOS heated tobacco technology-The article discusses IQOS heated tobacco technology, which heats tobacco instead of burning it. The claimed benefit is reduced smoke production and therefore reduced exposure of others to secondhand smoke compared with conventional cigarettes.
+
+https://www.reconnectwithyourworld.com/why-second-hand-smoke-is-a-thing-of-the-past-with-icos-technology/",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Outdoor air pollution contributes to most of the preventable lung cancers after tobacco. Besides, most of the world’s population lives in areas which exceed annual WHO limits for particulate matter (PM2.5)
+
+https://www.who.int/publications/i/item/9789240001299
+https://www.who.int/news-room/fact-sheets/detail/lung-cancer
+https://www.crick.ac.uk/news/2022-09-10_scientists-reveal-how-air-pollution-can-cause-lung-cancer-in-people-who-have-never-smoked","Applications of Machine Learning and IoT for Outdoor Air Pollution Monitoring and Prediction (Systematic Review)
+Reviews AI and IoT systems for predicting air pollution and supporting public health decisions
+
+https://arxiv.org/abs/2401.01788
+
+",,,,"Air quality surveillance system: With this, it is possible to inform the population about the health risks associated with inhaling particulate matter. Assessments of emissions and its sources can be done to find efficient interventions like reduced trash burning, use of cleaner vehicles and fuels, and guide policy. Additionally, combination with weather forecast can enable people to avoid high risk periods and shift activities to periods with lower pollution.
+
+https://www.c40knowledgehub.org/s/article/Low-and-Middle-Income-Countries-Urban-Air-Pollution-Solutions?language=en_US
+https://scied.ucar.edu/learning-zone/air-quality/how-weather-affects-air-quality
+",,"IQAir air purifiers- Real-time air quality data from over 80,000 monitoring sensors worldwide. Trusted by hospitals, schools, and families worldwide, IQAir air purifiers remove ultrafine particles down to 0.003 microns — the smallest particles that impact your health.
+
+https://www.iqair.com/
+
+\Ambee’s hyperlocal and real-time data ensures that you know exactly what you’re exposed to. Backed by science and trusted by Fortune 100 companies, Ambee’s Air Quality API is the perfect fit for all your needs.
+
+https://www.getambee.com/","WHO report on cancer: setting priorities, investing wisely and providing care for all
+
+https://www.crick.ac.uk/news/2022-09-10_scientists-reveal-how-air-pollution-can-cause-lung-cancer-in-people-who-have-never-smoked
+https://www.who.int/news-room/fact-sheets/detail/lung-cancer","C40 Knowledge Community
+https://scied.ucar.edu/learning-zone/air-quality/how-weather-affects-air-quality",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Radon, a leading cause of lung cancer, may be found in high concentrations in indoor environments like homes; exposure to it can be caused by cracks in walls or floors, sumps or drains.
+
+https://www.who.int/news-room/fact-sheets/detail/radon-and-health","Deploy IoT-enabled radon sensors integrated with cloud analytics and automated alert systems to enable continuous indoor radon monitoring, early risk detection, and population-level surveillance.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12526553",,,"Exposure-based lung cancer risk stratification, targeted LDCT screening for individuals in high-radon regions, integration of radon exposure history into risk assessment models
+
+https://www.who.int/news-room/fact-sheets/detail/radon-and-health","National radon policies and regulations: Measures can be taken to provide information on levels of radon indoors and the associated health risks, establish a national annual average residential radon concentration reference level, develop radon measurement protocols, implement radon prevention in building codes, promote education for building professionals and provide financial support to remove radon from existing buildings by increasing under-floor ventilation, installing a radon sump system, sealing floors and walls, and improving the ventilation of the building.
+
+https://www.who.int/news-room/fact-sheets/detail/radon-and-health
+
+\Centre for Disease Control (CDC) recommends radon testing at home: as it could be the source of Radon induced Lung Cancer. Could be tested using two types of kits: Short-term kits (measure radon for 2–90 days for quick results) and Long-term kits (measure radon in your home for over 90 days).
+
+https://www.cdc.gov/radon/testing/index.html",,"Airthings-Develop smart radon detectors and indoor air quality monitors.
+Continuously measure radon levels inside homes, schools, and workplaces.
+
+https://www.airthings.com/
+
+\RadonEye -develops radon monitoring technologies, including the RadonEye series of detectors. The company specializes in continuous radon measurement using pulsed ionization chamber technology and real-time monitoring capabilities
+
+https://radonftlab.com/","Radon
+
+","Radon
+https://www.cdc.gov/radon/testing/index.html",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Occupational exposure to carcinogenic agents such as asbestos, arsenic, bischloromethyl ether, hexavalent chromium, polycyclic aromatic hydrocarbons etc. can increase the likelihood of developing lung cancer. This contributes to a share of  preventable lung cancer cases after tobacco and air pollution.
+
+ Kasper, D. L., Fauci, A. S., Hauser, S. L., Longo, D. L., Jameson, J. L., & Loscalzo, J. (2018). Harrison's Principles of Internal Medicine 20/E (Vol. 1 & Vol. 2)(ebook). McGraw Hill Professional
+https://www.who.int/news-room/fact-sheets/detail/lung-cancer",,,,,"Work health policies: Strengthening occupational protection with meaningful pollution exposure limits in workplaces and its continuous monitoring,  developing preventive guidelines, offering awareness campaigns and conducting regular medical examinations.
+
+https://www.ersnet.org/news-and-features/news/lung-cancer-prevention-diagnosis-treatment-and-survivorship/",,"G8 is an advanced gas detection solution designed to protect workers from exposure to hazardous airborne carcinogens in high-risk industrial environments. With real-time gas monitoring, instant alerts, built-in radio communication, and direct-to-cloud data connectivity, it enables early hazard detection, rapid incident response, and continuous exposure monitoring, helping reduce occupational health risks and prevent work-related lung diseases, including lung cancer.
+
+https://www.blacklinesafety.com/
+https://www.blacklinesafety.com/solutions/personal-gas-detection/g8-portable-gas-detector",". Kasper, D. L., Fauci, A. S., Hauser, S. L., Longo, D. L., Jameson, J. L., & Loscalzo, J. (2018). Harrison's Principles of Internal Medicine 20/E (Vol. 1 & Vol. 2)(ebook). McGraw Hill Professional
+https://www.who.int/news-room/fact-sheets/detail/lung-cancer","Lung cancer: prevention, diagnosis, treatment and survivorship - ERS - European Respiratory Society",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,," A prior lung disease such as chronic bronchitis, emphysema, and tuberculosis increases the risk of developing lung cancer.
+
+. Kasper, D. L., Fauci, A. S., Hauser, S. L., Longo, D. L., Jameson, J. L., & Loscalzo, J. (2018). Harrison's Principles of Internal Medicine 20/E (Vol. 1 & Vol. 2)(ebook). McGraw Hill Professional","AI based predictive model: Using parameters like patient age, sex, genetic history, body mass index, smoking intensity, occupational exposure, presence of prior lung diseases, and other clinically relevant information, along with laboratory and imaging results, an AI based model can be used to predict the risk of lung cancer.15
+
+https://www.mdpi.com/2072-6694/13/14/3496
+
+\AI-based EHR Risk Stratification: Uses EHR data (history of COPD, emphysema, TB, smoking, age, family history) to automatically identify patients at high risk and recommend LDCT screening.
+
+https://www.chestphysician.org/ai-enabled-approaches-poised-to-transform-diagnosis-management-of-lung-diseases
+
+Opportunistic AI on Chest CT/X-ray: Detects emphysema, fibrosis, old TB scars, and other chronic lung abnormalities on imaging performed for unrelated reasons, flagging patients for lung cancer screening.
+
+https://www.chestphysician.org/ai-enabled-approaches-poised-to-transform-diagnosis-management-of-lung-diseases/
+
+Digital Screening Registries & Care Coordination: Tracks high-risk patients, schedules annual low-dose CT screening, sends reminders, and monitors follow-up adherence
+
+https://www.viz.ai/blog/unlocking-the-potential-of-ai-in-lung-disease-diagnosis-and-care-coordination",,,,,,"Navina – AI Clinical Copilot for Primary Care: Navina is an AI-powered clinical intelligence platform that aggregates structured and unstructured patient data from EHRs, claims, labs, and clinical notes to generate actionable insights at the point of care. It helps clinicians identify care gaps, surface potential diagnoses, improve documentation, and support informed clinical decision-making while reducing administrative burden.
+
+https://www.navina.ai/",". Kasper, D. L., Fauci, A. S., Hauser, S. L., Longo, D. L., Jameson, J. L., & Loscalzo, J. (2018). Harrison's Principles of Internal Medicine 20/E (Vol. 1 & Vol. 2)(ebook). McGraw Hill Professional",Individual 5-Year Lung Cancer Risk Prediction Model in Korea Using a Nationwide Representative Database,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Symptoms,"At this stage, the focus is on early symptom recognition, timely referral, and avoiding misdiagnosis or delayed diagnosis of lung cancer. Since symptoms may be vague, overlap with infections like COVID-19, or be ignored by patients, digital triage, remote consultation, wearable monitoring, and structured referral pathways can help detect warning signs earlier and guide patients to appropriate care.
+
+1. Symptom awareness and patient education
+2. Telemedicine and e-consultations
+3. Digital triage and electronic health records
+4. Respiratory wearable sensors
+5. AI-based symptom tracking and risk alerts
+6. Structured referral pathways
+7. Optimal care pathways for suspected lung cancer
+8. GP and primary-care level decision support","Patient – Reports symptoms, seeks care, and undergoes diagnosis and treatment.
+
+Family – Supports healthcare decisions and treatment adherence.
+
+General Practitioner – Recognizes suspicious symptoms and initiates referrals.
+
+Pulmonologist – Evaluates respiratory symptoms and performs diagnostic procedures.
+
+Medical Device Companies – Develop telehealth, monitoring, and diagnostic technologies.","Patients with symptoms of lung cancer in remote areas may lack awareness and face limited access to care due to little integration between primary care and tertiary care, slow referral processes, etc.","Digital Lung Cancer Referral Pathway (HealthPathways + e-Referral): A web-based referral platform that guides primary care physicians through standardized investigations, automates specialist referrals, and integrates with electronic referral systems to reduce delays and improve care coordination for rural patients.
+
+https://ijic.org/articles/10.5334/ijic.7627
+
+",,,"Virtual Multidisciplinary Team (MDT) Platform: Enables pulmonologists, radiologists, oncologists, and primary care physicians to review patient cases remotely using shared imaging and patient records, ensuring specialist input for patients in remote regions.
+
+https://www.astrazeneca.com/content/dam/az/PDF/2024/Good-practices-in-lung-cancer-MDTs.pdf","Optimal care pathways: Structured care plans specific to lung cancer that define all tasks to be pursued, their timeframe, sequence and the professionals involved. In combination with electronic health record management, rapid clinical and pathological diagnoses, and prompt referral to an appropriate center for further care can be facilitated.5,16
+
+https://www.who.int/publications/i/item/9789240001299","AI-Pathway Companion Lung Cancer – focused on non-small cell lung cancer, supporting personalized and standardized decision-making along the whole treatment process2. The AI-Pathway Companion Lung Cancer3 assists multidisciplinary teams (MDT) by facilitating patient management and case reviews in a single dashboard, providing quality checks on data completeness, and enabling the documentation of clinically relevant patient-specific notations. 
+
+https://www.siemens-healthineers.com/press/releases/aipathwaylung","Apollo telehealth- Apollo TeleHealth specialises in integrated healthcare delivery to provide services such as TeleConsultations, Tele Radiology, Tele Cardiology, Tele Condition Management, and Tele-ICU services among others.
+
+https://apollotelehealth.com/
+
+\Axana- More efficient cancer care with AI-enabled workflows and insights Data collection,MDT preparation & optimalisation, Tasks and worklists, Pathway management ,Online collaboration.
+
+https://axana.com/",,"WHO report on cancer: setting priorities, investing wisely and providing care for all",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"A change in the character of COPD, particularly if associated with other new symptoms, should always raise suspicion of lung cancer but is often ignored by the patient.","AI-driven smartphone screening for Acute COPD Exacerbations (AECOPD)-
+The patient simply: uses a smartphone.records deep breathing and cough sounds, AI analyzes the audio.
+The system determines whether the patient may be experiencing an exacerbation.
+
+https://www.nature.com/articles/s41746-025-02086-z",,"Respiratory wearable sensors: Wearable respiratory monitoring devices continuously track breathing patterns and respiratory rate using body-worn sensors. Combined with signal processing and machine learning, they can automatically identify abnormal breathing patterns, enabling early detection of respiratory disorders and timely clinical intervention.
+
+https://www.researchgate.net/publication/333694274_Breathing_Monitoring_and_Pattern_Recognition_with_Wearable_Sensors
+https://www.intechopen.com/chapters/66828",,,,"Lunit INSIGHT CXR is a clinically proven AI detects 11 major thoracic abnormalities, supports tuberculosis screening, flags normal cases, and surfaces critical results – reducing report times, easing workloads, and empowering faster, more accurate chest X-ray decisions.
+
+https://www.lunit.io/en/ai-radiology-software/insight-cxr/
+
+\Qure.ai- Identify more incidental nodules from CXRs taken from non-oncology departments and help early-stage lung cancer detection. 
+
+https://www.qure.ai/product/qxr",,Breathing Monitoring and Pattern Recognition with Wearable Sensors | IntechOpen,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Poor Recognition of Early Lung Cancer Symptoms
+Many patients with lung cancer suffer early on from breathlessness, potentially missing out on the implication these symptoms have.
+",,,,,,,"CentAI: Advanced MRI, CT Calcium Scoring, and cutting-edge biomarkers work together to uncover hidden tumors at their earliest, most treatable stages. In fact, our comprehensive fully body scan examines every major organ and system, detecting over 200 conditions before symptoms appear.
+
+https://www.cent.health/cancer
+
+\LungLife Screening Program by Apollo Cancer Centres: India's first dedicated lung cancer screening initiative for high-risk individuals. Using **low-dose CT (LDCT)**, AI-assisted imaging, and risk-based assessment, it enables early detection of lung cancer, supports timely follow-up, and improves the chances of diagnosis at a more treatable stage. 
+
+https://www.apollohospitals.com/cancer-treatment-centres/news/apollo-cancer-centre-leads-the-way-with-indias-first-lunglife-screening-program-to-combat-lung-cancer/
+",,Breathing Monitoring and Pattern Recognition with Wearable Sensors | IntechOpen,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Lung cancer and COVID-19 can share similar symptoms, potentially leading to patients incorrectly attributing their symptoms to the infectious disease instead of cancer. (can be removed)",,,,,"Patient education efforts: Efforts must be undertaken to educate patients on the similarities of lung cancer and COVID-19 symptoms: a new, continuous cough is a concerning symptom patients should tell their doctor about, especially if it is accompanied by loss of appetite, unplanned weight loss, or fatigue.18 
+
+https://www.medicinenet.com/covid_or_lung_cancer_shared_symptoms-news.htm",,,,https://www.medicinenet.com/covid_or_lung_cancer_shared_symptoms-news.htm,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Diagnosis,"
+
+Diagnosis involves comprehensive imaging, tissue sampling, and molecular profiling to confirm lung cancer type, stage, and actionable mutations guiding therapy selection.
+
+•Low-Dose CT / PET-CT (staging)
+• Bronchoscopy & CT-guided percutaneous biopsy
+• Liquid biopsy (ctDNA)
+• Digital pathology (AI-assisted)
+• Next-Generation Sequencing (NGS) for EGFR, ALK, ROS1, KRAS, HER2 mutations
+• Advanced dynamic whole-body PET/CT (Biograph Vision Quadra)
+• AI-Rad Companion for automated nodule detection and measurement","Patient - Undergoes several tests like imaging and blood work.
+
+Pulmonologist - Performs bronchoscopy and lung biopsy and refers the patient to an oncologist for further management.
+
+Radiologist - Evaluates medical images (CT, MRI, etc.) in order to diagnose the patient and plan treatment options. 
+
+Molecular Pathologist / Molecular Diagnostics Laboratory – Performs biomarker testing, genomic profiling, and molecular analysis to identify actionable mutations and guide precision treatment decisions.
+
+Medical Oncologist – Interprets molecular profiling, pathology, and imaging findings to determine personalized treatment strategies, including targeted therapy, immunotherapy, chemotherapy, and follow-up
+
+Interventional Radiologist - Performs CT-guided percutaneous biopsy.
+
+Pathologist - Evaluates tissue samples and characterizes the type of lung cancer.
+
+MedTech & Digital Health Companies- Create innovative tech solutions to help diagnose the patient quickly and successfully.
+
+","Small pulmonary nodules may remain undetected during imaging interpretation, delaying diagnosis due to scanning error, recognition error, decision-making error, satisfaction of search, short timeframes for a case and bad image quality can result in  missed lung cancer diagnosis.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5338577/","AI-powered Computer-Aided Detection (CAD) and AI-assisted diagnosis:Automatically detects and highlights suspicious pulmonary nodules, improves detection of small nodules, assists radiologists in reducing scanning and recognition errors, and provides malignancy risk prediction.
+
+https://link.springer.com/article/10.1007/s11604-025-01781-x
+
+\AI worklist prioritization: Flags high-risk CT scans so suspicious cases are reviewed first, helping mitigate delays caused by heavy workloads and short reporting times.
+
+https://ajronline.org/doi/10.2214/ajr.22.28949
+
+\Advanced image reconstruction and motion-correction algorithms: Advanced AI-based image reconstruction techniques improve CT image quality by reducing noise and preserving fine anatomical details, while respiratory motion management techniques help minimize motion artifacts that may obscure small pulmonary lesions, improving lung cancer detection.
+
+https://arxiv.org/pdf/2309.09333
+https://pubmed.ncbi.nlm.nih.gov/35040674/
+
+\AI-Enabled Lung Nodule Risk Stratification & Clinical Decision Support: Uses AI to automatically assess pulmonary nodule malignancy risk, prioritize high-risk patients, and provide guideline-based follow-up recommendations, enabling earlier lung cancer diagnosis and more consistent clinical decision-making.
+
+https://optellum.com/bms-real-world-impact/
+
+\AI as a Second Reader: Employs AI as an independent second reader during CT interpretation, helping radiologists identify overlooked pulmonary nodules and improving overall diagnostic performance. The review concludes that most studies show improved radiologist performance with AI assistance.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10219568","Automated nodule segmentation and volumetric analysis: Automatically measures nodule size, volume, and growth over time, reducing manual measurement variability and improving follow-up decisions.
+
+https://www.ejropen.com/article/S2352-0477%2822%2900042-9
+
+\Automated prior-image comparison: Compares current CT scans with previous examinations to detect subtle interval growth that may otherwise be overlooked.
+
+https://pubmed.ncbi.nlm.nih.gov/23864063/",,,"Personalized Biomarker-Guided Lung Cancer Screening:
+Integrates molecular biomarkers with clinical and imaging data to identify high-risk individuals, optimize screening strategies, and facilitate earlier diagnosis and precision treatment.
+
+https://www.mdpi.com/2077-0383/14/21/7812
+","NAEOTOM® Alpha class: NAEOTOM Alpha® is a radically new photon-counting detector. The QuantaMax detector directly converts X-rays into an electrical signal, which is then used to create an image. The energy of each X-ray is measured, so spectral information is available for every scan, and the images are contrast-rich with high spatial resolution at the same dose. Combining the high spatial resolution of the QuantaMax photon-counting detector with our Dual Source temporal resolution enables the visualization of fine details for increased diagnostic confidence.
+
+https://www.siemens-healthineers.com/computed-tomography
+
+\myExam Companion: Integrated into all NAEOTOM Alpha class scanners, myExam Companion can accelerate scanning workflows, providing time savings with simplified steps that reduce the burden on staff. It makes it easy to set up clinical workflows, can reduce inter-operator variability, and saves time. For example, streamlining oncology procedures with myExam Companion can result in 74%-time savings and 87% fewer clicks for abdomen acquisitions, and 82%- time savings and 91% fewer clicks for brain acquisitions.2
+
+https://www.siemens-healthineers.com/computed-tomography/naeotom
+
+\BIOGRAPH One (PET/MR):BIOGRAPH One supports one patient-centric pathway to personalized care. By seamlessly integrating PET and MR into one comprehensive exam, it supports clinicians from diagnosis and staging, through a personalized therapy decision to regular therapy assessments to excel precision and support one streamlined approach.
+
+https://www.siemens-healthineers.com/en-in/magnetic-resonance-imaging/pet-mr-scanner/biograph-one
+
+\Biograph Trinion platform (PET/CT): Biograph Trinion offers a suite of dedicated tools to simplify and streamline complex oncology workflows for consistent results, opens new possibilities for cardiology imaging with intelligent AI-based features like Cardio Direct and more, keeps patient well-being in focus with a faster, more personalized imaging experience.
+
+https://www.siemens-healthineers.com/en-in/molecular-imaging/pet-ct/biograph-trinion
+
+\AI-Rad Companion: AI-Rad Companion, our family of AI-powered, augmented workflow solutions, helps you to reduce the burden of basic repetitive tasks and may increase your diagnostic precision when interpreting medical images.E27 AI-Rad Companion can be fully integrated into the image interpretation workflow and helps you to handle your daily workload with greater ease – drive productivity with seamless integration in the reading and reporting workflow including automated measurements and DICOM structured reports while every workflow step remains under control to enable evidence based decisions. 
+
+https://www.siemens-healthineers.com/digital-health-solutions/ai-rad-companion
+
+\Oncology Assay for Lung cancer using Atellica IM Analyser like CYFRA 21-1, NSE, SCC:Seamlessly integrating immunoassay (IM) and clinical chemistry analysis—and infusing the process with industry-leading digitization, next-level sample-management automation, and AI-powered intelligence—Atellica® Solution is where simplicity and control merge so you can focus on driving better outcomes.
+
+https://www.siemens-healthineers.com/laboratory-diagnostics/clinical-chemistry-and-immunoassay-systems/atellica-solution-analyzers","qCT by Qure.ai: Helps in early detection and monitoring of lung nodules. Precise quantification, comprehensive characterization, and 3D visualization ensure no missed opportunities for early intervention.
+
+https://www.qure.ai/evidence/ai-mproves-lung-nodule-detection-in-multi-center-study
+https://www.qure.ai/product/lung-nodule-management
+
+\qTrack by Qure.ai:Comprehensive lung nodule management platform that enables care coordination through smart prompts, hardware-agnostic image viewing for AI-annotated Chest X-Rays and CTs, integrates with PACS/ EMR to automatically identify, track, prioritize, and manage pulmonary nodules across follow-up scans, preventing patients from being lost to follow-up.
+
+https://www.qure.ai/product/lung-nodule-management
+
+\aview LCS by Core:line: 1. Detecting and Analyzing Easy to miss Lung Nodules on Low-Dose Chest CT with Imaging Artificial Intelligence.
+2. Automated Matching of Follow-up with Pre+J4vious Lung CT Scans Instantly Assess Nodule Changes.
+3. CT Findings are visualized in 3D.
+4. Automatically Analyze Lung Cancer Screening Results and Generates Comprehensive Reports.
+
+https://www.corelinesoft.com/en/solutions/lcs
+
+\ClearReadCT chest by Riverain Technologies: Proven to reduce total reading time by 36%1, a series of advanced AI algorithms are deployed that target complex and time-consuming tasks like nodule segmentation, characterization, and Agatston scoring. The unique and patented vessel suppression solution provides an unimpaired view of the lung for improved visualization of nodules. Pulmonary nodule findings are segmented, quantified, and prior exams are used for comparison. An Agatston score is calculated for CAC on ungated, non-contrast CTs.
+
+https://www.riveraintech.com/clearread-ct-cardiothoracic-health-ai-suite/
+
+\contextflow ADVANCE Chest CT is an AI-driven clinical decision support platform that assists radiologists in detecting, characterizing, and longitudinally tracking pulmonary nodules on chest CT scans. It provides automated nodule detection and volumetric analysis, guideline-based recommendations (e.g., Lung-RADS and Fleischner), AI-assisted differential diagnosis, and comparison with prior scans to improve diagnostic accuracy, reduce interpretation time, and support standardized lung cancer screening workflows.
+
+https://contextflow.com/solution/advance-chest-ct-2/
+
+\FUJIFILM Deep Learning Lung Nodule CAD System: A deep learning-based Computer-Aided Detection (CAD) system that uses a 3D convolutional neural network (3D CNN) to automatically detect pulmonary nodules on chest CT scans. Designed as a second-reader tool, it assists radiologists in identifying small nodules that may otherwise be missed, improving detection performance while maintaining robustness across varying radiation dose levels. Reader studies demonstrated that the CAD system increased the detection of clinically significant nodules requiring follow-up, supporting more reliable and efficient lung cancer screening workflows.
+
+https://reili.fujifilm.com/en/research/id=research202402-01/index.html
+
+\SenseCare Lung CT – AI-Powered Pulmonary Nodule Detection and Follow-up:
+AI-powered clinical decision support solution that assists radiologists in detecting, classifying, and monitoring pulmonary nodules on chest CT scans. The software automatically identifies lung nodules, pneumonia lesions (including COVID-19), and rib fractures, provides quantitative measurements such as nodule size, density, and malignancy risk, and enables longitudinal follow-up by tracking changes in nodule volume, diameter, density, and doubling time across serial CT examinations. It also generates structured reports and integrates with PACS to improve diagnostic accuracy, standardize reporting, and enhance workflow efficiency.
+
+https://www.sensetime.com/en/product-business?categoryId=33108
+
+\Veolity – AI-Enabled Lung CT Reading Platform for Lung Cancer Screening: AI-powered lung CT reading platform developed by MeVis Medical Solutions to support high-throughput lung cancer screening and pulmonary nodule management. It combines AI-based computer-aided detection (CAD), automated nodule segmentation and volumetric measurements, longitudinal comparison with prior CT scans, malignancy risk assessment, and structured reporting within an optimized reading workflow. The platform integrates with PACS and is designed to improve nodule detection, standardize follow-up, reduce interpretation time, and enhance diagnostic quality in lung cancer screening and monitoring.
+
+https://www.veolity.com/
+
+\JLK JLD-01K – AI-Based Lung Nodule Detection Solution: AI-powered computer-aided detection (CAD) solution that analyzes chest CT scans to automatically detect and quantify pulmonary nodules. Using a 3D deep learning neural network, it identifies nodule location and provides quantitative measurements, including diameter and volume, to support early lung cancer diagnosis. The solution offers 2D/3D visualization, personalized follow-up analysis, PACS integration, and automated reporting, helping radiologists improve detection accuracy, standardize nodule assessment, and streamline CT interpretation workflows.
+
+https://jlkgroup.com/static/pdf/en/JLD-01K_eng.pdf
+
+\DeepHealth Chest Suite – AI-Powered Lung Cancer Screening and Pulmonary Nodule: AI-powered clinical decision support solution designed to support lung cancer screening and routine chest CT interpretation. It provides automated pulmonary nodule detection, segmentation, volumetric quantification, longitudinal comparison of prior and current CT scans, standardized reporting, and AI-assisted workflow optimization.
+
+https://deephealth.com/population-health/chest-suite/
+https://www.ncbi.nlm.nih.gov/books/NBK614745
+
+\Advanced intelligent Clear-IQ Engine (AiCE) by Canon Medical: AiCE is an innovative Deep Learning Reconstruction technology that’s been trained to reduce noise and boost signal to deliver sharp, clear and distinct images at speed. Harnessing the enormous computational power of a Deep Convolutional Neural Network (DCNN), Advanced intelligent Clear-IQ Engine (AiCE) is trained to differentiate signal from noise, so that the algorithm can suppress noise while enhancing signal. Because it is trained with advanced MBIR, it exhibits high spatial resolution. But unlike MBIR, AiCE deep learning reconstruction overcomes the challenges (image appearance and/or reconstruction speed) in clinical adoption.
+
+https://global.medical.canon/products/computed-tomography/aice/
+
+\Optellum Virtual Nodule Clinic – AI-Powered Lung Nodule Risk Assessment and Clinical Decision Support: AI-powered clinical decision support platform that helps clinicians identify, prioritize, and manage patients with pulmonary nodules detected on chest CT scans. Powered by its Lung Cancer Prediction (LCP) AI, the platform analyzes CT images to generate a personalized malignancy risk score, enabling more accurate risk stratification and evidence-based management decisions. It also supports automated patient discovery, longitudinal nodule tracking, workflow coordination, and seamless integration with PACS and EHR systems to accelerate early lung cancer diagnosis and improve clinical efficiency.
+
+https://optellum.com/press-release-researchers-use-ai-to-predict-cancer-risk-of-lung-nodules
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"For a definitive diagnosis, a biopsy is obligatory. 
+Biopsies require multiple tissue samples which is a complex process and there is a risk of complications.","AI-Assisted Rapid On-Site Evaluation (ROSE): Uses deep learning to automatically analyze bronchoscopic cytology images during Rapid On-Site Evaluation (ROSE), enabling real-time assessment of specimen adequacy and malignant cells, improving diagnostic accuracy while reducing dependence on on-site cytopathologists.
+
+https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2024.1360831
+
+\AI-Guided Segmentation & Biopsy Path Planning:
+Uses artificial intelligence to automatically segment thoracic anatomy, detect pulmonary lesions, and recommend optimal CT-guided biopsy trajectories, improving procedural planning, standardization, and biopsy safety while supporting clinical decision-making
+
+https://visualize.jove.com/38355040-artificial-intelligence-guided-segmentation-and-path-planning-software-for-transthoracic-lung-biopsy",,"Shape-Sensing Bronchoscopy: Uses fiber-optic shape-sensing technology to provide real-time tracking of the bronchoscope during navigation, enabling precise access to peripheral pulmonary nodules and improving biopsy accuracy for early lung cancer diagnosis.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12000946
+
+\Electronic Nose (E-Nose) Breath Analysis:
+Uses gas sensor arrays to detect volatile organic compounds (VOCs) in exhaled breath, combined with AI-based pattern recognition to enable rapid, non-invasive, and point-of-care lung cancer screening with high diagnostic potential.
+
+https://link.springer.com/article/10.1007/s00408-025-00828-0","Robotic-Assisted Bronchoscopy for Precision Lung Nodule Biopsy: Combines robotic navigation with advanced imaging technologies such as cone-beam CT, radial EBUS, and navigation systems to improve the accuracy and safety of peripheral pulmonary nodule biopsy, enabling earlier and more precise lung cancer diagnosis.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12874743/
+
+\Robotic Bronchoscopic Cryobiopsy for High-Yield Lung Nodule Diagnosis:
+Combines robotic bronchoscopy with cryobiopsy to obtain larger, better-preserved tissue samples from peripheral pulmonary nodules, improving diagnostic yield (up to 90–95%) while maintaining a favorable safety profile and supporting precision oncology
+
+https://reports.mountsinai.org/article/pulm2026-cryobiopsy
+
+\Needle-Based Confocal Laser Endomicroscopy (nCLE): Provides real-time microscopic imaging of peripheral pulmonary nodules during bronchoscopy, enabling an optical biopsy that improves lesion characterization and supports earlier, more accurate lung cancer diagnosis before conventional pathology results are available.
+
+https://thorax.bmj.com/content/77/4/370","Risk-based management instead of treating every nodule the same: The 2017 Fleischner Society Guidelines recommend a risk-based management approach for incidentally detected pulmonary nodules, where follow-up and diagnostic decisions are tailored according to both patient-specific risk factors (e.g., smoking history, age, family history) and nodule characteristics (size, morphology, type, and location), rather than applying uniform surveillance protocols.
+
+https://pubs.rsna.org/doi/10.1148/radiol.2017161659","myNeedle companion - myNeedle Companion is a package consisting of myNeedle Guide (planning and guidance software), myNeedle Laser* (laser guidance system), and dedicated scan protocols. The solution harmonizes both workflow and user interface across selected angiography and CT systems, with the aim of enabling consistent results.
+myNeedle Companion offers powerful tools – such as laser guidance, image fusion, and multiple needle path planning – to enable targeted needle placement in standard and complex cases.
+
+https://www.siemens-healthineers.com/angio/options-and-upgrades/clinical-software-applications/myneedle-companion","Ion Robotic Bronchoscopy – Robotic-Assisted Minimally Invasive Lung Biopsy:
+Robotic-assisted platform that enables physicians to perform minimally invasive biopsies of small, hard-to-reach lung nodules. Using shape-sensing technology, an ultrathin robotic catheter, and 3D CT-based navigation, it provides precise and stable access to peripheral lung lesions, allowing accurate tissue sampling while reducing the need for multiple biopsies and supporting earlier diagnosis and treatment of lung cancer.
+
+https://www.intuitive.com/en-us/products-and-services/ion
+
+\MONARCH™ Platform – Robotic-Assisted Bronchoscopy for Precise Lung Biopsy:
+robotic-assisted bronchoscopy system that enables physicians to accurately navigate to small, peripheral, and hard-to-reach lung nodules for minimally invasive biopsy. Using AI-powered navigation, real-time visualization, and robotic precision, it improves access to suspicious lesions, enhances tissue sampling accuracy, and supports earlier and more definitive lung cancer diagnosis while reducing the need for more invasive biopsy procedures
+
+https://www.jnjmedtech.com/en-US/products/robotics/monarch-platform/bronchoscopy/
+
+\Biodesix Nodify Lung® – Blood-Based AI-Enabled Risk Assessment for Pulmonary Nodules: Blood-based biomarker test that helps clinicians assess the likelihood that an indeterminate pulmonary nodule is malignant. By combining blood biomarkers with clinical risk factors, it stratifies patients into higher- or lower-risk categories, helping determine whether a patient should undergo an immediate biopsy or continue with CT surveillance. This reduces unnecessary invasive biopsies for benign nodules while prioritizing high-risk patients for earlier diagnostic intervention and lung cancer diagnosis.
+
+https://www.biodesix.com/patient/lung-nodule
+
+",,"(https://www.uscjournal.com/articles/intravascular-ultrasound-guided-versus-angiography-guided-percutaneous-coronary-0)
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Tissue biopsy, the gold standard for lung cancer diagnosis and molecular profiling, is invasive, often unsuitable for early detection, and samples only a limited portion of the tumor. Small or poor-quality biopsy specimens, tumor heterogeneity, and subjective interpretation by pathologists can lead to diagnostic variability, incomplete molecular characterization, and inconsistent treatment decisions.","AI-Enabled Digital Pathology:
+Combines Whole Slide Imaging (WSI) with artificial intelligence to digitize pathology workflows, automate histopathological image analysis, improve tumor detection and biomarker assessment, and support precision oncology through faster and more accurate diagnoses.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7653145
+
+\AI-Assisted Computational Pathology:
+Applies deep learning to digital histology and cytology images to automate lung cancer detection, subtype classification, prognostic assessment, and biomarker prediction, improving diagnostic accuracy and supporting pathologists in clinical decision-making.
+
+https://www.mdpi.com/2072-6694/15/15/3981
+
+\AI-Based Gene Mutation Prediction (DeepGEM): Uses deep learning to predict clinically actionable gene mutations directly from routine H&E pathology slides, enabling molecular profiling from limited biopsy tissue and supporting faster, more personalized treatment decisions.
+
+https://www.nature.com/articles/s41419-026-08769-z
+
+\AI-Driven Multimodal Pathology Integration: Integrates digital pathology with transcriptomic data using AI to correlate tissue morphology with molecular characteristics, improving tumor characterization, addressing intratumoral heterogeneity, and supporting more accurate prognostic assessment and personalized treatment decisions.
+
+https://www.nature.com/articles/s41419-026-08769-z
+
+\Medical Digital Twin for Personalized Lung Cancer Care:
+Creates a real-time virtual representation of a patient by continuously integrating imaging, pathology, molecular, clinical, and sensor data to support personalized clinical decision-making, treatment planning, and longitudinal patient monitoring.
+
+https://www.nature.com/articles/s41598-026-41205-y","Automated Tissue Slide Staining Systems:
+Automates immunohistochemistry (IHC), H&E, and special staining workflows to deliver standardized, high-quality tissue staining, reducing laboratory variability, improving reproducibility, and supporting more consistent pathological evaluation.
+
+https://diagnostics.roche.com/global/en/products/product-category/lab-type/pathology-lab/automated-slide-staining-systems.html
+
+\Automated High-Capacity Tissue Processing: Automates tissue processing using rapid, standardized protocols with dual-retort technology and integrated sample traceability, reducing turnaround time while ensuring consistent, high-quality tissue preparation for downstream histopathological analysis.
+
+https://www.leicabiosystems.com/histology-equipment/tissue-processors/histocore-peloris-3","Hyperspectral Microscopic Imaging (HMI): Captures rich spectral information beyond conventional RGB pathology images, enabling detection of subtle biochemical and pathological differences that improve lung cancer tissue characterization.
+
+https://www.nature.com/articles/s41598-025-85678-9
+
+\Spatial Transcriptomics: Maps gene expression within intact tissue while preserving spatial architecture, enabling identification of tumor heterogeneity, immune cell localization, and molecular signatures that support precision lung cancer diagnosis and treatment.
+
+https://link.springer.com/article/10.1007/s10555-025-10304-z
+
+\Spatial Proteomics: Visualizes protein expression within the native tumor microenvironment, enabling high-resolution characterization of immune infiltration, tumor heterogeneity, prognostic biomarkers, and therapeutic targets.
+
+https://link.springer.com/article/10.1007/s10555-025-10304-z
+
+\Single-cell RNA Sequencing (scRNA-seq): Profiles gene expression at the individual cell level, enabling high-resolution characterization of tumor heterogeneity, rare cell populations, immune microenvironment, and molecular biomarkers to support precision diagnosis and personalized treatment in lung cancer.
+
+https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1693784/full",.,,,"Guardant360® Liquid CDx – Blood-Based Liquid Biopsy for Precision Lung Cancer Diagnosis: FDA-approved liquid biopsy test that analyzes circulating tumor DNA (ctDNA) from a simple blood sample to identify clinically actionable genomic alterations in patients with advanced solid tumors, including non-small cell lung cancer (NSCLC). It provides comprehensive genomic profiling when tissue biopsy is insufficient or not feasible, helping clinicians guide targeted therapy selection, reduce the need for repeat invasive biopsies, and accelerate personalized treatment decisions.
+
+https://www.guardantcomplete.com/hcp/solutions/guardant360-liquid-cdx
+
+\FoundationOne® CDx – Comprehensive Genomic Profiling for Precision Lung Cancer Care: FDA-approved tissue-based comprehensive genomic profiling (CGP) test that uses next-generation sequencing (NGS) to analyze 324 cancer-related genes and key biomarkers from a tumor biopsy. For patients with non-small cell lung cancer (NSCLC), it identifies actionable genomic alterations that help match patients to targeted therapies and immunotherapies, enabling personalized treatment decisions while reducing the need for multiple sequential biomarker tests.
+
+https://www.foundationmedicine.com/test/foundationone-cdx
+
+\Roche AVENIO® ctDNA Expanded Kit V2 – NGS Liquid Biopsy for Comprehensive Tumor Profiling: next-generation sequencing (NGS) liquid biopsy assay that analyzes circulating tumor DNA (ctDNA) from a blood sample using a 77-gene panel. Optimized for lung cancer and other solid tumors, it detects multiple classes of genomic alterations—including single nucleotide variants (SNVs), insertions/deletions (indels), fusions, and copy number variants (CNVs)—to support comprehensive molecular profiling when tissue is limited or difficult to obtain. This enables non-invasive genomic testing, facilitates precision treatment selection, and may reduce the need for repeat tissue biopsies.
+
+https://rochesequencingstore.com/catalog/avenio-ctdna-expanded-kit-v2/
+
+\Paige Diagnostic AI – AI-Assisted Digital Pathology for Cancer Diagnosis: AI-powered digital pathology platform that assists pathologists in detecting, grading, and classifying cancer from digitized biopsy slides. Using deep learning and whole-slide image analysis, it highlights suspicious regions, automates measurements and quantification, prioritizes cases, and supports diagnostic decision-making across multiple cancers, including lung cancer. By serving as a second-reader tool, Paige improves diagnostic confidence, reduces turnaround time, enhances workflow efficiency, and helps identify subtle cancerous lesions that might otherwise be missed.
+
+https://www.paige.ai/diagnostic-ai
+
+\Illumina TruSight™ Oncology 500 – Comprehensive Genomic Profiling: TruSight™ Oncology 500 (TSO 500) is an NGS-based assay that analyzes 523 cancer-related genes to detect actionable genomic alterations and biomarkers such as TMB and MSI. It supports precision treatment selection for cancers, including NSCLC, by enabling comprehensive molecular profiling from a single test.
+
+https://www.illumina.com/products/by-type/clinical-research-products/trusight-oncology-500.html",,"Market solution - Götberg, M., Christiansen, E. H., Gudmundsdottir, I. J., Sandhall, L., Danielewicz, M., Jakobsen, L., Olsson, S.-E., ... (2017). Instantaneous Wave-free Ratio versus Fractional Flow Reserve to Guide PCI. New England Journal of Medicine, 376(19), 1813–1823. https://doi.org/10.1056/NEJMoa1616540",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Inadequate tissue sample for diagnosis and molecular testing: Small or poor-quality biopsy samples may not contain enough viable tumor cells for histopathological diagnosis or biomarker testing, often necessitating repeat biopsies.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8375502/","AI-Guided Segmentation & Biopsy Path Planning:
+Uses artificial intelligence to automatically segment thoracic anatomy, detect pulmonary lesions, and recommend optimal CT-guided biopsy trajectories, improving procedural planning, standardization, and biopsy safety while supporting clinical decision-making
+
+https://visualize.jove.com/38355040-artificial-intelligence-guided-segmentation-and-path-planning-software-for-transthoracic-lung-biopsy","Automated High-Capacity Tissue Processing: Automates tissue processing using rapid, standardized protocols with dual-retort technology and integrated sample traceability, reducing turnaround time while ensuring consistent, high-quality tissue preparation for downstream histopathological analysis.
+
+https://www.leicabiosystems.com/histology-equipment/tissue-processors/histocore-peloris-3","Shape-Sensing Bronchoscopy: Uses fiber-optic shape-sensing technology to provide real-time tracking of the bronchoscope during navigation, enabling precise access to peripheral pulmonary nodules and improving biopsy accuracy for early lung cancer diagnosis.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12000946
+
+\Needle-based Confocal Laser Endomicroscopy (nCLE):Provides real-time microscopic visualization of tissue at the needle tip, helping target viable tumor tissue and reduce non-diagnostic samples.
+
+https://thorax.bmj.com/content/77/4/370","Robotic-Assisted Bronchoscopy for Precision Lung Nodule Biopsy: Combines robotic navigation with advanced imaging technologies such as cone-beam CT, radial EBUS, and navigation systems to improve the accuracy and safety of peripheral pulmonary nodule biopsy, enabling earlier and more precise lung cancer diagnosis.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12874743/
+
+\Robotic Bronchoscopic Cryobiopsy for High-Yield Lung Nodule Diagnosis:
+Combines robotic bronchoscopy with cryobiopsy to obtain larger, better-preserved tissue samples from peripheral pulmonary nodules, improving diagnostic yield (up to 90–95%) while maintaining a favorable safety profile and supporting precision oncology
+
+https://reports.mountsinai.org/article/pulm2026-cryobiopsy
+
+\Needle-Based Confocal Laser Endomicroscopy (nCLE):Provides real-time microscopic imaging of peripheral pulmonary nodules during bronchoscopy, enabling an optical biopsy that improves lesion characterization and supports earlier, more accurate lung cancer diagnosis before conventional pathology results are available.
+
+https://thorax.bmj.com/content/77/4/370
+
+\Targeted Next-Generation Sequencing (NGS) Multi-Gene Panel: Uses a targeted multi-gene sequencing panel to simultaneously detect clinically actionable mutations from a single biopsy specimen, reducing tissue consumption, shortening turnaround time from approximately 3 weeks to 4 days, and enabling faster precision treatment selection.
+
+https://www.nature.com/articles/s41598-025-08039-6
+",,,"Guardant360® Liquid CDx – Blood-Based Liquid Biopsy for Precision Lung Cancer Diagnosis: FDA-approved liquid biopsy test that analyzes circulating tumor DNA (ctDNA) from a simple blood sample to identify clinically actionable genomic alterations in patients with advanced solid tumors, including non-small cell lung cancer (NSCLC). It provides comprehensive genomic profiling when tissue biopsy is insufficient or not feasible, helping clinicians guide targeted therapy selection, reduce the need for repeat invasive biopsies, and accelerate personalized treatment decisions.
+
+https://www.guardantcomplete.com/hcp/solutions/guardant360-liquid-cdx
+
+\FoundationOne® CDx – Comprehensive Genomic Profiling for Precision Lung Cancer Care: FDA-approved tissue-based comprehensive genomic profiling (CGP) test that uses next-generation sequencing (NGS) to analyze 324 cancer-related genes and key biomarkers from a tumor biopsy. For patients with non-small cell lung cancer (NSCLC), it identifies actionable genomic alterations that help match patients to targeted therapies and immunotherapies, enabling personalized treatment decisions while reducing the need for multiple sequential biomarker tests.
+
+https://www.foundationmedicine.com/test/foundationone-cdx
+
+\Illumina TruSight™ Oncology 500 – Comprehensive Genomic Profiling: TruSight™ Oncology 500 (TSO 500) is an NGS-based assay that analyzes 523 cancer-related genes to detect actionable genomic alterations and biomarkers such as TMB and MSI. It supports precision treatment selection for cancers, including NSCLC, by enabling comprehensive molecular profiling from a single test.
+
+https://www.illumina.com/products/by-type/clinical-research-products/trusight-oncology-500.html
+
+\Roche AVENIO® ctDNA Expanded Kit V2 – NGS Liquid Biopsy for Comprehensive Tumor Profiling: next-generation sequencing (NGS) liquid biopsy assay that analyzes circulating tumor DNA (ctDNA) from a blood sample using a 77-gene panel. Optimized for lung cancer and other solid tumors, it detects multiple classes of genomic alterations—including single nucleotide variants (SNVs), insertions/deletions (indels), fusions, and copy number variants (CNVs)—to support comprehensive molecular profiling when tissue is limited or difficult to obtain. This enables non-invasive genomic testing, facilitates precision treatment selection, and may reduce the need for repeat tissue biopsies.
+
+https://rochesequencingstore.com/catalog/avenio-ctdna-expanded-kit-v2/
+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"If CT findings are inconclusive or if metastatic disease is suspected, a PET/CT scan may be required. 
+However, PET/CT imaging performed with a limited field of view for dynamic assessment restricts the ability of clinicians to continuously track tracer kinetics throughout the entire body.","Risk-Stratified Early Lung Cancer Treatment Board: Standardizes treatment selection using operability assessment, pulmonary reserve, frailty, Charlson Comorbidity Index, and patient preference to assign patients to surgery, segmentectomy, SBRT, or ablation
+
+https://pubmed.ncbi.nlm.nih.gov/38133722/",,"Total-Body PET/CT with Dynamic Whole-Body Kinetic Imaging: Uses a long axial field-of-view (LAFOV) PET/CT scanner to capture dynamic tracer distribution across the entire body simultaneously, enabling continuous whole-body tracer kinetic analysis, quantitative parametric imaging, and improved lesion characterization compared with conventional limited-field dynamic PET.
+
+https://pubmed.ncbi.nlm.nih.gov/37079129/
+
+\Digital Silicon Photomultiplier (SiPM) PET/CT: Uses silicon photomultiplier (SiPM) detector technology to improve PET sensitivity, spatial resolution, and signal-to-noise ratio while reducing scan time and radiation dose, enabling more accurate detection of small lesions.
+
+https://www.sciencedirect.com/science/article/abs/pii/S1078817423001864",,,"Biograph Vision Quadra™: Bringing X-Class performance to Biograph Vision Quadra PET/CT with industry-leading 183-ps ultra-fast time of flight (TOF)7. Faster time of flight (TOF) reduces noise, increasing detectability of small lesions and amplifies scanner sensitivity. 
+
+https://www.siemens-healthineers.com/en-in/molecular-imaging/pet-ct/biograph-vision-quadra
+
+\Biograph Vision.X PET/CT Scanner: Utilizes 178 ps ultra-high Time-of-Flight (TOF) performance, silicon photomultiplier (SiPM) detectors, and high-resolution LSO crystals to improve PET sensitivity, lesion contrast, and spatial resolution, enabling better detection of small pulmonary lesions while reducing scan time and radiation dose.
+
+https://www.siemens-healthineers.com/en-us/press-room/press-releases/biograph-vison-x-pet-ct-scanner-debut
+
+\FlowMotion™ Multiparametric PET Suite :Uses AI-powered, fully automated Patlak kinetic modelling to generate quantitative parametric PET images (e.g., metabolic rate of FDG uptake and distribution volume), enabling routine dynamic PET analysis with automated input function extraction and absolute tracer quantification beyond conventional SUV measurements.
+
+https://www.siemens-healthineers.com/en-in/molecular-imaging/options-and-upgrades/software-applications/flowmotion-multiparametricpet-suite
+
+\syngo.via Molecular Imaging Platform: An AI-enabled multimodality imaging platform that integrates PET/CT visualization, image fusion, quantitative analysis, automated case preparation, and structured reporting to improve diagnostic efficiency, reproducibility, and oncology decision-making.
+
+https://www.siemens-healthineers.com/en-us/molecular-imaging/pet-ct/syngo-via","uEXPLORER® by United Imaging – Total-Body PET/CT: total-body PET/CT system that captures the entire body in a single scan, enabling faster, high-sensitivity imaging for cancer detection, staging, and treatment monitoring. Its extended field of view improves detection of small metastatic lesions while supporting lower radiation doses and more accurate assessment of disease spread.
+
+https://global.united-imaging.com/en/product-service/products/mi/uexplorer
+
+\Omni Legend™ by GE HealthCare – AI-Enhanced Digital PET/CT: Omni Legend™ by GE HealthCare is an AI-enhanced digital PET/CT system that delivers high-sensitivity, high-resolution imaging for cancer detection, staging, and treatment monitoring. Powered by Precision DL deep learning technology, it improves small lesion detectability, enables faster scans with lower radiation doses, and enhances workflow efficiency for more accurate lung cancer assessment.
+
+https://www.gehealthcare.com/en-in/products/molecular-imaging/pet-ct/omni-legend
+
+\Cartesion Prime SP by Canon Medical – AI-Assisted Digital PET/CT: AI-assisted digital PET/CT system that uses AiCE (Advanced Intelligent Clear-IQ Engine) deep learning reconstruction to deliver high-quality PET images with faster scan times and lower radiation doses. Its high-sensitivity digital detector and Time-of-Flight (TOF) technology improve detection of small lesions, supporting more accurate cancer staging and treatment monitoring.
+
+https://us.medical.canon/products/molecular-imaging/cartesion-prime-sp/
+
+\Vereos Digital PET/CT by Philips – Fully Digital PET/CT Imaging: fully digital PET/CT system that uses Digital Photon Counting (DPC) technology to deliver high-resolution, high-sensitivity imaging. It improves detection of small lesions, enables faster scans with lower radiation doses, and supports more accurate cancer staging, treatment planning, and therapy monitoring.
+
+https://www.philips.co.uk/c-dam/b2bhc/gb/resource-catalog/landing/brightontender/vereos-petct-product-specification-lr.pdf",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Treatment,"Treatment is highly individualized by histology (NSCLC/SCLC), clinical stage (I–IV), and molecular profile. 
+
+1) Surgery: Video-assisted thoracoscopic surgery (VATS )/ robotic-assisted lobectomy, sublobar resection
+2) Radiation: SBRT (Stereotactic Body Radiotherapy)  SABR (Stereotactic Ablative Radiotherapy), Intensity-Modulated Radiation Therapy (IMRT), adaptive 4D-CT RT, FLASH RT (investigational)
+3) Pharmacological:
+   • Platinum-based chemo
+   • Targeted: Osimertinib (EGFR), Alectinib (ALK), Sotorasib (KRAS G12C)
+   • Immunotherapy: Pembrolizumab, Atezolizumab (PD-1/PD-L1)
+   • ADC: Telisotuzumab vedotin (MET, FDA May 2025)
+4) Ablation: Image-guided RFA/microwave ± immunotherapy","Patient - Begins a multimodal treatment depending on the cancer stage. 
+
+Radiation Oncologist - Plans radiation therapy and monitors the treatment progress.
+
+Thoracic Surgeon - Performs surgery to remove cancerous tissue in the lung
+
+Interventional Radiologist - Performs interventional procedures like ablation.
+
+Pathologist - Prescribes chemotherapy, targeted therapy, immunotherapy or other supportive care and monitors the treatment progress.
+
+MedTech, Digital Health & Diagnostics Companies - Create innovative tech solutions to help treat thepatient effectively.
+
+Molecular Pathologist / Molecular Diagnostics Laboratory: Performs genomic profiling and biomarker testing to identify actionable mutations and guide precision medicine.
+
+
+
+Medical Oncologist: Determines personalized systemic treatment, including chemotherapy, immunotherapy, targeted therapy, and treatment sequencing based on imaging, pathology, and molecular profiling.
+
+Thoracic Surgeon: Performs surgical resection of lung tumors and utilizes advanced navigation, imaging, and minimally invasive technologies to improve surgical precision and patient outcomes.
+
+Radiation Oncologist: Plans and delivers radiotherapy, defines target volumes, selects treatment techniques, and adapts treatment plans based on imaging and patient-specific anatomical changes.","Delay between lung cancer diagnosis and treatment initiation can allow tumor progression and upstaging, reducing curative treatment opportunities and lowering survival chances.
+","AI-Driven Digital Treatment Pathway Dashboard:
+An AI-enabled digital pathway dashboard can integrate clinical decision support with hospital workflow tracking to monitor each treatment milestone, including MDT approval, patient consent, insurance clearance, planning CT, simulation, chemotherapy scheduling, and treatment readiness. Automated alerts can notify staff when approvals or pathway steps are delayed, helping improve coordination, reduce treatment-start delays, and support timely oncology care delivery.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11087160/
+
+
+
+
+","
+
+
+
+
+",,,"Same-Day or Rapid-Start Oncology Clinics ; In these clinics, patients are seen by multiple specialists on the same day and multiple investigations are organized, enabling rapid diagnosis and multi-disciplinary treatment decisions. 
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7528692/
+
+\FAst track AI / Digital scheduling : automates appointment scheduling, and minimizes delays caused by administrative and with cases based  priority, Early review from Multi speciality team within 24hrs  rather waiting for weeks (real time dashboard)
+
+https://journals.sagepub.com/doi/10.1016/j.carj.2018.02.001","teamplay Digital Health Platform: teamplay digital health platform is the platform that enables digital transformation with the goal to turn data into cost savings and better care. It provides easy access to solutions for operational, clinical and shared decision support – combining flexibility and scalability with future readiness.
+
+https://www.siemens-healthineers.com/digital-health-solutions/teamplay-digital-health-platform
+
+\Syngo Carbon Syngo Carbon is Siemens Healthineers' enterprise imaging and reporting solution that manages data around the patient rather than individual departments. Syngo Carbon opens a new level of possibilities in image interpretation, reporting, Artificial Intelligence (AI), and data management. It provides an improved patient-centric workflow where clinicians get easy access to appropriate and relevant patient data across the enterprise leads to improved outcomes.
+
+https://www.siemens-healthineers.com/digital-health-solutions/syngo-carbon
+
+\syngo.via: Discover the 360° view for treatment decisions in oncology. By providing a comprehensive and integrated imaging platform, advanced visualization tools, and efficient data sharing capabilities designed for oncology reading, the syngo.via supports important milestones of the cancer path: from screening over diagnosis to follow-up.
+
+https://www.siemens-healthineers.com/digital-health-solutions/syngovia
+","Viz Oncology Suite : AI-powered care coordination and clinical decision support platform that streamlines oncology workflows by integrating imaging, electronic health records (EHRs), clinical guidelines, and multidisciplinary communication. It identifies eligible patients, aggregates key clinical information, and provides real-time, guideline-based recommendations to accelerate diagnosis, treatment planning, and referrals. By reducing fragmented workflows and treatment delays, it supports timely, personalized cancer care.
+
+https://www.viz.ai/oncology
+
+\Elekta ONE Medical Oncology is a cloud-enabled oncology information and care management platform that unifies patient records, treatment planning, care coordination, and multidisciplinary workflows across the cancer care continuum. It provides clinicians with a comprehensive view of patient data, supports standardized treatment pathways, and streamlines collaboration to enable personalized, efficient oncology care
+
+https://www.elekta.com/products/oncology-informatics/elekta-one/oncology-care/medical-oncology/",,Low and Middle Income Countries’ Urban Air Pollution Solutions,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Personalizing the optimal treatment mix and sequencing for lung cancer patients is challenging due to variations in tumor stage, histology, molecular profile, age, comorbidities, performance status, patient preferences, and financial considerations.
+
+","Based on registries and outcome focused treatment databases, artificial intelligence algorithms can suggest an optimal treatment combination and sequence by an assessment of the treatment methods and outcomes of similar patients. These optimal therapy combinations can help to maximize survival e.g., ablation plus immunotherapy.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9459232/
+
+\AI driven multimodal integrated with clincal pathway - precision therapy: Assesing the best treatment planning based on molecular varition to imaging phenotypic varition assesing drug sensitivity ,genomics,prognostic risk assesment,and guided with personalised treatment plan
+
+https://www.nature.com/articles/s41419-026-08769-z#Sec3
+
+
+
+","Oncology HMIS : Complete Oncology module capturing capturing complete patient data (lab reports,radiology investing and medical history )assisting streamline workflows, automate treatment planning, track patient progress, and improve patient outcomes.
+
+https://blog.deepaarogya.com/top-oncology-hmis-for-treatment-planning-and-tracking/",,"AI assisted  Biomarker-guided sequential targeted therapy : Comprehensive molecular profiling (EGFR, ALK, ROS1, BRAF V600E, MET exon 14 skipping, RET, NTRK, KRAS G12C, HER2, etc.) enables clinicians to select the most effective targeted therapy and determine the optimal treatment sequence based on the tumor's genomic profile, disease stage, resistance mechanisms, performance status, comorbidities, age, and patient preferences.
+
+https://www.nature.com/articles/s41392-025-02243-6",,"ARIA CORE is an oncology management system that combines crucial patient information for radiation therapy, systemic therapy, and beyond, enabling active management of the complete patient treatment pathway. 
+
+https://www.siemens-healthineers.com/press/releases/aipathwaylung
+https://www.siemens-healthineers.com/en-in/clinical-specialities/oncology
+https://events.siemens-healthineers.com/lung-cancer-pathway","RayIntelligence: cloud-based oncology analytics platform that integrates data from treatment planning systems, oncology information systems, and other clinical sources to provide actionable insights across the cancer care pathway. It consolidates fragmented oncology data into interactive dashboards that support clinical decision-making, workflow optimization, quality improvement, and personalized treatment strategies. By leveraging real-world data analytics, it helps cancer centers continuously improve patient outcomes and operational efficiency.
+
+https://www.raysearchlabs.com/rayintelligence/
+
+Flatiron OncoEMR : cloud-based oncology-specific electronic health record (EHR) designed to streamline clinical workflows, support precision medicine, and enable evidence-based cancer care. It integrates clinical decision support, molecular profiling, guideline-based treatment pathways, and patient management into a single platform. By providing comprehensive patient information at the point of care, it helps clinicians make faster, personalized treatment decisions while improving coordination across the oncology care team
+
+https://www.oncokb.org/oncology-therapies",,Frontiers | Application of Circulating Tumor DNA as a Biomarker for Non-Small Cell Lung https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2021.725938/full,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Inadequate real-time imaging during minimally invasive lung cancer surgery can compromise tumor localization, surgical accuracy, and preservation of healthy lung tissue
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9622445/","Augmented Reality (AR) Surgical Navigation :
+Superimposes patient-specific 3D CT reconstructions onto the surgical field, helping surgeons identify deep or small nodules and achieve accurate resection margins, visualize anatomical structures, preserve healthy lung tissue, and achieve adequate resection margins during minimally invasive thoracic surgery.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12175789/","An imaging device with procedural intelligence can aid the physician to standardize and speed up the process while enhancing precision and patient safety throughout the workflow steps such as image acquisition, planning, localization and resection for optimal patient outcomes.
+
+ https://www.siemens-healthineers.com/clinical-specialities/surgery/surgical-disciplines/thoracic-surgery-equipment/ivats-in-the-hybrid-or ",,"VATS / robotic-assisted thoracic surgery with enhanced imaging:
+VATS and robotic-assisted thoracic surgery are minimally invasive approaches used in lung cancer surgery. Robotic-assisted systems provide magnified 3D high-definition visualization and improved instrument maneuverability, helping surgeons perform precise dissection through small incisions and supporting safer, more accurate minimally invasive lung resection.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5638256/
+
+\Hybrid operating room with cone-beam CT
+Provides real-time intraoperative imaging y for lung nodule localization during VATS(cieling mounted display system), reducing reliance on preoperative marking and improving accuracy during surgery.
+
+https://link.springer.com/article/10.1186/s13019-024-02564-7
+
+\Near-Infrared (NIR) Fluorescence Imaging with Indocyanine Green (ICG):
+intravenous indocyanine green and near-infrared imaging to provide real-time visualization of pulmonary nodules, intersegmental planes, tissue perfusion, and vascular anatomy during minimally invasive lung cancer surgery. This improves tumor localization, enables precise anatomical segmentectomy, preserves healthy lung tissue
+
+https://academic.oup.com/ejcts/article/58/Supplement_1/i77/5811097","Image-Guided Navigation Workflow for Tumor Ablation and Minimally Invasive Lung Procedures
+Integrates preoperative CT planning, trajectory planning, real-time image-guided navigation, and treatment execution into a standardized workflow. This improves localization of small or deep lung lesions, enables accurate percutaneous  probe placement for tumor ablation or biopsy, minimizes damage to healthy lung tissue, and reduces procedure time and repeat interventions.
+
+https://www.sciencedirect.com/science/article/pii/S2211568425000051
+","Hybrid Operating Room Consulting and planning: hybrid operating room equipment and additional services that help from ideation, implementation, to routine operations. Some of the requirements tahta are addressed are:-
+Fixed C-arms and combined multi-modality imaging equipment 
+Consulting and planning for Hybrid OR layout and design 
+
+https://www.siemens-healthineers.com/en-in/clinical-specialities/surgery/surgery-product-portfolio/hybrid-or
+
+ARTIS icono ceiling: ARTIS icono ceiling was built to expand procedure mix in a single interventional suite. Unique C-arm design delivers greater patient coverage, faster and more precise 3D imaging from all sides.
+
+https://www.siemens-healthineers.com/en-us/angio/artis-interventional-angiography-systems/artis-icono-ceiling","Medivis SurgicalAR :Converts CT scans into patient-specific 3D holograms for surgical planning and intraoperative visualization.
+
+https://www.medivis.com/surgical-ar
+
+\The Philips Interventional Oncology Suite: hybrid image-guided treatment environment built on the Azurion platform, combining advanced imaging, treatment planning, live navigation, and minimally invasive procedures in a single suite. It supports precise biopsy, tumor ablation, and embolization using high-resolution 2D/3D imaging and real-time guidance, enabling clinicians to perform complex oncologic interventions with greater accuracy and efficiency. The integrated workflow reduces patient transfers, improves multidisciplinary collaboration, and enhances procedural outcomes.
+
+https://www.usa.philips.com/healthcare/image-guided-therapy/interventional-oncology-suite
+
+
+
+",,"Biograph Vision Quadra PET/CT Scanner - Siemens Healthineers
+ https://www.siemens-healthineers.com/clinical-specialities/oncology/cancer-types/lung-cancer",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Radiotherapy planning workflows are often prolonged by  breathing-related anatomical variations, extensive imaging requirements, and manual target and organ-at-risk contouring, resulting in increased planning time and resource utilization.
+
+","AI-based respiratory motion simulation (RMSim):Simulates realistic respiratory motion from static CT scans to generate synthetic datasets for validating motion management algorithms, improving image registration, deformable image analysis, and respiratory motion compensation used in radiotherapy planning.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10202019/
+
+
+
+","AI Auto-Contouring for Radiotherapy Planning to automatically delineate tumors and organs at risk, reducing planning time
+
+https://www.sciencedirect.com/science/article/pii/S2405631625000417",,"Improving the 4D CT image quality in case of breathing irregularities by adapting to the patient‘s breathing pattern in real time can minimize artefacts, and AI-assisted Autocontouring of organs can enable streamlined organs at risk contouring and result in time saving and reducing unwarranted variations with high-quality contours. 
+
+https://www.siemens-healthineers.com/radiotherapy/ct-for-rt/somatom-go-open#Efficiency
+
+\Surface-Guided Radiation Therapy (SGRT): reduces motion artifacts during radiation therapy by utilizing 3D imaging to position and track patients. This technology enhances the accuracy and safety of radiation therapy by ensuring optimal positioning, which minimizes radiation exposure to surrounding healthy tissue. SGRT employs sophisticated camera systems to continuously monitor the patient's surface during treatment, detecting any movement and providing immediate feedback for precise realignment. This real-time tracking capability helps to detect and reduce intra-fraction patient motion, improving overall treatment outcomes.
+
+https://link.springer.com/article/10.1186/s13014-020-01629-w
+
+",,,"Vision RT :
+Uses surface-guided imaging to monitor respiratory motion and patient positioning during simulation and treatment, improving reproducibility and reducing setup errors.
+
+https://visionrt.com/our-solutions/alignrt
+
+\Perfint Healthcare : Perfint Healthcare’s MAXIO and ROBIO are computer-assisted workflow solutions for CT-guided percutaneous interventions, including biopsy and tumor ablation. MAXIO supports pre-procedure planning, CT image-based targeting, trajectory guidance, and post-procedure review, helping standardize image-guided intervention workflows and support accurate probe or needle placement.
+
+https://www.perfinthealthcare.com/maxioworkflow.php",,https://www.siemens-healthineers.com/radiotherapy/ct-for-rt/somatom-go-open,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"During radiotherapy planning, clinicians might find it difficult to target the tumor volume precisely and track volume changes in every session. This inaccurate planning can result in suboptimal clinical outcome.
+The individuality of every lung cancer case makes adaption of the right radiotherapy technique and highly precise dosage control challenging. 
+
+https://tlcr.amegroups.org/article/view/41657/html
+https://aapm.onlinelibrary.wiley.com/doi/10.1118/1.2349696","Deep Learning Auto-Segmentation for Radiotherapy – AI-Based Target Delineation: It uses AI to automatically delineate tumors and organs at risk on CT, MRI, and PET images for radiotherapy planning. It reduces manual contouring time, improves consistency and precision in target definition, and supports more accurate radiation treatment planning while emphasizing the need for quality assurance and clinician oversight.
+
+https://academic.oup.com/bjrai/article/1/1/ubae015/7841928
+
+\AI-Guided Personalized Radiation Therapy: Uses AI-enhanced imaging, intelligent workflows, and real-time treatment adaptation to adjust radiation plans based on daily changes in tumor size, shape, and patient anatomy. This improves targeting accuracy, protects healthy tissues, and enables more personalized and precise cancer treatment.
+
+https://www.elekta.com/adaptive-radiotherapy/","Surface Guided Radiation Therapy (SGRT) – Automated Patient Positioning and Motion Management: Uses 3D surface imaging to automatically monitor patient position in real time during radiotherapy. The system detects patient movement, automatically pauses radiation delivery if movement exceeds predefined limits, and supports precise patient setup, improving treatment accuracy while reducing manual intervention and unnecessary imaging.
+
+https://visionrt.com/introduction-to-sgrt/","MR-Linac–Guided Adaptive Radiotherapy – MRI-Guided Precision Radiation Therapy: MR-Linac combines MRI with a linear accelerator to enable real-time image-guided and adaptive radiotherapy. Its superior soft tissue visualization allows clinicians to adjust treatment plans based on daily anatomical changes, improving tumor targeting while reducing radiation exposure to surrounding healthy tissues.
+
+https://link.springer.com/article/10.1186/s13014-023-02221-8","Adaptive Radiotherapy (ART) – Personalized Radiation Treatment: advanced radiotherapy approach that adjusts the treatment plan during the course of therapy to account for changes in tumor size, shape, position, and patient anatomy. This improves radiation precision, enhances tumor coverage, and minimizes exposure to surrounding healthy tissues, leading to better treatment outcomes and fewer side effects.
+
+https://www.mdpi.com/2072-6694/16/6/1206
+
+ \Surface Guided Radiation Therapy (SGRT): Uses 3D surface imaging to monitor patient position in real time during radiotherapy. It improves setup accuracy, detects patient movement, and can automatically pause radiation if the patient moves outside the treatment tolerance, enhancing treatment precision while reducing the need for tattoos or additional imaging radiation.
+
+
+https://visionrt.com/introduction-to-sgrt/
+
+",,"Ethos™ Therapy by Siemens Healthineers (Varian) – AI-Powered Adaptive Radiotherapy : Ethos therapy is designed to optimize treatment planning and delivery for every workflow - whether adaptive or conventional radiotherapy. Leverage diagnostic MR, PET, and CT images during the planning and treatment process.
+
+https://cancercare.siemens-healthineers.com/products/adaptive-therapy/ethos
+
+\syngo.via RT Image Suite by Siemens Healthineers: syngo.via RT Image Suite was developed for radiation oncology professionals. Designed as a user-friendly work aid to make simulation, image assessment, and contouring easier and better integrated.
+
+https://www.siemens-healthineers.com/radiotherapy/software-solutions/syngovia-rt-image-suite
+","Unity by Elekta – MRI-Guided Adaptive Radiotherapy (MR-Linac): MRI-guided linear accelerator (MR-Linac) that combines a 1.5T MRI scanner with a linear accelerator to provide continuous, high-resolution imaging during radiation therapy. It enables clinicians to adapt treatment plans in real time based on daily anatomical changes, improving tumor targeting while minimizing radiation exposure to healthy tissues.
+
+https://www.elekta.com/products/radiation-therapy/unity/
+
+\RayStation® by RaySearch Laboratories – AI-Assisted Auto-Contouring for Radiotherapy Planning: AI-powered auto-segmentation to automatically contour organs at risk (OARs) and target volumes for radiotherapy planning. It reduces manual contouring time, improves consistency and accuracy, and helps streamline treatment planning while supporting precise radiation delivery.
+
+https://www.raysearchlabs.com/contouring-organs-at-risk_raystation/
+
+\AlignRT® by Vision RT – Surface Guided Radiation Therapy (SGRT): surface-guided radiation therapy (SGRT) system that uses 3D stereo cameras to monitor patient position in real time before and during treatment. It improves setup accuracy, detects patient movement, and can automatically pause radiation delivery if movement exceeds predefined limits, enhancing treatment precision and patient safety.
+
+https://visionrt.com/",,"cancercare.siemens-healthineers.com
+https://www.prnewswire.com/news-releases/varian-receives-investigational-device-exemption-ide-for-flash-technology-clinical-trial-fast-02-301575202.html",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Conventional radiotherapy often requires multiple treatment sessions over several weeks, resulting in frequent hospital visits, increased travel and waiting time, and a significant physical, emotional, and financial burden for patients, which may affect treatment adherence and quality of life.
+
+https://www.sciencedirect.com/science/article/pii/S2347562524002324",,"
+",,"Prospectively, Flash therapy, an experimental treatment modality delivering radiation therapy, could enable the physicians to apply ultra-high doses within a few seconds in 1 to 3 appointments which could make multiple appointments over many weeks expendable
+
+https://www.prnewswire.com/news-releases/varian-receives-investigational-device-exemption-ide-for-flash-technology-clinical-trial-fast-02-301575202.html
+https://www.prnewswire.com/news-releases/first-cancer-patient-treated-with-varian-probeam-compact-proton-therapy-system-at-treatment-center-in-florida-300959639.html
+
+\Stereotactic Body Radiation Therapy (SBRT/SABR) delivers high doses of radiation with sub-millimeter precision to small tumors in fewer treatment sessions than conventional radiotherapy. This approach improves tumor control while minimizing damage to surrounding healthy tissues and reducing the overall treatment duration.
+
+https://www.cancer.gov/about-cancer/treatment/types/radiation-therapy
+
+\Hypofractionated Radiotherapy – Shortened Radiation Treatment: Hypofractionated radiotherapy delivers higher doses of radiation per treatment session, allowing the total course of radiotherapy to be completed in fewer sessions than conventional treatment. This reduces hospital visits and overall treatment time while maintaining effective tumor control for appropriate patients.
+
+https://www.astro.org/provider-resources/guidelines
+
+Unity by Elekta – MRI-Guided Adaptive Radiotherapy (MR-Linac): Unity by Elekta is an MRI-guided linear accelerator (MR-Linac) that combines high-resolution 1.5T MRI with radiation therapy to visualize tumors in real time and adapt treatment to daily anatomical changes. This enables more precise tumor targeting, better protection of healthy tissues, and personalized radiation therapy.
+
+https://www.elekta.com/products/radiation-therapy/unity/
+
+Carbon Ion Therapy – High-Precision Particle Beam Therapy: advanced form of particle therapy that uses carbon ion beams to deliver highly precise, high-dose radiation to tumors while minimizing damage to surrounding healthy tissues. Due to its greater biological effectiveness, it is particularly beneficial for treating radioresistant, deep-seated, and difficult-to-treat tumors, offering improved local tumor control with fewer side effects.
+
+https://www.ghmc.jp/en/carbon-ion-therapy/
+
+",,"Ethos™ Therapy by Siemens Healthineers (Varian) – AI-Powered Adaptive Radiotherapy : Ethos therapy is designed to optimize treatment planning and delivery for every workflow - whether adaptive or conventional radiotherapy. Leverage diagnostic MR, PET, and CT images during the planning and treatment process.
+
+https://cancercare.siemens-healthineers.com/products/adaptive-therapy/ethos
+
+\HyperSight™ in Halcyon by Siemens Healthineers (Varian) – Advanced In-Room Imaging for Radiotherapy: HyperSight imaging solution on Halcyon offers improved image quality with CT number accuracy comparable to planning CT, which may lead to improved dose calculation accuracy. HyperSight may allow for treatment planning directly on a CBCT image in an adaptive workflow. Images for all anatomical sites acquired with at least 50% increased gantry speed.
+
+https://cancercare.siemens-healthineers.com/products/radiotherapy/treatment-delivery/hypersight
+
+\RapidPlan® Knowledge-Based Planning by Siemens Healthineers (Varian) – AI-Powered Treatment Planning: Harness the power of machine learning to improve treatment planning in Eclipse. Develop plans for virtually every type of external beam radiotherapy including IMRT, RapidArc, and VMAT. Start planning quickly with models designed by leading academic institutions. Create institution-specific DVH estimation models quickly, and import/export models.
+
+https://cancercare.siemens-healthineers.com/products/radiotherapy/treatment-planning/rapidplan-knowledge-based-planning","Unity by Elekta – MRI-Guided Adaptive Radiotherapy (MR-Linac): MRI-guided linear accelerator (MR-Linac) that combines a 1.5T MRI scanner with a linear accelerator to provide continuous, real-time visualization of tumors during radiation therapy. It enables clinicians to adapt treatment plans to daily anatomical changes and manage tumor motion, improving treatment precision while minimizing radiation exposure to healthy tissues.
+
+https://www.elekta.com/products/radiation-therapy/unity/
+
+\RayStation® by RaySearch Labora
+
+tories – AI-Powered Radiotherapy Treatment Planning: AI-powered treatment planning system that uses machine learning, automated treatment planning, deep learning–based auto-segmentation, and dose optimization to generate high-quality radiotherapy plans. It also supports adaptive radiotherapy and multiple treatment modalities, improving planning efficiency, consistency, and precision.
+
+https://www.raysearchlabs.com/raystation/
+
+\AlignRT® by Vision RT – Surface Guided Radiation Therapy (SGRT): Surface-guided radiation therapy (SGRT) system that uses 3D stereo cameras and computer vision to monitor patient position in real time before and during radiotherapy. It automatically detects patient movement and can pause radiation delivery if the patient moves outside the treatment tolerance, improving treatment accuracy, safety, and workflow efficiency.
+
+https://visionrt.com/our-solutions/alignrt/
+
+\Catalyst+ HD by C-RAD – Surface Guided Radiation Therapy (SGRT): Catalyst+ HD by C-RAD is a surface-guided radiation therapy (SGRT) system that uses structured light technology, 3D surface imaging, and real-time motion monitoring to automatically position patients and track movement during radiotherapy. It supports automatic beam hold when patient movement exceeds predefined thresholds, improving treatment accuracy, safety, and workflow efficiency.
+
+https://c-rad.com/products/catalyst-plus/
+
+Limbus Contour™ by Limbus AI – AI-Powered Auto-Contouring for Radiotherapy: Limbus AI uses deep learning to automatically segment tumors and organs at risk (OARs) on CT and MRI images for radiotherapy planning. It generates clinically validated contours in minutes, reducing manual contouring time while improving planning efficiency and consistency.
+
+https://limbus.ai/",,"Varian Receives Investigational Device Exemption (IDE) for Flash Technology Clinical Trial, FAST-02
+https://cancercare.siemens-healthineers.com/de/node/10915",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+, ,,"Determining appropriate treatment for patients with early-stage lung cancer can be challenging, as not all patients are suitable candidates for surgery or radiotherapy owing to underlying clinical conditions and functional limitations.
+",,,,"It offers treatment of medically inoperable early-stage lung cancer, is a relatively cheap therapy, and can be repeated. Moreover, ablation can be used to support immunotherapy
+
+https://pubmed.ncbi.nlm.nih.gov/33282409/
+
+\ Combined Robotic bronchoscopy or electromagnetic navigation bronchoscopy (ENB) with thermal ablation: Bronchoscopic thermal ablation offers a minimally invasive local treatment option for medically inoperable early-stage lung cancer patients, expanding treatment access and allow outpatient treatment with shorter recovery times.
+
+https://www.sciencedirect.com/science/article/pii/S265966362500061X
+
+\Stereotactic Body Radiation Therapy (SBRT/SABR) delivers high doses of radiation with sub-millimeter precision to small tumors in fewer treatment sessions than conventional radiotherapy. This approach improves tumor control while minimizing damage to surrounding healthy tissues and reducing the overall treatment duration.
+
+https://www.mdpi.com/2077-0383/14/14/4871
+
+Percutaneous Microwave Ablation (MWA): A minimally invasive, CT-guided thermal ablation technique that destroys early-stage lung tumors using microwave energy.offering local tumor control while preserving healthy lung tissue and reducing procedural morbidity.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9685331/","Risk-Stratified Early Lung Cancer Treatment Board:Standardizes treatment selection using operability assessment, pulmonary reserve, frailty, Charlson Comorbidity Index, and patient preference to assign patients to surgery, segmentectomy, SBRT, or ablation
+
+",,"
+",,Image guided thermal ablation in lung cancer treatment - PubMed,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Acquires resistance to EGFR/ALK/KRAS targeted therapies often goes undetected until radiographic (CT/PET) progression is already visible, by which point the tumor has been evolving under treatment pressure for some time, narrowing options for early-switch or combination strategies.
+
+https://www.nature.com/articles/s41571-025-01011-3","Longitudinal ctDNA (liquid biopsy) monitoring during active treatment: Serial blood draws track tumor-derived DNA shedding and clearance kinetics on-therapy, flagging molecular resistance mutations (e.g., EGFR T790M/C797S, MET amplification, small-cell transformation) days-to-weeks before scans show growth, enabling earlier treatment-sequencing decisions.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11930993/",,,"AI-enhanced liquid biopsy analysis: machine-learning models trained on serial ctDNA and proteomic data identify emerging resistance-driver alterations and stratify progression/response risk earlier than conventional imaging follow-up.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12688787/",,,,,,,,,,Sanskriti,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Immune checkpoint inhibitors (pembrolizumab, atezolizumab, durvalumab, etc.) can trigger immune-related adverse events (irAEs) - pneumonitis, colitis, hepatitis, endocrinopathies - that are under-recognized or detected late because symptoms are non-specific and reporting relies on infrequent clinic visits; lung cancer accounts for the largest share of reported irAE cases of any tumor type.
+
+https://academic.oup.com/jamiaopen/article/9/3/ooag094/8707580","AI/LLM-based irAE surveillance of clinical notes and patient-reported symptoms: Large language model pipelines mine electronic health record narratives and structured data to flag irAEs with higher sensitivity than ICD-code-based detection, surfacing cases that manual review misses.
+
+https://www.massgeneralbrigham.org/en/about/newsroom/press-releases/ai-tool-offers-more-accurate-detection-of-immune-related-adverse-events-in-cancer-patients",,,"Predictive irAE risk modeling: Machine-learning algorithms (including PET/CT radiomics and pretreatment CT-based deep learning) predict which patients are at elevated risk of severe irAEs such as checkpoint-inhibitor pneumonitis before or early in treatment, supporting closer monitoring or pre-emptive management.
+
+https://aacrjournals.org/cancerimmunolres/article-abstract/13/7/964/763126/Artificial-Intelligence-Can-Predict-Personalized?redirectedFrom=fulltext",,,,,,,,,,Sanskriti,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Rehabilitation,"Rehabilition is multidisciplinary focus adressing physical,psychlogical,nutitional,social and functional recovery after treatment  aim of maximizing independence and quality of life.
+
+
+1)Breathing Rehabilitation : 
+Breathing Exercise -Improving Lung Function 
+Managing Breathlessness
+2)Pain Management and Motivation 
+Mindfulness, meditation Yoga and gentle stretching 
+Music therapy and other distraction Techniques like Gaming simulations and VR-virtual reality distraction.
+3)Social organization and pschotherapy 
+4)Malnutrition management: 
+Customized diet plan 
+Nutrition Tracking 
+
+
+","Patient- Undergoing rehab programs
+Family - members providing emotional support,assisting and encouraging  during  rehabilitation plans
+Rehabilitation Therapist- therapist plans & guides patient through rehabilitation programs
+Pulmonologist-  provides care related to lung prblems and advices on rehabilitation
+Medical Device Companies- providing the products related to the rehab
+Nutritionist- designing diet plans,nutritional assessment and educating ","Treating lung cancer with radiation therapy or resection of the tumor may have consequences on the ability to breath properly.
+https://www.researchgate.net/publication/344231975_The_Effects_of_Respiratory_Rehabilitation_Program_on_Perceived_Self-Efficacy_and_Dyspnea_in_Patients_with_Lung_Cancer   ","Mobile Health based Pulmonary Rehabilitation parctices: 
+
+https://mhealth.jmir.org/2019/6/e12645/
+
+Precision-Controlled Bionic Lung Simulator :A dual-chamber bionic lung simulator capable of reproducing realistic breathing patterns by precisely controlling lung compliance, airway resistance, respiratory muscle force, and airflow. It can simulate both spontaneous and mechanically ventilated breathing
+
+https://www.mdpi.com/2306-5354/12/9/963",,,,"Patients can benefit from pulmonary rehabilitation. It involves resistance and breathing exercises which help to improve breathing technique, relieve breathlessness, and improve endurance, essential for reintegrating them into former jobs. 
+https://www.researchgate.net/publication/344231975_The_Effects_of_Respiratory_Rehabilitation_Program_on_Perceived_Self-Efficacy_and_Dyspnea_in_Patients_with_Lung_Cancer   ",,"Kaia Health Pulmonary Rehabilitation
+complete pulmonary rehabilitation program providing 24X7 exercise, rehabilitation breathing techniques and pulmonary education.
+https://kaiahealth.com/solutions/kaiabreathe/",,https://www.researchgate.net/publication/344231975_The_Effects_of_Respiratory_Rehabilitation_Program_on_Perceived_Self-Efficacy_and_Dyspnea_in_Patients_with_Lung_Cancer     ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Even after extensive tumor therapy (e.g., surgery), patients can still be left with severe pain that might not entirely respond to common pain treatments. 
+https://www.researchgate.net/publication/230582083_Post-Thoracotomy_Pain_Syndrome_Assessment_and_Intervention","Non-pharmacological adjuncts like VR have become an important option for effective pain management. Patient immersion in interactive virtual reality provides distraction from painful stimuli and can decrease an individual’s perception of pain. 42,43
+
+Godman, H. (2022, April 1). Virtual reality for chronic pain relief. Harvard Health. Retrieved November 29, 2022, from https://www.health.harvard.edu/pain/virtual-reality-for-chronic-pain-relief
+
+Pourmand, A., Davis, S., Marchak, A., Whiteside, T., & Sikka, N. (2018). Virtual reality as a clinical tool for pain management. Current pain and headache reports, 22(8), 1-6. https://doi.org/10.1007/s11916-018-0708-2
+",,,,"Music therapy in combination with appropriate analgesics can help to significantly lower the pain score in patients after lung cancer surgery. 44,45
+
+University of Utah Health. (2017, June 14). Five ways music therapy can help during cancer treatment. University of Utah Health. Retrieved November 29, 2022, from https://healthcare.utah.edu/huntsmancancerinstitute/news/2017/five-ways-music-therapy-can-help-during-cancer-treatment.php
+/n
+https://pubmed.ncbi.nlm.nih.gov/26331434/",,,,"https://www.researchgate.net/publication/230582083_Post-Thoracotomy_Pain_Syndrome_Assessment_and_Intervention
+Godman, H. (2022, April 1). Virtual reality for chronic pain relief. Harvard Health. Retrieved November 29, 2022, from https://www.health.harvard.edu/pain/virtual-reality-for-chronic-pain-relief
+Pourmand, A., Davis, S., Marchak, A., Whiteside, T., & Sikka, N. (2018). Virtual reality as a clinical tool for pain management. Current pain and headache reports, 22(8), 1-6. https://doi.org/10.1007/s11916-018-0708-2
+University of Utah Health. (2017, June 14). Five ways music therapy can help during cancer treatment. University of Utah Health. Retrieved November 29, 2022, from https://healthcare.utah.edu/huntsmancancerinstitute/news/2017/five-ways-music-therapy-can-help-during-cancer-treatment.php",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Sarcopenia and malnutrition are common in patients with lung cancer. This can influence the overall outcome negatively. 46
+Nigro, E., Perrotta, F., Scialò, F., D'Agnano, V., Mallardo, M., Bianco, A., & Daniele, A. (2021). Food, Nutrition, Physical Activity and Microbiota: Which Impact on Lung Cancer?. International journal of environmental research and public health, 18(5), 2399. https://doi.org/10.3390/ijerph18052399","Customized diet chart for patient:  Complete assesment on  patient nutrition and provides the diet plan  personalized to oncology  patient 
+
+https://www.opsan.in/oncology-diet-plan",,,,"Cancer patients have an increased need of energy intake and especially protein intake to counter inflammation-induced sarcopenia. A balanced and special diet for lung cancer patients can have positive influence on the overall prognosis. 46   
+
+Exercising regularly can help to maintain the functional respiratory volume in patients suffering from lung cancer and also regain lost muscle mass. 
+                                                                                                     
+Nigro, E., Perrotta, F., Scialò, F., D'Agnano, V., Mallardo, M., Bianco, A., & Daniele, A. (2021). Food, Nutrition, Physical Activity and Microbiota: Which Impact on Lung Cancer?. International journal of environmental research and public health, 18(5), 2399. https://doi.org/10.3390/ijerph18052399                        ",,"Opsan Customized diet planning solution providing complete diet plan during cancer treatment & post cancer treatment
+Customized plan with addition of required nutrition assesement and provides plan based on assessment.
+https://www.opsan.in/oncology-diet-plan",,"Nigro, E., Perrotta, F., Scialò, F., D'Agnano, V., Mallardo, M., Bianco, A., & Daniele, A. (2021). Food, Nutrition, Physical Activity and Microbiota: Which Impact on Lung Cancer?. International journal of environmental research and public health, 18(5), 2399. https://doi.org/10.3390/ijerph18052399",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Lung cancer patients often suffer from anxiety, depression and massive distress. Worldwide, receiving mental health help is often difficult within a reasonable time frame.","Social group psychotherapy can have a positive influence on the overall well-being and on the clinical outcome. Digital formats can enable patients around the world to participate in social group psychotherapies if they don’t have access otherwise. 47,48
+
+Peng, W., Zhang, H., & Li, Z. (2019). Responses of lung cancer survivors undergoing gamma knife surgery to supportive group psychotherapy. Medicine, 98(9), e14693. https://doi.org/10.1097/MD.0000000000014693 
+
+Lleras de Frutos, M., Medina, J. C., Vives, J., Casellas?Grau, A., Marzo, J. L., Borràs, J. M., & Ochoa?Arnedo, C. (2020). Video conference vs face?to?face group psychotherapy for distressed cancer survivors: A randomized controlled trial. Psycho?Oncology, 29(12), 1995-2003. https://doi.org/10.1002/pon.5457
+
+\AI mental health comapanion : Ask daily mood questions, detect emotional deteriotion,provied coping suggestions,alert clinicians the severe cases
+
+
+",,,,,,,,"Peng, W., Zhang, H., & Li, Z. (2019). Responses of lung cancer survivors undergoing gamma knife surgery to supportive group psychotherapy. Medicine, 98(9), e14693.
+ https://doi.org/10.1097/MD.0000000000014693
+Lleras de Frutos, M., Medina, J. C., Vives, J., Casellas?Grau, A., Marzo, J. L., Borràs, J. M., & Ochoa?Arnedo, C. (2020). Video conference vs face?to?face group psychotherapy for distressed cancer survivors: A randomized controlled trial. Psycho?Oncology, 29(12), 1995-2003. https://doi.org/10.1002/pon.5457",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Patients may not take part in pulmonary rehabilitation due to lack of knowledge, perceived benefits, physical obstacles of patients and infrastructural difficulties. 49
+Lahham, A., & Holland, A. E. (2021). The Need for Expanding Pulmonary Rehabilitation Services. Life (Basel, Switzerland), 11(11), 1236. https://doi.org/10.3390/life11111236","In regions with lack of trained pulmonary rehabilitation experts, remote options can enable patients to receive education and exercise training to improve health status. Additionally, a remote patient monitoring system connected with smart devices can enable the rehabilitation therapist to have real-time access to patient data. 50
+
+Jangalee, J.V., Ghasvareh, P., Guenette, J. A., & Road, J. (2021). Incorporating remote patient monitoring in virtual pulmonary rehabilitation programs. Canadian journal of respiratory therapy : CJRT = Revue canadienne de la therapie respiratoire : RCTR, 57, 83–89. https://doi.org/10.29390/cjrt-2021-015",,,,,"Teamplay Mycare campanion : Flexible telemedicine solution that enables remote care for patients with chronic diseases. The teamplay myCare Companion allows healthcare providers to design their own telemedicine programs and flexibly adapt the underlying technology to their needs.
+
+https://www.siemens-healthineers.com/press/releases/mycarecompanion.html",,,"Lahham, A., & Holland, A. E. (2021). The Need for Expanding Pulmonary Rehabilitation Services. Life (Basel, Switzerland), 11(11), 1236. https://doi.org/10.3390/life11111236
+Jangalee, J.V., Ghasvareh, P., Guenette, J. A., & Road, J. (2021). Incorporating remote patient monitoring in virtual pulmonary rehabilitation programs. Canadian journal of respiratory therapy : CJRT = Revue canadienne de la therapie respiratoire : RCTR, 57, 83–89. https://doi.org/10.29390/cjrt-2021-015",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,Patients might not be motivated enough to undergo rehabilitation and Habit sessation counselling.,,,,,"Gamification can help motivate the patients by making the exercises more interactive and personalized. 51
+Simmich, J., Deacon, A. J., & Russell, T. G. (2019). Active Video Games for Rehabilitation in Respiratory Conditions: Systematic Review and Meta-Analysis. JMIR serious games, 7(1), e10116. https://doi.org/10.2196/10116",,"Pelago Health- Digital health startup (formerly Quit Genius) that provides virtual tobacco cessation programs through employers and health plans. It combines: Behavioral coaching, Cognitive Behavioral Therapy (CBT), Telehealth consultations, Nicotine Replacement Therapy (NRT), Progress tracking through a mobile app
+
+https://www.pelagohealth.com/what-we-treat/tobacco/
+Pivot Health (Pivot Breathe) is a digital smoking cessation platform that combines- Mobile app–based coaching,nDedicated quit coaches, Nicotine replacement support, Carbon monoxide breath sensor for real-time biofeedback and motivation.
+ https://pivot.co/smoking-cessation
+
+
+",,"Simmich, J., Deacon, A. J., & Russell, T. G. (2019). Active Video Games for Rehabilitation in Respiratory Conditions: Systematic Review and Meta-Analysis. JMIR serious games, 7(1), e10116. https://doi.org/10.2196/10116",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"More than half of previously employed lung cancer survivors do not return to work after treatment, driven by persistent fatigue, dyspnea, depression, and a lack of structured vocational support - a rehabilitation need that is largely absent from current physical/breathing-focused rehab pathways.
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8163665/","Digital return-to-work coaching platforms: Mobile-app-based coaching combined with employer/insurer support (e.g., used as routine employee support alongside oncology care) has been associated with improved return-to-work outcomes and reduced absenteeism for cancer survivors, including those with job loss.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8663674/",,,,"Structured return-to-work and vocational rehabilitation programs: Multidisciplinary interventions combining occupational therapy, work-capacity assessment, and social-service/employer liaison; early identification of survivors at risk of not returning to work (via factors such as fatigue score, comorbidities, and job type) allows earlier, targeted supportive intervention.
+https://www.ajmc.com/view/cancer-survivors-returning-to-work-barriers-and-interventions",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Follow-up,"Followup focuses on early detection of relapse through regular clinical and imaging surveillance while maintaining functional recovery through ongoing rehabilitation. It aims to preserve lung function, enhance quality of life, reduce complications, and improve long-term survival outcomes. 
+Relapse monitoring and emotional upliftment from previous trauma & fear
+Real time monitoring of patient 
+","Patient- Report symptoms, Follow medication plans 
+Family-  Supports,encourages and esuring the regular medical checkups
+Pulmonologist- Monitoring  health status and  planning treatment accordingly
+Oncologist-Assesing the recovery after treatment and  follow up plans  
+Radiologist-  Monitoring patient recovery through imaging and analyzing the changes in lung condition.","Coordination breaks down as patients transition from active oncology follow-up to primary care: primary care providers often rate this handoff as fair-to-poor, up to a third of survivors are unsure which physician is responsible for their ongoing care, and treatment/follow-up information is frequently missing from the primary care record - especially relevant for lung cancer given the need for long-term second-primary-cancer surveillance.","Communication platforms for experts of various specialties can help to provide more patients the best care with access to a multidisciplinary care team for integrated supportive care, even if some specialists are not physically present, for example in remote areas.","Shared surviourship dashboard integrated with HMIS, automated scheduling the Multidisciplinary care team and care plans to patient customized with the past medical history.
+
+https://academic.oup.com/jamiaopen/article/7/3/ooae056/7719572",,,"Integration of the available local community wellness centers and public healthworkers guiding and streamlinning the care pathway and telemedicine platform connecting patients and specialists, planned routine monitoring.","Teamplay Mycare campanion : Flexible telemedicine solution that enables remote care for patients with chronic diseases. The teamplay myCare Companion allows healthcare providers to design their own telemedicine programs and flexibly adapt the underlying technology to their needs.
+
+https://www.siemens-healthineers.com/press/releases/mycarecompanion.html","E-sanjeevini : Public Telemedicini platform connecting remote primary care centers and Frontline works to specialty cares(specialities) providing realtime guidance and counselling to patient through 
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11422547",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,The overall outcome can be worse if patients don’t feel integrated in the whole pathway.,"This allows patients to participate in the pathway, interact with their physicians and better communicate with their therapists, if they have access to all their health records and the latest medical information anytime and anywhere, enabling empowered, continuous and connected care to achieve better health outcomes
+
+https://www.siemens-healthineers.com/digital-health-solutions/ehealth-solutions/patient-portal",,,,,"Ehealth solution: eHealth Solutions applications are based on an interoperable, system and vendor-neutral platform to enable cross-organizational health data exchange. This facilitates close collaboration and communication across care teams as well as with patients, aiming at achieving better and more timely outcomes.
+
+https://www.siemens-healthineers.com/digital-health-solutions/ehealth-solutions",,,https://www.siemens-healthineers.com/digital-health-solutions/ehealth-solutions/patient-portal,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,Not being able to discuss problems or adverse events during the intervals between follow-up schedules can negatively impact the patient ,"Patient outcomes management software such as Noona engage patients in their care with real time symptom reporting and monitoring, streamlined clinical workflows to promote evidence-based care, and access to rich data insights for better management and ongoing assessment over the course of care. 
+
+https://cancercare.siemens-healthineers.com/products/software/patient-engagement/noona",,,,,"Noona :  Noona is an oncology-focused solution for patient engagement designed to support patients every step of the way, from diagnosis through to post-treatment follow-up. Seamlessly integrated with ARIA CORE or other Hospital Information Systems (HIS), Noona helps enhance patient care by automating the delivery of essential treatment information (e.g. upcoming appointments, education materials, test results, and clinical reports) and extending the point of care from inside the hospital directly to patients.
+
+https://cancercare.siemens-healthineers.com/products/software/patient-engagement/noona
+","Moovcare : A remote patient monitoring ,reporting adverse event between followup and reporting and providing the multidisciplanry clinicians support. Weekly reporting symptoms through a web or mobile application using short patient - reported outcome questionnaires.AI based clinical algorthim analyzes these symptoms reports and automatically alerts oncology team on complications , clinical deteriortion and disease recurrence.
+
+https://www.moovcare.com/en",,cancercare.siemens-healthineers.com,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Lung cancer survivors often experience poor cardiorespiratory fitness, malnutrition or sleep issues. 54
+
+cancer.org.au/assets/pdf/lung-cancer-optimal-cancer-care-pathway
+https://www.mdpi.com/1424-8220/18/8/2414","Customized diet chart for patient and track of nutrition intake
+
+https://www.opsan.in/oncology-diet-plan",,"Wearables enable patients to monitor their vital values or sleep data in real time and adjust their physical activity level and nutritional intake appropriately
+
+https://www.researchgate.net/publication/326615338_Wearable_Health_Devices-Vital_Sign_Monitoring_Systems_and_Technologies",,,No direct Siemens Healthineers portfolio coverage identified.,,,"cancer.org.au/assets/pdf/lung-cancer-optimal-cancer-care-pathway
+https://www.mdpi.com/1424-8220/18/8/2414",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Emotional distress in fear of relapse is common in cancer patients, which can cause longlasting traumatic disorders. Additionally, no social contacts understanding what the patients went through, can be exhausting.","Based on certain prognostic factors like patient’s age, gender, BMI, smoking status, the intensity of radiotherapy, and their tumor characteristics, AI can help in predicting the probability of recurring cancer in patients who already underwent the complete treatment pathway. 57
+https://www.theguardian.com/society/2022/apr/23/cancer-ai-tool-predicts-tumour-regrowth
+
+Digital twin anlysing the complete profile and predicates recurrence of cancer
+Gregory, A. (2022, April 23). AI tool accurately predicts tumourregrowth in cancer patients. The Guardian. Retrieved November 29, 2022, from https://www.mdpi.com/1424-8220/24/3/958",,,,"Patients can join the lung cancer patient community to share the concern, fear and information about recovering from the disease, which can help them cope physically, emotionally and mentally.
+ A 24/7 helpline service that connects to a lung cancer expert and other healthcare professionals can be made available as often as needed, at no cost.
+
+American Lung Association. (n.d.). Find support forlung cancer. American Lung Association. Retrieved November 29, 2022, from https://www.lung.org/lung-health-diseases/lung-disease-lookup/lung-cancer/living-with-lung-cancer/find-support",No direct Siemens Healthineers portfolio coverage identified.,"Lungevity : 24X7 support providing service contecting patients,caregivers with experts. Along side provides resources helping patients monitor health, manage long term side effectsand  signs of recurrence.Symptoms tracking , follow-up care planning and patient support services.
+
+https://www.lungevity.org/patients-care-partners/support-services
+
+\Rayscape : Oncology tracking -detects and tracks lesion and  tumor/ nodule changes assesing growth, stability and response.Asses in nodule survillance providing recommendations.
+
+https://www.rayscape.ai/oncological-tracking-lung-ai",,"https://journals.lww.com/md-journal/fulltext/2019/03010/responses_of_lung_cancer_survivors_undergoing.44.aspx
+AI tool accurately predicts tumour regrowth in cancer patients | Cancer | The Guardian",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Missed followups due to long distance travel, financial constrains, poor insight on treatment followups 
+Missed Medication  due to cognitive impairment after treatment or due to complex medication regime.
+ ",,"Digital appointment management system integrated with HMIS : Remainder alert system integrated and No-show rate dashboard ehealth solution 
+
+https://www.preprints.org/manuscript/202601.0502
+
+\Smart pill dispensers -alerts notifing on missed pills to paitents and caregivers.
+
+https://www.siemens-healthineers.com/digital-health-solutions/ehealth-solutions
+",,,,,"Smart pill dispenser with mobile app alert system 
+https://herohealth.com/",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Lung cancer survivors carry an elevated, sustained risk of second primary lung cancer (approx. 0.7-1.1% per patient per year, cumulative over time with no plateau) and recurrence, yet most centers apply a uniform, fixed-interval CT surveillance schedule (e.g., every 6-12 months for 2 years) rather than tailoring frequency and duration to each patient's actual risk.
+
+https://www.sciencedirect.com/science/article/pii/S155608642400683X","AI/deep-learning risk-stratified postoperative surveillance: Models trained on pre- and post-operative chest CT imaging biomarkers predict individual risk of recurrence or new primary lung cancer, enabling personalized surveillance intervals (more frequent imaging for higher-risk survivors, less frequent/lower-burden follow-up for lower-risk survivors) instead of one-size-fits-all schedules.
+
+https://www.jacr.org/article/S1546-1440(25)00466-1/fulltext",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

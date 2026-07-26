@@ -1,0 +1,56 @@
+class SearchRequest(BaseModel):
+    query: str
+    disease_name: Optional[str] = None
+    k: int = 8
+
+@app.post("/search")
+async def semantic_search(request: SearchRequest, db: Session = Depends(get_db)):
+    """Hybrid semantic search (FAISS + BM25) across disease pathways."""
+    try:
+        from rag_tools import AdvancedRAG
+        adv_rag = AdvancedRAG(embeddings_model=embeddings)
+
+        key = (request.disease_name or "").lower() if request.disease_name else "global"
+        store = VECTOR_STORES.get(key) or VECTOR_STORES.get("global")
+
+        if not store:
+            # Fallback: simple DB text search
+            db_ops = DatabaseOperations(db)
+            diseases = db_ops.get_all_diseases()
+            results = []
+            query_lower = request.query.lower()
+            for disease in diseases:
+                for stage in disease.stages:
+                    for pp in stage.pain_points:
+                        if (query_lower in (pp.description or "").lower() or
+                            query_lower in disease.name.lower() or
+                            query_lower in stage.name.lower()):
+                            results.append({
+                                "text": pp.description,
+                                "disease": disease.name,
+                                "stage": stage.name,
+                                "pain_point_id": pp.id,
+                                "severity": pp.severity,
+                                "tags": pp.tags.split(",") if pp.tags else [],
+                                "relevance_score": 0.5,
+                                "source": "db_text_search"
+                            })
+            return {"results": results[:request.k], "query": request.query, "source": "db_fallback"}
+
+        results = adv_rag.perform_hybrid_search(query=request.query, faiss_store=store, k=request.k)
+
+        enriched = []
+        for r in results:
+            metadata = r.get("metadata", {})
+            enriched.append({
+                "text": r["text"],
+                "disease": metadata.get("disease", request.disease_name or ""),
+                "stage": metadata.get("stage", ""),
+                "pain_point_id": metadata.get("pain_point_id"),
+                "relevance_score": r["relevance_score"],
+                "source": "hybrid_rag"
+            })
+
+        return {"results": enriched, "query": request.query, "source": "hybrid_rag"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

@@ -1,0 +1,119 @@
+Stage,Overview (scenario + tests/procedures overview),Stakeholders,Pain points,Solutions,,,,,,,SOURCES
+Stage,,,,"Digitalization (AI, IoT, Blockchain, etc.)","Automation including into devices (e.g. for operation, intuitive HMIs, servicing, etc.)",Sensing,Clinical innovation/ new treatment/ new diagnostic technologies,Process innovation ,Our portfolio coverage ,Ecosystem solutions beyond SHS,
+Prenatal,,"List from old pathway:
+Pregnant Woman - Wishes to take care of herself and the newborn baby.
+Family - Ensures proper care of the pregnant woman and the developing fetus.
+General Practitioner - Provides care for general medical problems.
+Obstetrician - Tracks specifically the health of the mother and fetus.
+Pediatrician - In charge of the health check-up of the newborn.","Birth asphyxia may lead to cerebral hypoxia which is a major risk factor for developing Alzheimer’s disease in adulthood.
+https://pubmed.ncbi.nlm.nih.gov/34905310/","Prognostic risk scores can be developed based on maternal and neonatal clinical characteristics like premature rupture of membrane, prolonged labor, meconium aspiration syndrome, birth weight, preterm, tight-nuchal cord, etc. to predict high risk of neonatal asphyxia.",,,"Fetal fibronectin is a biomarker that helps to predict the risk of premature birth risks, one of the major causes of birth asphyxia. Thereby, doctors can prepare the right measures for any complication including oxygen deprivation.",,,,"https://link.springer.com/article/10.1186/s12887-022-03582-x
+https://www.hologic.com/hologic-products/gynecologic-health/rapid-ffn#usa"
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+Prevention,,"List from old pathway:
+Patient - Struggles with an unhealthy lifestyle including smoking and an unbalanced diet.
+Family - Tries to motivate the patient to engage in healthier lifestyle choices.
+General Practitioner - Provides care relating to general medical problems and performs routine health check-ups.
+Dietitian - Suggests appropriate meal plans to maintain a healthy lifestyle.
+Ministry of Health - Raises awareness on neurodegenerative diseases and educates the public on its preventive measures.
+Tech Companies - Design and develop wearable devices and innovative technologies that help to engage in a healthier lifestyle.","Patients with certain genes such as APOE e4 allele or genetic mutations in PSEN1 gene are at a higher risk for AD. 
+https://www.nia.nih.gov/news/study-reveals-how-apoe4-gene-may-increase-risk-dementia
+https://www.pnas.org/doi/full/10.1073/pnas.1619574114",,,,,"This could help to identify patients with an elevated risk of AD through specific biomarkers and mutations. Accordingly, the patient can be suggested to make lifestyle modifications that could reduce the risk of developing the disease.",,,"https://www.sciencedirect.com/science/article/abs/pii/S0197458019300296?via%3Dihub
+https://www.nia.nih.gov/health/alzheimers-causes-and-risk-factors/alzheimers-disease-genetics-fact-sheet"
+,,,"An unhealthy diet with a deficient vitamin intake, and imbalance of omega fatty acids can cause obesity and inflammation, potentially leading to AD.
+https://journals.sagepub.com/doi/10.3233/ADR-190152","An app that provides personalized nutrition and healthy eating choices via a food diary, calorie counter, diet plans and various trackers can help patients reach their diet goals and stay motivated.",,,,"Efforts should be put into educating the public on how early intervention like diet changes can help attenuate AD. Focus should be on the MIND diet i.e., Mediterranean-DASH (Dietary Approaches to Stop Hypertension) Intervention for Neurodegenerative Delay that can improve cognitive function.",,,"https://mhealth.jmir.org/2019/5/e9232/
+https://www.sciencedirect.com/science/article/pii/S2161831322004513?via%3Dihub"
+,,,"Cigarette smoking is linked to an increased risk of developing AD.
+https://alz-journals.onlinelibrary.wiley.com/doi/10.1016/j.jalz.2014.04.009","Engaging app-based content can make a significant difference in one’s cessation effort by combining cognitive behavioral therapy like audio sessions and interactive exercises to learn deal with cravings, providing access to qualified coaches, and enabling personalized tracking of health progress and money saved.",,,,,,,https://mental.jmir.org/2020/10/e22833
+,,,"Patients with lifestyle diseases such as type 2 diabetes and cardiovascular disease are at an increased risk for AD.
+https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2021.631770/full",,,"Conventional wearable sensors e.g., in form of smart watches are used to measure and analyze various health parameters. These can be further employed to detect and monitor changes associated with diabetes or cardiovascular disease.",,Screening in the form of preventive health check-ups of at-risk groups can aid in early detection and timely management of these diseases. ,"
+",,"https://www.uhhospitals.org/blog/articles/2022/09/smart-watches-hold-promise-to-detect-disease-and-improve-health
+https://www.healio.com/news/cardiology/20190317/smartphone-heart-rate-tech-deep-learning-may-aid-in-diabetes-detection"
+,,,"Early detection before noticeable symptoms arise is challenging and not well understood.
+","Using a machine learning model, it analyzes recorded speech snippets to detect mild cognitive impairment and AD by identifying linguistic and acoustic changes present in the very early stages of AD. This provides primary care providers with a simple screening tool for at-risk individuals.",,,,,,,https://neurosciencenews.com/ai-alzheimers-speech-23017/
+,,,"Social isolation, which increased during the pandemic, is associated with a risk of developing various types of dementia, including Alzheimer’s disease, especially in the elderly.
+https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf","Virtual reality creates simulated environment for individuals to experience regular social interactions with their families and allows them to participate in activities such as virtual travel, games, and educational programs which helps reduce loneliness and improve mental well-being.",,,,,,,https://www.forbes.com/sites/solrogers/2020/02/26/how-virtual-reality-is-benefiting-seniors/?sh=22252f691485
+Symptoms,,"List from old pathway:
+Patient - Starts to experience symptoms of AD.
+Family - Notices changes in the patient’s memory and is worried, but lacks knowledge about neurodegenerative diseases.
+General Practitioner - Sees the patient regularly and is noticing changes in memory and mood, leading to a referral to an expert.
+Neurologist - Specialist of the disease, responsible for diagnosis & treatment.
+Tech Companies - Create innovative tech solutions to help monitor and track the symptoms of AD.","Symptoms of AD can be manifold and often overlap with other neurological disorders, making diagnosis, monitoring and treatment difficult.","By applying machine learning to patient brain imaging data, a computational model can be created that maps the symptoms of AD to the brain’s anatomy in a conceptual, color-coded framework. Prospectively, this might help to find new approaches in understanding, diagnosing and treating AD.",,,"It can create virtual representations of individuals bringing together data from brain scans, behavioral studies, lifestyle surveys and clinical studies. These might facilitate innovative brain research, understanding of brain function and disease at individual level, improve diagnosis, risk prediction, and optimize potential therapies by personalized decision-making.",,,,"https://www.nature.com/articles/s41467-022-29047-4
+https://www.alzheimer-europe.org/our-work/current-work/ebrain-health"
+,,,"Early behavioral symptoms of AD can be non-specific, potentially leading to delayed or even no diagnosis, especially in ethnic minorities and persons with lower education.",,,,,"Integrated media and public education campaigns could help to raise concern and awareness about Alzheimer's and dementia, and move people to take action in the fight against the disease.",,,https://www.alz.org/about/awareness-initiatives
+,,,"Patient may experience challenges in planning, and confusion with time and place. ","After appropriate training, patients with mild dementia can use apps that improve their daily life by reminding them to take medicine, show up for doctor appointments or social gatherings, make important calls to family members or friends and so on.",,,,,,,https://www.alzinfo.org/articles/prevention/phone-reminder-apps-can-be-a-useful-tool-for-those-with-early-alzheimers/
+,,,Patient may misplace or lose items and be unable to retrace his/her steps to find the things again.,,,Important personal belongings like a purse or keys can be equipped with small tracking devices which use a broad tracking network with GPS or bluetooth to show their location on an app or emit sounds to assist in locating the lost item.,,,,,The 2 Best Bluetooth Trackers for 2026 | Reviews by Wirecutter
+,,,"Early on, patients might struggle with changes in mood, becoming fearful or anxious, while also withdrawing from social activity or work. ",,,"While possibly monitoring emotions or physical appearance and notifying patients and caregivers about changes in the patient’s personality, they could provide a user interface with reminders, chat function or cognitive exercises, and help patients cope with early symptoms.",,,,,https://helpdementia.com/how-smart-mirrors-are-helping-people-with-memory-loss-recognize-themselves/
+,,,,,,,,,,`,
+,,,,,,,,,,,
+Diagnosis,,"List from old pathway:
+Patient - Receives several diagnostic services from health care providers.
+Family - Supports the patient throughout the process and has the need for information about the disease.
+Neurologist - Specialist of the disease. Decides on the diagnostic measures and makes primary diagnosis.
+Radiologist - Interprets medical images like CT and  MRI to aid in diagnosis.
+Nuclear Medicine Physician - Interprets PET scans to aid in diagnosis.
+Medical Device Companies - Create innovative tech solutions to help diagnose AD correctly and efficiently.",Incomplete data exchange and/or miscommunication between clinicians may hamper decision making and thus patient outcome.,"By securely sharing and enabling quick access to health information, EHRs help clinicians to more effectively diagnose patients, reduce medical errors, and provide safer care. EHR based tools can be used to detect patients with undiagnosed dementia or foster a deeper understanding of the disease progression via big data analyses.",,,,,,,https://www.nia.nih.gov/news/electronic-health-records-based-tool-uses-data-detect-undiagnosed-dementia
+,,,Diagnosis of AD is complex and usually involves expensive and at times invasive tests not commonly available outside of highly specialized clinical settings.,"ML models can process multimodal clinical data to accurately perform a differential diagnosis of AD which can support medical personnel to establish the correct diagnosis. Especially in resources-limited settings, these could be utilized as an initial screening approach, relying on easily accessible and novel parameters such as retinal photographs.",,,,,,,https://www.thelancet.com/journals/landig/article/PIIS2589-7500(22)00169-8/fulltext
+,,,Differentiating AD from other types of dementias can sometimes be challenging.,,,,"The simultaneous acquisition of MRI or CT imaging and PET data provides exceptional insights into brain anatomy, functions, and metabolism, and allows a precise visualization of areas of decreased or increased glucose metabolism in the brain, helping to differentiate AD from other forms of dementia, as well as determine the extent and progression of the disease.
+
+Using powerful 3T MRI technology helps clinicians to assess atrophy and changes in tissue characteristics in AD patients. This allows the assessment of medial temporal atrophy which has been shown to have a predictive value for AD and is a proposed criteria for diagnosing AD at a pre-dementia stage.
+","
+
+
+",,,https://www.siemens-healthineers.com/clinical-specialities/neurology/neurological-disorders/alzheimer-disease
+,,,"Current guidelines recommend brain imaging and cerebrospinal fluid analysis for diagnosing AD. However, a lumbar puncture can be painful, while brain imaging is expensive.",,,,"By developing reliable and easily available immunoassays for blood-based P-tau or A? misfolding, individuals at high risk of AD can be identified and disease-modifying therapies could be administered early in the disease's progression, including patients with preexisting conditions such as Down syndrome.",,,,https://www.lunduniversity.lu.se/article/blood-test-detects-alzheimers-people-down-syndrome
+,,,"Patients with Down syndrome have an up to 80% risk of developing AD in their lifetime but due to the pre-existing intellectual disability, diagnosing AD can be very challenging.
+https://www.lunduniversity.lu.se/article/blood-test-detects-alzheimers-people-down-syndrome",,,,"By developing reliable and easily available immunoassays for blood-based P-tau or A? misfolding, individuals at high risk of AD can be identified and disease-modifying therapies could be administered early in the disease's progression, including patients with preexisting conditions such as Down syndrome.",,,,https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/alz.12745
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,"
+",,,
+Treatment,,"List from old pathway:
+Patient - Receives treatment but might struggle with accompanying obligations.
+Family - Helps patient comply to the treatment but finds it difficult to manage as the disease progresses.
+Neurologist - Initiates and monitors the treatment as well as the disease progression.
+Pharmacy - Provides medication that is part of the multimodal treatment concept of AD.
+Hospital Administration - Manages the treatment services provided to the patient.
+Medical Device Companies - Create innovative tech solutions to help treat AD effectively.",No effective treatment exists for AD as most treatments currently mainly focus on alleviating symptoms.,,,,"Lecanemab, a humanized IgG1 monoclonal antibody that binds with high affinity to A? soluble protofibrils, targets and affects the underlying pathophysiology for AD. Patients receiving the treatment have shown significant dose- and time-dependent reduction of amyloid beta plaque and reduced cognitive decline.",,,,"https://www.nejm.org/doi/10.1056/NEJMoa2212948
+https://www.npr.org/sections/health-shots/2023/01/06/1147513068/fda-alzheimers-drug-leqembi-lecanemab-accelerated-approval"
+,,,"As symptoms can vary greatly in Alzheimer's patients, so does the extent of the different Alzheimer’s pathologies. Especially for testing novel drugs, it is therefore key to select target clinical trial participants. ",,,,,"The first signs of neuropathological changes can be detected in PET brain imaging where radioactive imaging agent for specific biomarkers are injected into the patient’s bloodstream, and in vivo accumulation of the biomarker is imaged under a PET camera. These Alzheimer’s imaging biomarkers are used for selecting the suitable patient population that may benefit from investigational drugs being tested.",,,https://www.siemens-healthineers.com/molecular-imaging/news/image-selection-alzheimers-therapy
+,,,"Side effects like amyloid-related imaging abnormalities require frequent and regular MRI scans to monitor any potential impact of ARIA over the course of treatment, resulting in larger volume of MRI procedures.",,"By employing targeted denoising and convolutional neural networks, it generates high resolution images from low resolution input. With this, neuro exam scans can be done faster, boosting workflow efficiency while improving patient experience.",,,"Equipped with unique parallel imaging, multi-slice, and compressed sensing technologies, it  can enable faster MRI scans and increase productivity.",,,"https://www.siemens-healthineers.com/magnetic-resonance-imaging/technologies-and-innovations/turbo-suite
+https://www.siemens-healthineers.com/en-us/clinical-specialities/neurology/neurological-disorders/alzheimer-disease"
+,,,Adherence to paper-and-pencil based cognitive training might be low.,"It enables patients with mild AD to undergo individualized cognitive training in the comfort of their home, making it more accessible. Not only is the patient adherence more, but they also sustain their performance in given tasks, and improve in  domains of visual and auditory memory, attention, and arithmetic.",,,,,,,https://formative.jmir.org/2022/9/e34450
+,,,,,,,,.,,,
+,,,,,,,,,,,
+Rehabilitation,,"List from old pathways:
+Patient - Receives assistance and care by the family and health care experts.
+Family - This is the primary caregiver and helps the patient wherever needed. 
+Neurologist - Refers patient to rehabilitation specialists.
+Physiotherapist - Supports the patient through physical exercises.
+Psychotherapist - Supports the patient through psychotherapeutic interventions.
+Tech Companies - Create innovative tech solutions to help the rehabilitation process.","Some patients might not have access to conventional rehabilitation services, especially during the pandemic.
+","It enables patients to receive rehabilitation at home by a multidisciplinary team which can select the best approach for each patient, monitor its execution and outcome remotely, and modify the treatment accordingly. Comprehensive rehabilitative interventions can help patients achieve their goals and stimulate several cognitive abilities which can delay functional decline.",,,,,,,"https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2020.00926/full
+https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2020.623933/full"
+,,,There might be a scarcity of rehabilitation therapists for AD. ,,"These can support medical staff and caregivers by performing various tasks like having engaging conversations with AD patients, recognizing emotions or entertaining them with songs and games. Prospectively, non-pharmaceutical therapies such as music and physio-motor therapy could  be facilitated via robots as well.",,,,,,https://www.walshmedicalmedia.com/open-access/use-of-humanoid-robot-in-dementia-care-a-literature-review.pdf
+,,,Patients may not be able to perform physical exercises properly and lack motivation to indulge in it regularly.,"Remote training can be facilitated for via a touchscreen and a motion detecting device such as a Kinect camera: easy to follow instruction videos are played at scheduled times, while the patient’s movements are monitored to give verbal feedback about their execution. Further, an email is sent to physical therapist for following up with patients if they don't perform the training.",,,,"It involves individual or group exercises in a pool guided by therapists. It helps patients to stay physically active, encourages greater functional mobility, relieves joint stress, provides opportunities for socialization, aids in developing a routine, and soothes the mind and body. It is a great alternative to traditional physical therapy and improves compliance as it is less painful to exercise in an aquatic environment.",,,"https://mental.jmir.org/2020/8/e19495/
+https://www.hydroworx.com/blog/"
+,,,Patients with Alzheimer’s are at high risk for malnutrition due to decreased appetite or attention deficits.,,,"It covers methods, systems and devices that help the elderly unobtrusively in everyday tasks at their home. Such systems could be employed to track patient’s eating habit and encourage him/her to eat. A caregiver can be informed if the patient is under-eating.",,,,,"https://www.mdpi.com/1424-8220/19/15/3265
+https://medinform.jmir.org/2020/11/e20215"
+,,,,,,,,,,,
+,,,,,,,,,,,
+Follow-up,,"List from old pathways:
+Patient - Still receiving various care services and trying to slow the progression of the disease.
+Family - This is the primary caregiver and helps the patient wherever needed. 
+Neurologist - Follows up with the patient regularly to assess the progress of the disease.
+General Practitioner - While taking care of general health related questions, the GP also monitors the progression of AD.
+Medical Device Companies - Create innovative tech solutions to help monitor the progression of AD.","As the disease progresses, patients might increasingly wander and become disorientated, not finding their way home. Also, falls might pose a significant health risk. ",,,"A wide variety of GPS trackers within individual’s cloth attachments, bracelets or shoe soles can keep caregivers informed about the whereabouts of the patient. Additionally, with sensors such as accelerometer and wearables, it can detect falls with high sensitivity and specificity.",,,,,"https://www.ourparents.com/products-for-seniors/location-devices-dementia
+https://www.forbes.com/health/medical-alert-systems/fall-detection-devices/"
+,,,Taking medications correctly is an increasingly difficult task as AD progresses.,,"To secure the correct medication intake, smart pill dispensers pre-set medications in a locked box system which will dispense them at the right time. An alarm alerts the individual to take the medications and reload the box, while drug intake can be remotely monitored, and notification can be sent to the caregivers in case of missed doses.",,,,,,https://www.grayingwithgrace.com/pill-dispensers-for-dementia/
+,,,"Family members and friends may be burdened with different responsibilities towards the patient at each stage of AD, which can lead to increased stress levels and impact quality of life.","These are easily accessible tools for patients and caregivers which could be used to educate and train caregivers, especially those who feel isolated. Additionally, these tools can facilitate self-assessments and offer evidence-based feedback, as well as connect caregivers with resources.
+
+A web platform can help caregivers by providing services like a centralized hub for sharing and documenting information with the care team, a guide for daily activities, and a scheduler for organizing recurring care events. An added feature for video or telephone conference can support caregivers in difficult situations.",,,,,,,"https://www.jmir.org/2021/6/e25006
+https://aging.jmir.org/2022/3/e36975"
+,,,"It can be challenging to assess cognitive decline, measure brain activity and monitor the disease progression remotely.",,,"A stretchable and transparent biocompatible electrode could be employed to measure brain activity and photoplethysmography could be used to measure other related parameters such as pulse waves and blood oxygen saturation. This could help to continuously and remotely monitor AD as well as related health issues, like impaired sleep.",,,,,https://advanced.onlinelibrary.wiley.com/doi/10.1002/admt.202200362
+,,,,,,,,,,,
+,,,,,,,,,,,

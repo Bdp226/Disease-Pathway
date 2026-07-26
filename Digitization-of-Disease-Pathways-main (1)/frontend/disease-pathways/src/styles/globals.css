@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'SHBree';
+  src: url('../assets/fonts/SH-Bree-HeadlineGlobal.woff2') format('woff2'),
+       url('../assets/fonts/SH-Bree-HeadlineGlobal.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SiemensSans';
+  src: url('../assets/fonts/SiemensSans-Black.woff2') format('woff2'),
+       url('../assets/fonts/SiemensSans-Black.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-teal: #009999ff;
+  --primary-teal-light: #87d2d2ff;
+  --primary-teal-dark: #00ACC1;
+  --accent-orange: #ec6702ff;
+  --accent-orange-light: #ecb591ff;
+  --accent-orange-dark: #ec6702;
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray: #808080;
+  --light-gray: #bfbfbf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--primary-teal);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--primary-teal-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--accent-orange);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-orange-dark);
+  transform: translateY(-2px);
+}
+
+.siemens-header {
+  font-family: 'SHBree', sans-serif;
+  font-weight: 700;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  /* Hero section responsive */
+  section > div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  
+  section > div[style*="display: flex"] > div {
+    flex: 1 !important;
+  }
+  
+  /* Disease grid responsive */
+  div[style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Typography responsive */
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .navbar ul {
+    gap: 1.5rem !important;
+  }
+}
