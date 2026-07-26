@@ -1,3 +1,30 @@
+# Disease Pathway - V2 (FAANG Architecture & UI/UX Upgrades)
+
+## What's New in This Version?
+We have heavily refactored the original codebase to align with FAANG-grade system design principles, observability, and frontend best practices. 
+
+### 1. Architectural Modularity (Backend)
+- **Separation of Concerns:** Refactored the monolithic `main.py` by extracting route handlers into a modular `routers/` directory (e.g., `diseases_router.py`, `chat.py`). This makes the codebase scalable, easier to test, and ready for microservices.
+- **Observability Middleware:** Implemented `CorrelationIdMiddleware` to inject unique trace IDs into every request, allowing for distributed tracing and advanced logging.
+- **Standardized Error Handling:** Added a global exception handler middleware that catches unhandled crashes and formats them into **RFC 7807** compliant Problem Details JSON responses.
+
+### 2. Frontend React Architecture
+- **Custom Hooks:** Extracted complex data-fetching logic out of UI components and into reusable custom hooks (e.g., `useDiseases.js`). This strictly separates state management from the presentation layer.
+- **Global Error Boundaries:** Integrated `ErrorBoundary.jsx` at the root of the React application to gracefully catch rendering errors and prevent full-page crashes (White Screen of Death).
+
+### 3. UI/UX & Responsive Design Overhaul
+- **Dashboard Fixes:** Fixed critical export bugs in the Analytics Dashboard that prevented it from rendering on the Admin Panel.
+- **Desktop-App Layout:** Replaced brittle inline styles with robust CSS classes (`.admin-layout`, `.admin-sidebar`). Implemented independent scrolling for the sidebar and main content areas, mimicking premium SaaS products.
+- **Mobile Responsiveness:** Added proper `@media` queries to ensure the Admin Panel collapses into a smooth, horizontal navigation strip on tablets and mobile devices.
+
+### 4. Version Control Optimization
+- **Clean Repository:** Introduced a strict `.gitignore` to exclude `node_modules`, `__pycache__`, and virtual environments, shrinking the repository size and improving CI/CD pipeline efficiency.
+
+---
+
+<details>
+<summary><b>Original README (Before Refactoring)</b></summary>
+
 # Disease Pathway
 A web application for managing disease pathway data with Excel import and user submission capabilities.
 ## Overview
@@ -884,3 +911,4 @@ cd frontend/disease-pathways
 npm install
 npm run dev
 ```
+</details>
