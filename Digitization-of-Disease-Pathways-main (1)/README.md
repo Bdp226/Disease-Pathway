@@ -1,4 +1,4 @@
-# Disease Pathway - V2 (FAANG Architecture & UI/UX Upgrades)
+# Disease Pathway 
 
 ## What's New in This Version?
 We have heavily refactored the original codebase to align with FAANG-grade system design principles, observability, and frontend best practices. 
