@@ -1,8 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { COLORS, SOLUTION_COLORS, SOLUTION_TYPES } from '../utils/constants.js';
-import { parseTextWithLinks } from '../utils/textParser.js';
+import { renderTextWithInlineLinks } from '../utils/textParser.js';
+import { mlAPI } from '../utils/api.js';
 
 const PainPointModal = ({ painPoint, isOpen, onClose }) => {
+  const [showAIInsights, setShowAIInsights] = useState(false);
+  const [aiData, setAiData] = useState({ risk: null, recommendations: [], loading: false, error: null });
+
+  const handleToggleAI = async () => {
+    if (!showAIInsights && !aiData.risk && !aiData.loading) {
+      setAiData(prev => ({ ...prev, loading: true, error: null }));
+      try {
+        const [riskRes, recRes] = await Promise.all([
+          mlAPI.getRiskClassification(painPoint.description),
+          mlAPI.getRecommendations('cad', painPoint.description) // defaulting to cad for now
+        ]);
+        setAiData({
+          risk: riskRes.risk_classification,
+          recommendations: recRes.recommendations,
+          loading: false,
+          error: null
+        });
+      } catch (err) {
+        setAiData(prev => ({ ...prev, loading: false, error: 'Failed to load AI Insights' }));
+      }
+    }
+    setShowAIInsights(!showAIInsights);
+  };
+
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape') {
@@ -124,7 +149,7 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
                   lineHeight: '1.6',
                   fontWeight: '500'
                 }}>
-                  {solution}
+                  {renderTextWithInlineLinks(solution, { color: SOLUTION_COLORS[type] || COLORS.primaryTeal })}
                 </p>
               </div>
             ))}
@@ -140,14 +165,84 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
 
     if (!hasCoverage && !hasExistingSolutions) return null;
 
-    // ✅ Parse coverage and existing solutions
-    const coverageItems = hasCoverage ? parseTextWithLinks(painPoint.coverage) : [];
-    const solutionItems = hasExistingSolutions ? parseTextWithLinks(painPoint.existing_solutions) : [];
+    if (!hasCoverage && !hasExistingSolutions) return null;
 
     return (
       <div style={{ marginBottom: '2rem' }}>
+        {/* AI Insights Section */}
+        <div style={{ marginBottom: '2rem', background: '#f8f9fa', borderRadius: '12px', padding: '1rem', border: `1px solid ${COLORS.lightGray}` }}>
+          <button 
+            onClick={handleToggleAI}
+            style={{
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              background: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+              padding: '0.5rem',
+              color: COLORS.primaryTeal,
+              fontWeight: '700',
+              fontSize: '1.1rem'
+            }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span>🤖</span> AI Risk & Recommendations
+            </div>
+            <span>{showAIInsights ? '▲' : '▼'}</span>
+          </button>
+          
+          {showAIInsights && (
+            <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: `1px solid ${COLORS.lightGray}` }}>
+              {aiData.loading ? (
+                <div style={{ textAlign: 'center', padding: '1rem', color: COLORS.gray }}>
+                  Loading AI analysis...
+                </div>
+              ) : aiData.error ? (
+                <div style={{ color: COLORS.accentOrange, textAlign: 'center' }}>{aiData.error}</div>
+              ) : (
+                <div>
+                  <div style={{ marginBottom: '1rem' }}>
+                    <span style={{ fontWeight: '600', marginRight: '0.5rem' }}>Clinical Risk Level:</span>
+                    <span style={{
+                      padding: '0.3rem 0.8rem',
+                      borderRadius: '20px',
+                      fontSize: '0.85rem',
+                      fontWeight: 'bold',
+                      background: aiData.risk === 'CRITICAL' ? '#ffebee' : 
+                                 aiData.risk === 'HIGH' ? '#fff3e0' : 
+                                 aiData.risk === 'MODERATE' ? '#e8f5e9' : '#f3f4f6',
+                      color: aiData.risk === 'CRITICAL' ? '#d32f2f' : 
+                             aiData.risk === 'HIGH' ? '#ed6c02' : 
+                             aiData.risk === 'MODERATE' ? '#2e7d32' : COLORS.gray
+                    }}>
+                      {aiData.risk || 'UNKNOWN'}
+                    </span>
+                  </div>
+                  <div>
+                    <span style={{ fontWeight: '600', display: 'block', marginBottom: '0.5rem' }}>Predictive Solutions:</span>
+                    {aiData.recommendations.map((rec, idx) => (
+                      <div key={idx} style={{ 
+                        background: COLORS.white, 
+                        padding: '1rem', 
+                        borderRadius: '8px', 
+                        marginBottom: '0.5rem',
+                        boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+                        borderLeft: `4px solid ${COLORS.primaryTeal}`
+                      }}>
+                        <div style={{ fontSize: '0.9rem', marginBottom: '0.3rem' }}>{rec.content}</div>
+                        <div style={{ fontSize: '0.8rem', color: COLORS.gray, fontWeight: 'bold' }}>Similarity: {rec.similarity_score}%</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
         {/* Coverage Section */}
-        {coverageItems.length > 0 && (
+        {hasCoverage && (
           <div style={{ marginBottom: '2rem' }}>
             <div style={{
               display: 'flex',
@@ -174,73 +269,32 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
             </div>
             
             <div style={{ paddingLeft: '1.5rem' }}>
-              {coverageItems.map((item, index) => (
-                <div 
-                  key={index}
-                  style={{ 
-                    marginBottom: '1rem',
-                    padding: '1.5rem',
-                    background: COLORS.white,
-                    borderRadius: '12px',
-                    border: `2px solid ${COLORS.black}`,
-                    borderLeft: `6px solid ${COLORS.primaryTeal}`,
-                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
-                  }}
-                >
-                  {/* Text Description */}
+                <div style={{ 
+                  marginBottom: '1rem',
+                  padding: '1.5rem',
+                  background: COLORS.white,
+                  borderRadius: '12px',
+                  border: `2px solid ${COLORS.black}`,
+                  borderLeft: `6px solid ${COLORS.primaryTeal}`,
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+                }}>
                   <p style={{
                     color: COLORS.black,
-                    margin: item.urls.length > 0 ? '0 0 1rem 0' : 0,
+                    margin: 0,
                     fontSize: '0.95rem',
                     lineHeight: '1.6',
-                    fontWeight: '500'
+                    fontWeight: '500',
+                    whiteSpace: 'pre-line'
                   }}>
-                    {item.text}
+                    {renderTextWithInlineLinks(painPoint.coverage, { color: COLORS.primaryTeal })}
                   </p>
-
-                  {/* URLs - Show as clickable links */}
-                  {item.urls.length > 0 && (
-                    <div style={{ 
-                      paddingTop: '0.5rem',
-                      borderTop: item.urls.length > 0 ? `1px dashed ${COLORS.primaryTeal}30` : 'none'
-                    }}>
-                      {item.urls.map((url, urlIndex) => (
-                        <div key={urlIndex} style={{ marginBottom: '0.5rem' }}>
-                          <a
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                              color: COLORS.primaryTeal,
-                              textDecoration: 'none',
-                              fontSize: '0.85rem',
-                              fontWeight: '500',
-                              transition: 'all 0.3s ease',
-                              wordBreak: 'break-all',
-                              display: 'inline-block'
-                            }}
-                            onMouseEnter={(e) => {
-                              e.target.style.color = COLORS.primaryTealDark;
-                              e.target.style.borderBottom = `1px solid ${COLORS.primaryTealDark}`;
-                            }}
-                            onMouseLeave={(e) => {
-                              e.target.style.color = COLORS.primaryTeal;
-                            }}
-                          >
-                            🔗 {url}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
-              ))}
             </div>
           </div>
         )}
 
         {/* Existing Solutions Section */}
-        {solutionItems.length > 0 && (
+        {hasExistingSolutions && (
           <div style={{ marginBottom: '2rem' }}>
             <div style={{
               display: 'flex',
@@ -267,67 +321,26 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
             </div>
             
             <div style={{ paddingLeft: '1.5rem' }}>
-              {solutionItems.map((item, index) => (
-                <div 
-                  key={index}
-                  style={{ 
-                    marginBottom: '1rem',
-                    padding: '1.5rem',
-                    background: COLORS.white,
-                    borderRadius: '12px',
-                    border: `2px solid ${COLORS.black}`,
-                    borderLeft: `6px solid ${COLORS.accentOrange}`,
-                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
-                  }}
-                >
-                  {/* Text Description */}
+                <div style={{ 
+                  marginBottom: '1rem',
+                  padding: '1.5rem',
+                  background: COLORS.white,
+                  borderRadius: '12px',
+                  border: `2px solid ${COLORS.black}`,
+                  borderLeft: `6px solid ${COLORS.accentOrange}`,
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)'
+                }}>
                   <p style={{
                     color: COLORS.black,
-                    margin: item.urls.length > 0 ? '0 0 1rem 0' : 0,
+                    margin: 0,
                     fontSize: '0.95rem',
                     lineHeight: '1.6',
-                    fontWeight: '500'
+                    fontWeight: '500',
+                    whiteSpace: 'pre-line'
                   }}>
-                    {item.text}
+                    {renderTextWithInlineLinks(painPoint.existing_solutions, { color: COLORS.accentOrange })}
                   </p>
-
-                  {/* URLs - Show as clickable links */}
-                  {item.urls.length > 0 && (
-                    <div style={{ 
-                      paddingTop: '0.5rem',
-                      borderTop: item.urls.length > 0 ? `1px dashed ${COLORS.accentOrange}30` : 'none'
-                    }}>
-                      {item.urls.map((url, urlIndex) => (
-                        <div key={urlIndex} style={{ marginBottom: '0.5rem' }}>
-                          <a
-                            href={url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                              color: COLORS.accentOrange,
-                              textDecoration: 'none',
-                              fontSize: '0.85rem',
-                              fontWeight: '500',
-                              transition: 'all 0.3s ease',
-                              wordBreak: 'break-all',
-                              display: 'inline-block'
-                            }}
-                            onMouseEnter={(e) => {
-                              e.target.style.color = COLORS.accentOrangeDark;
-                              e.target.style.borderBottom = `1px solid ${COLORS.accentOrangeDark}`;
-                            }}
-                            onMouseLeave={(e) => {
-                              e.target.style.color = COLORS.accentOrange;;
-                            }}
-                          >
-                            🔗 {url}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </div>
-              ))}
             </div>
           </div>
         )}
@@ -363,6 +376,8 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
           width: '70%',
           maxWidth: '900px',
           maxHeight: '85vh',
+          display: 'flex',
+          flexDirection: 'column',
           background: COLORS.white,
           border: `2px solid ${COLORS.black}`,
           borderRadius: '20px',
@@ -375,6 +390,7 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
       >
         {/* Header */}
         <div style={{
+          flexShrink: 0,
           padding: '2rem 2rem 1rem',
           borderBottom: `2px solid ${COLORS.lightGray}`,
           background: `${COLORS.primaryTealLight}15`
@@ -393,9 +409,10 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
                 color: COLORS.black,
                 margin: 0,
                 fontSize: '1rem',
-                lineHeight: '1.6'
+                lineHeight: '1.6',
+                whiteSpace: 'pre-line'
               }}>
-                {painPoint.description}
+                {renderTextWithInlineLinks(painPoint.description, { color: COLORS.primaryTeal })}
               </p>
             </div>
             
@@ -432,8 +449,8 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
 
         {/* Solutions Content */}
         <div style={{
-          padding: '2rem',
-          maxHeight: 'calc(85vh - 200px)',
+          flex: 1,
+          padding: '2rem 2rem 0 2rem', // Removed bottom padding since some browsers ignore it on scrolling flex children
           overflowY: 'auto'
         }}>
           <h3 style={{
@@ -449,11 +466,15 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
           
           {/* New Fields in Solutions Section */}
           {renderNewFields()}
+          
+          {/* Spacer to prevent harsh cutoff at the bottom */}
+          <div style={{ height: '2rem', flexShrink: 0 }} />
         </div>
 
         {/* Footer with Source Links */}
         {painPoint.sources && (
           <div style={{
+            flexShrink: 0,
             padding: '1.5rem 2rem',
             borderTop: `2px solid ${COLORS.lightGray}`,
             background: `${COLORS.lightGray}10`
@@ -474,9 +495,8 @@ const PainPointModal = ({ painPoint, isOpen, onClose }) => {
               </span>
               
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-                {painPoint.sources
-                  .split(/[\s,]+/) // Splits by whitespace or commas
-                  .filter(link => link.trim().startsWith('http')) // Only keep valid links
+                {(painPoint.sources.match(/https?:\/\/[^\s]+/gi) || [])
+                  .map(link => link.replace(/,+$/, '')) // Clean trailing commas
                   .map((link, index) => (
                     <a
                       key={index}

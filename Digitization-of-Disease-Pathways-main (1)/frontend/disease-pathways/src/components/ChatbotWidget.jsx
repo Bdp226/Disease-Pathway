@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { COLORS, API_BASE_URL } from '../utils/constants.js';
 import { MdClose, MdSend, MdChat, MdFullscreen, MdFullscreenExit, MdThumbUp, MdThumbDown } from 'react-icons/md';
 import { isAuthenticated, getCurrentUser } from '../utils/api.js';
 import ReactMarkdown from 'react-markdown';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const ChatbotWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,12 @@ const ChatbotWidget = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [feedback, setFeedback] = useState({});  // { msgIndex: 1 or -1 }
   const messagesEndRef = useRef(null);
-  const { disease_name } = useParams();
+  const location = useLocation();
+  const getDiseaseNameFromUrl = () => {
+    const match = location.pathname.match(/\/pathway\/([^/]+)/);
+    return match ? decodeURIComponent(match[1]) : null;
+  };
+  const disease_name = getDiseaseNameFromUrl();
 
   const [selectedModel, setSelectedModel] = useState("llama");
   const [headerNotice, setHeaderNotice] = useState("");
@@ -126,11 +132,27 @@ const ChatbotWidget = () => {
         throw new Error('API request failed');
       }
 
-      const data = await response.json();
-      
+      // Handle streaming plain-text response (backend returns text/plain, not JSON)
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let fullText = '';
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        fullText += chunk;
+        // Update the message bubble progressively as tokens arrive
+        setMessages(prev => prev.map((m, i) =>
+          i === botMsgIndex ? { ...m, text: fullText, streaming: true, originalQuery: messageText } : m
+        ));
+      }
+
+      // Mark streaming as done
       setMessages(prev => prev.map((m, i) =>
-        i === botMsgIndex ? { ...m, text: data.response, streaming: false, originalQuery: messageText } : m
+        i === botMsgIndex ? { ...m, text: fullText, streaming: false } : m
       ));
+
     } catch (error) {
       setMessages(prev => [...prev, {
         text: `System Error: Unable to reach the AI. Please try again.`,
@@ -174,24 +196,39 @@ const ChatbotWidget = () => {
   }, [isOpen, disease_name]);
 
   const renderChatModal = () => {
-    if (!isOpen) return null;
-
-    return createPortal(
-      <div 
-        style={{
-          position: 'fixed', inset: 0, backgroundColor: 'rgba(0, 0, 0, 0.75)',
-          zIndex: 10000, display: 'flex', alignItems: 'center',
-          justifyContent: 'center', padding: isFullscreen ? '0' : '2rem'
-        }}
-        onClick={(e) => { if (e.target === e.currentTarget) setIsOpen(false); }}
-      >
-        <div style={{
-          background: '#1A1A1A', borderRadius: isFullscreen ? '0' : '20px',
-          boxShadow: '0 25px 80px rgba(0, 0, 0, 0.6)', width: '100%',
-          maxWidth: isFullscreen ? '100%' : '900px', height: isFullscreen ? '100%' : '85vh',
-          display: 'flex', flexDirection: 'column', overflow: 'hidden',
-          border: isFullscreen ? 'none' : `1px solid ${COLORS.gray}40`,
-        }}>
+    return (
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            style={{
+              position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+              width: '100vw', height: '100vh', backgroundColor: 'rgba(0, 0, 0, 0.75)',
+              zIndex: 2147483647, display: 'flex', alignItems: 'center',
+              justifyContent: 'center', padding: isFullscreen ? '0' : '2rem',
+              backdropFilter: 'blur(8px)'
+            }}
+            onClick={(e) => { if (e.target === e.currentTarget) setIsOpen(false); }}
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 40, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 20, scale: 0.96 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              style={{
+                background: '#111',
+                borderRadius: isFullscreen ? '0' : '20px',
+                boxShadow: '0 25px 80px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255,255,255,0.06)',
+                width: '100%',
+                maxWidth: isFullscreen ? '100%' : '900px',
+                height: isFullscreen ? '100%' : '85vh',
+                display: 'flex', flexDirection: 'column', overflow: 'hidden',
+                border: isFullscreen ? 'none' : `1px solid rgba(255,255,255,0.08)`,
+              }}
+            >
           
           {/* UPDATED: Model Selection Switcher with Underline Logic */}
           <div style={{
@@ -325,7 +362,6 @@ const ChatbotWidget = () => {
                             )}
                             <ReactMarkdown
                             components={{
-                              // Customizing standard MD tags to match your futuristic theme
                               p: ({node, ...props}) => <p style={{ marginBottom: '1.2rem' }} {...props} />,
                               h1: ({node, ...props}) => <h1 style={{ color: COLORS.primaryTeal, fontSize: '1.4rem', margin: '1rem 0' }} {...props} />,
                               h2: ({node, ...props}) => <h2 style={{ color: COLORS.primaryTeal, fontSize: '1.2rem', margin: '0.8rem 0' }} {...props} />,
@@ -338,11 +374,10 @@ const ChatbotWidget = () => {
                                   borderRadius: '6px',
                                   fontFamily: 'monospace',
                                   fontSize: '0.95rem',
-                                  color: COLORS.accentOrange, // Using your orange for high-contrast code
+                                  color: COLORS.accentOrange,
                                   border: `1px solid ${COLORS.gray}30`
                                 }} {...props} />
                               ),
-                              // Great for citing medical papers or pathway steps
                               blockquote: ({node, ...props}) => (
                                 <blockquote style={{
                                   borderLeft: `3px solid ${COLORS.primaryTeal}`,
@@ -356,6 +391,18 @@ const ChatbotWidget = () => {
                           >
                             {msg.text}
                             </ReactMarkdown>
+                            {/* Blinking cursor while streaming */}
+                            {msg.streaming && (
+                              <span style={{
+                                display: 'inline-block',
+                                width: '2px',
+                                height: '1.1em',
+                                background: COLORS.primaryTeal,
+                                marginLeft: '2px',
+                                verticalAlign: 'text-bottom',
+                                animation: 'blink 1s step-end infinite'
+                              }} />
+                            )}
 
                             {/* Feedback buttons — only on completed messages */}
                             {!msg.streaming && (
@@ -492,27 +539,65 @@ const ChatbotWidget = () => {
               </button>
             </form>
           </div>
-        </div>
-      </div>,
-      document.body
+          </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     );
   };
 
   return (
     <>
-      <button 
-        onClick={() => setIsOpen(true)}
-        style={{
-          position: 'fixed', top: '100px', right: '30px', zIndex: 9999,
-          width: '56px', height: '56px', borderRadius: '28px',
-          backgroundColor: COLORS.primaryTeal, color: 'white', border: 'none',
-          cursor: 'pointer', boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px'
-        }}
-      >
-        <MdChat />
-      </button>
-      {renderChatModal()}
+      {/* FAB: Chatbot button with pulse ring */}
+      <div style={{ position: 'fixed', top: '100px', right: '30px', zIndex: 2147483647 }}>
+        {/* Animated pulse rings */}
+        {!isOpen && (
+          <>
+            <span style={{
+              position: 'absolute', inset: '-6px', borderRadius: '50%',
+              border: `2px solid ${COLORS.primaryTeal}`,
+              animation: 'ringPulse 2s ease-out infinite',
+              pointerEvents: 'none'
+            }} />
+            <span style={{
+              position: 'absolute', inset: '-6px', borderRadius: '50%',
+              border: `2px solid ${COLORS.primaryTeal}`,
+              animation: 'ringPulse 2s ease-out 0.7s infinite',
+              pointerEvents: 'none'
+            }} />
+          </>
+        )}
+        <motion.button 
+          onClick={() => { setIsOpen(!isOpen); }}
+          whileHover={{ scale: 1.12 }}
+          whileTap={{ scale: 0.92 }}
+          style={{
+            width: '56px', height: '56px', borderRadius: '28px',
+            backgroundColor: isOpen ? '#ff4444' : COLORS.primaryTeal,
+            color: 'white', border: 'none',
+            cursor: 'pointer', boxShadow: isOpen
+              ? '0 4px 20px rgba(255,68,68,0.4)'
+              : `0 4px 20px rgba(0,153,153,0.5), 0 0 30px rgba(0,153,153,0.2)`,
+            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px',
+            transition: 'background-color 0.3s ease, box-shadow 0.3s ease'
+          }}
+        >
+          <MdChat style={{ pointerEvents: 'none' }} />
+        </motion.button>
+      </div>
+
+      <style>{`
+        @keyframes ringPulse {
+          0%   { transform: scale(1); opacity: 0.8; }
+          100% { transform: scale(2.2); opacity: 0; }
+        }
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+      `}</style>
+
+      {createPortal(renderChatModal(), document.body)}
     </>
   );
 };

@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
-import { ArrowRight, Activity, ShieldCheck, Zap, Globe } from "lucide-react";
+import { ArrowRight, Activity, ShieldCheck, Zap, Globe, Dna, Hospital, AlertTriangle, CheckCircle } from "lucide-react";
 import { diseaseAPI } from '../utils/api.js';
 import { COLORS, HOME_IMAGES } from '../utils/constants.js';
 import DiseaseGrid from '../components/DiseaseGrid.jsx';
 import LoadingSpinner from '../components/LoadingSpinner.jsx';
 import MinimalNavbar from '../components/MinimalNavbar.jsx';
-import ChatbotWidget from '../components/ChatbotWidget.jsx';
+import AnimatedStatCounter from '../components/AnimatedStatCounter.jsx';
 import heroBackground from "../assets/images/Homepage_DP_page-0002.mp4"; 
 
 // --- STAGE DATA FOR THE TRAY ---
@@ -55,6 +55,7 @@ const Home = () => {
   const [diseases, setDiseases] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [stats, setStats] = useState(null); // NEW: live system stats
   const trayRef = useRef(null);
   const isTrayInView = useInView(trayRef, { once: true, amount: 0.5 });
   
@@ -75,7 +76,7 @@ const Home = () => {
   { id: 'cardio', label: 'Cardio-vascular', path: '/diseases/cardio', comingSoon: false, icon: 'src/assets/images/Cardio.png' },
   { id: 'neuro', label: 'Neuro-degenerative', path: '/diseases/neuro', comingSoon: true, icon: 'src/assets/images/NeuroDegen.png' },
   { id: 'stroke', label: 'Stroke', path: '/diseases/stroke', comingSoon: true, icon: 'src/assets/images/Stroke.png' },
-  { id: 'cancer', label: 'Cancer', path: '/diseases/cancer', comingSoon: true, icon: 'src/assets/images/Cancer.png' },
+  { id: 'cancer', label: 'Cancer', path: '/diseases/cancer', comingSoon: false, icon: 'src/assets/images/Cancer.png' },
 ];
 
   // Animations for Part 1 (Headline)
@@ -98,6 +99,20 @@ const Home = () => {
       }
     };
     fetchDiseases();
+
+    // Fetch live system stats for the animated counter bar
+    const fetchStats = async () => {
+      try {
+        const res = await fetch('http://localhost:8000/stats');
+        if (res.ok) {
+          const data = await res.json();
+          setStats(data);
+        }
+      } catch (e) {
+        // Stats bar optional — degrade gracefully if backend offline
+      }
+    };
+    fetchStats();
   }, []);
 
   const theme = {
@@ -114,8 +129,6 @@ const Home = () => {
 
   return (
     <div style={{  position: 'sticky', background: theme.bg, color: theme.textMain, minHeight: '100vh', fontFamily: 'sans-serif' }}>
-
-      <ChatbotWidget />
       
       {/* --- HERO SECTION CONTAINER --- */}
       <section ref={containerRef} style={{ position: 'relative', height: '200vh' }}>
@@ -238,7 +251,75 @@ const Home = () => {
 
       {/* ================= MAIN CONTENT AREA ================= */}
       <main style={{ position: 'relative', zIndex: 30, background: theme.bg }}>
-        
+
+        {/* ── LIVE STATS BAR ─────────────────────────────────────────── */}
+        <section style={{ padding: '5rem 0 3rem', background: theme.bg }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 2rem' }}>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              style={{ textAlign: 'center', marginBottom: '3rem' }}
+            >
+              <p style={{
+                fontFamily: 'SiemensSans',
+                color: 'rgba(255,255,255,0.4)',
+                fontSize: '0.8rem',
+                fontWeight: '700',
+                textTransform: 'uppercase',
+                letterSpacing: '0.15em',
+                marginBottom: '0.5rem'
+              }}>
+                Live Knowledge Base Metrics
+              </p>
+              <h2 style={{
+                fontFamily: 'SHBree',
+                fontSize: 'clamp(1.6rem, 3vw, 2.5rem)',
+                color: 'white',
+                fontWeight: '700'
+              }}>
+                Powering Clinical Decision Intelligence
+              </h2>
+            </motion.div>
+
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+              gap: '1.5rem'
+            }}>
+              <AnimatedStatCounter
+                value={stats?.total_diseases ?? 0}
+                label="Disease Pathways"
+                icon={<Dna size={28} color="#009999" />}
+                color="#009999"
+                delay={0}
+              />
+              <AnimatedStatCounter
+                value={stats?.total_stages ?? 0}
+                label="Clinical Stages"
+                icon={<Hospital size={28} color="#009999" />}
+                color="#009999"
+                delay={0.1}
+              />
+              <AnimatedStatCounter
+                value={stats?.total_pain_points ?? 0}
+                label="Pain Points Mapped"
+                icon={<AlertTriangle size={28} color="#EC6702" />}
+                color="#EC6702"
+                delay={0.2}
+              />
+              <AnimatedStatCounter
+                value={stats?.total_solutions ?? 0}
+                label="Solutions Indexed"
+                icon={<CheckCircle size={28} color="#EC6702" />}
+                color="#EC6702"
+                delay={0.3}
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Section 1: Interactive Use Cases Framework */}
         <section style={{ padding: '8rem 0', background: '#000', color: 'white' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>

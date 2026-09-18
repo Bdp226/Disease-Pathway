@@ -1,5 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { COLORS, SOLUTION_COLORS } from '../utils/constants.js';
+import { renderTextWithInlineLinks } from '../utils/textParser.js';
 
 const PainPointCard = ({ 
   painPoint, 
@@ -8,17 +10,16 @@ const PainPointCard = ({
   stageColors, 
   isDarkTheme = false 
 }) => {
-  const getCardHeight = () => {
-    const baseHeight = 320;
-    const textLength = painPoint.description.length;
-    const additionalHeight = Math.floor(textLength / 100) * 40;
-    return Math.min(baseHeight + additionalHeight, 450);
-  };
 
-  const getSolutionCount = () => {
-    return Object.values(painPoint.solutions || {}).reduce((total, solutions) => {
-      return total + (Array.isArray(solutions) ? solutions.length : (solutions ? 1 : 0));
-    }, 0);
+  const getUrgencyBadge = (urgency) => {
+    switch (urgency?.toLowerCase()) {
+      case 'high':
+        return { label: 'Critical', color: '#ff4d4f', bg: 'rgba(255, 77, 79, 0.15)' };
+      case 'medium':
+        return { label: 'Medium', color: '#faad14', bg: 'rgba(250, 173, 20, 0.15)' };
+      default:
+        return null;
+    }
   };
 
   const hasNewFields = () => {
@@ -28,7 +29,6 @@ const PainPointCard = ({
 
   const getPrimaryColor = () => {
     if (!painPoint.solutions) return stageColors?.primary || COLORS.primaryTeal;
-    
     for (const [type, solutions] of Object.entries(painPoint.solutions)) {
       if (Array.isArray(solutions) && solutions.length > 0) {
         return SOLUTION_COLORS[type] || stageColors?.primary || COLORS.primaryTeal;
@@ -39,135 +39,198 @@ const PainPointCard = ({
     return stageColors?.primary || COLORS.primaryTeal;
   };
 
+  const urgencyBadge = getUrgencyBadge(painPoint.urgency);
+  const primaryColor = stageColors?.primary || COLORS.primaryTeal;
+
+  // Parse tags, filter empty ones
+  const tags = painPoint.tags
+    ? painPoint.tags.split(',').map(t => t.trim()).filter(Boolean)
+    : [];
+
+  const getTagStyle = (tag) => {
+    if (tag.includes('Treatment')) return { color: '#9c27b0', bg: 'rgba(156, 39, 176, 0.15)' };
+    if (tag.includes('Symptom')) return { color: '#e65100', bg: 'rgba(230, 81, 0, 0.15)' };
+    if (tag.includes('Clinical')) return { color: '#0277bd', bg: 'rgba(2, 119, 189, 0.15)' };
+    if (tag.includes('Financial')) return { color: '#2e7d32', bg: 'rgba(46, 125, 50, 0.15)' };
+    return { color: primaryColor, bg: `${primaryColor}20` };
+  };
+
+  const getTagTooltip = (tag) => {
+    if (painPoint.tags_breakdown && painPoint.tags_breakdown[tag]) {
+      return `Category: ${tag}\nFound entities: ${painPoint.tags_breakdown[tag].join(', ')}`;
+    }
+    return `Category: ${tag}`;
+  };
+
+  const urgencyTooltip = painPoint.urgency_breakdown?.matched_keywords?.length > 0 
+    ? `ML Urgency Score: ${painPoint.urgency_breakdown.score.toUpperCase()}\nTriggered by keywords: ${painPoint.urgency_breakdown.matched_keywords.join(', ')}`
+    : `Urgency Score: ${painPoint.urgency || 'Low'}`;
+
   return (
-    <button 
+    <motion.button
       className="pain-point-card"
       onClick={() => onClick(painPoint)}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+      whileHover={{ y: -8, scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       style={{
-        // GLASS MORPHIC EFFECT
         background: isDarkTheme 
-          ? `rgba(255, 255, 255, 0.08)` 
+          ? `rgba(255, 255, 255, 0.06)` 
           : `rgba(255, 255, 255, 0.25)`,
         backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)', // Safari support
-        
-        // STAGE-SPECIFIC COLORED BORDER
-        border: `1px solid ${stageColors?.primary || COLORS.primaryTeal}60`,
-        
-        padding: '2rem',
+        WebkitBackdropFilter: 'blur(12px)',
+        border: `1px solid ${primaryColor}50`,
+        padding: '1.5rem',
         borderRadius: '16px',
         cursor: 'pointer',
         textAlign: 'left',
         width: '100%',
+        boxSizing: 'border-box',
         fontFamily: 'inherit',
-        
-        height: `${getCardHeight()}px`,
         display: 'flex',
         flexDirection: 'column',
+        gap: '0.75rem',
         position: 'relative',
         overflow: 'hidden',
-        
-        // GLASS MORPHIC SHADOW
-        boxShadow: `0 8px 32px ${stageColors?.primary || COLORS.primaryTeal}20`,
-        
-        // INTERACTION STYLES
+        boxShadow: `0 8px 32px ${primaryColor}15`,
         userSelect: 'none',
         WebkitUserSelect: 'none',
-        MozUserSelect: 'none',
-        msUserSelect: 'none',
         outline: 'none',
         WebkitTapHighlightColor: 'transparent',
-        
-        // SMOOTH TRANSITIONS
-        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
-        e.currentTarget.style.boxShadow = `0 25px 50px ${stageColors?.primary || COLORS.primaryTeal}30`;
-        e.currentTarget.style.borderColor = stageColors?.primary || COLORS.primaryTeal;
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = 'translateY(0) scale(1)';
-        e.currentTarget.style.boxShadow = `0 8px 32px ${stageColors?.primary || COLORS.primaryTeal}20`;
-        e.currentTarget.style.borderColor = `${stageColors?.primary || COLORS.primaryTeal}60`;
       }}
       onFocus={(e) => e.currentTarget.blur()}
       onContextMenu={(e) => e.preventDefault()}
       tabIndex="-1"
     >
-      {/* Color Accent Bar - Stage Specific */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        height: '6px',
-        background: `linear-gradient(90deg, ${stageColors?.primary || COLORS.primaryTeal}, ${stageColors?.secondary || COLORS.primaryTealLight})`,
-        borderRadius: '16px 16px 0 0',
-        pointerEvents: 'none'
-      }} />
+      {/* Top accent bar — animated shimmer */}
+      <motion.div
+        style={{
+          position: 'absolute',
+          top: 0, left: 0, right: 0,
+          height: '3px',
+          background: `linear-gradient(90deg, ${primaryColor}, ${stageColors?.secondary || primaryColor}80, ${primaryColor})`,
+          backgroundSize: '200% 100%',
+          borderRadius: '16px 16px 0 0',
+          pointerEvents: 'none'
+        }}
+        animate={{ backgroundPosition: ['0% center', '200% center'] }}
+        transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+      />
 
-      {/* Header Section */}
-      <div style={{ 
-        marginBottom: '1rem'
+      {/* ── HEADER: Title + Urgency Badge ── */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: '0.5rem',
+        paddingTop: '0.5rem' /* clear the accent bar */
       }}>
-        <h3 style={{ 
-          color: COLORS.white, // White text for dark theme
-          marginBottom: '0.5rem',
-          fontSize: '1.1rem',
+        <h3 style={{
+          color: COLORS.white,
+          fontSize: '1rem',
           fontWeight: '700',
-          margin: '0 0 0.5rem 0',
-          textShadow: `0 0 10px ${stageColors?.primary || COLORS.primaryTeal}40`
+          margin: 0,
+          textShadow: `0 0 8px ${primaryColor}40`
         }}>
           Pain Point
         </h3>
-        
+
+        {urgencyBadge && (
+          <span 
+            title={urgencyTooltip}
+            style={{
+            background: urgencyBadge.bg,
+            color: urgencyBadge.color,
+            padding: '3px 10px',
+            borderRadius: '20px',
+            fontSize: '0.78rem',
+            fontWeight: '700',
+            border: `1px solid ${urgencyBadge.color}40`,
+            whiteSpace: 'nowrap',
+            flexShrink: 0,
+            cursor: 'help'
+          }}>
+            {urgencyBadge.label}
+          </span>
+        )}
       </div>
 
-      {/* Description Section */}
-      <div style={{ 
-        flex: 1, 
-        marginBottom: '1rem',
-        // overflow: 'hidden'
+      {/* ── DESCRIPTION ── truncated to 7 lines, no overflow */}
+      <p style={{
+        color: isDarkTheme ? 'rgba(255,255,255,0.85)' : COLORS.darkGray,
+        margin: 0,
+        fontSize: '0.9rem',
+        lineHeight: '1.6',
+        fontWeight: '400',
+        /* Clamp to 7 lines so long text never overflows */
+        display: '-webkit-box',
+        WebkitLineClamp: 7,
+        WebkitBoxOrient: 'vertical',
+        overflow: 'hidden',
+        wordBreak: 'break-word',
+        overflowWrap: 'anywhere',
+        flexShrink: 0,
+        whiteSpace: 'pre-line'
       }}>
-        <p style={{
-          color: COLORS.white, // White text for dark theme
-          margin: 0,
-          display: '-webkit-box',
-          WebkitLineClamp: 6,
-          WebkitBoxOrient: 'vertical',
-          // overflow: 'hidden',
-          // textOverflow: 'ellipsis',
-          fontSize: '0.95rem',
-          lineHeight: '1.6',
-          fontWeight: '500',
-          opacity: 0.9
-        }}>
-          {painPoint.description}
-        </p>
-      </div>
+        {renderTextWithInlineLinks(painPoint.description, { color: '#88ccca' })}
+      </p>
 
-      {/* New Fields Indicators */}
+      {/* ── TAGS ── rendered after description, before footer */}
+      {tags.length > 0 && (
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '5px',
+          flexShrink: 0
+        }}>
+          {tags.map((tag, idx) => {
+            const { color, bg } = getTagStyle(tag);
+            return (
+              <span 
+                key={idx} 
+                title={getTagTooltip(tag)}
+                style={{
+                background: bg,
+                color: color,
+                border: `1px solid ${color}40`,
+                padding: '3px 9px',
+                borderRadius: '10px',
+                fontSize: '0.72rem',
+                fontWeight: '600',
+                whiteSpace: 'nowrap',
+                cursor: 'help'
+              }}>
+                {tag}
+              </span>
+            );
+          })}
+        </div>
+      )}
+
+      {/* ── ADDITIONAL INFO ── rendered inline, no absolute positioning */}
       {hasNewFields() && (
         <div style={{
-          marginBottom: '1rem',
-          padding: '0.75rem',
-          background: `rgba(255, 255, 255, 0.05)`,
-          backdropFilter: 'blur(8px)',
+          padding: '0.6rem 0.75rem',
+          background: `rgba(255,255,255,0.05)`,
           borderRadius: '8px',
-          border: `1px solid ${stageColors?.primary || COLORS.primaryTeal}40`
+          border: `1px solid ${primaryColor}30`,
+          flexShrink: 0
         }}>
           <div style={{
-            fontSize: '0.8rem',
-            color: stageColors?.primary || COLORS.primaryTeal,
+            fontSize: '0.75rem',
+            color: primaryColor,
             fontWeight: '600',
-            marginBottom: '0.25rem'
+            marginBottom: '0.2rem'
           }}>
             Additional Information Available:
           </div>
-          <div style={{ fontSize: '0.75rem', color: COLORS.white }}>
+          <div style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.7)', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             {painPoint.coverage && painPoint.coverage.trim() && (
-              <span style={{ marginRight: '0.75rem' }}>• Our portfolio coverage </span>
+              <span>• Our portfolio coverage</span>
             )}
             {painPoint.existing_solutions && painPoint.existing_solutions.trim() && (
               <span>• Existing Solutions</span>
@@ -176,31 +239,71 @@ const PainPointCard = ({
         </div>
       )}
 
-      {/* Footer Section */}
+      {/* ── ML INSIGHTS (Explicit Breakdown) ── */}
+      {(painPoint.urgency_breakdown?.matched_keywords?.length > 0 || (painPoint.tags_breakdown && Object.keys(painPoint.tags_breakdown).length > 0)) && (
+        <details 
+          style={{
+            background: 'rgba(0,0,0,0.2)',
+            borderRadius: '8px',
+            border: `1px dashed ${primaryColor}60`,
+            padding: '0.5rem',
+            fontSize: '0.8rem',
+            marginTop: '0.5rem'
+          }}
+          onClick={(e) => e.stopPropagation()} /* Prevent card click when interacting */
+        >
+          <summary style={{ cursor: 'pointer', color: primaryColor, fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <span>ML Insights Breakdown</span>
+          </summary>
+          <div style={{ marginTop: '0.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', paddingLeft: '1rem', borderLeft: `2px solid ${primaryColor}40` }}>
+            {painPoint.urgency_breakdown?.matched_keywords?.length > 0 && (
+              <div>
+                <strong style={{ color: COLORS.white }}>Urgency ({painPoint.urgency_breakdown.score}):</strong> Triggered by keywords: 
+                <span style={{ color: '#ff4d4f', marginLeft: '0.3rem' }}>{painPoint.urgency_breakdown.matched_keywords.join(', ')}</span>
+              </div>
+            )}
+            {painPoint.tags_breakdown && Object.keys(painPoint.tags_breakdown).length > 0 && (
+              <div>
+                <strong style={{ color: COLORS.white }}>Entity Extraction:</strong>
+                <ul style={{ margin: '0.2rem 0 0 0', paddingLeft: '1rem', color: 'rgba(255,255,255,0.8)' }}>
+                  {Object.entries(painPoint.tags_breakdown).map(([tag, entities]) => (
+                    <li key={tag}>
+                      <strong>{tag}:</strong> {entities.join(', ')}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </details>
+      )}
+
+      {/* ── FOOTER: spacer pushes it to bottom ── */}
+      <div style={{ flexGrow: 1, minHeight: '0.5rem' }} />
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingTop: '1rem',
-        borderTop: `1px solid ${stageColors?.primary || COLORS.primaryTeal}40`,
-        marginTop: 'auto'
+        paddingTop: '0.75rem',
+        borderTop: `1px solid ${primaryColor}30`,
+        flexShrink: 0
       }}>
-        <div style={{
-          color: COLORS.white,
+        <span style={{
+          color: 'rgba(255,255,255,0.7)',
           fontWeight: '600',
-          fontSize: '0.85rem'
+          fontSize: '0.82rem'
         }}>
           Click for details
-        </div>
-        <div style={{
-          fontSize: '1.3rem',
-          color: stageColors?.primary || COLORS.primaryTeal,
+        </span>
+        <span style={{
+          fontSize: '1.2rem',
+          color: primaryColor,
           fontWeight: 'bold'
         }}>
           →
-        </div>
+        </span>
       </div>
-    </button>
+    </motion.button>
   );
 };
 

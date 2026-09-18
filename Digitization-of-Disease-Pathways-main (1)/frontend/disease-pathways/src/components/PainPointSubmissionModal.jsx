@@ -4,15 +4,27 @@ import { painPointAPI, diseaseAPI } from '../utils/api.js';
 import { COLORS } from '../utils/constants.js';
 import { MdClose, MdAdd } from 'react-icons/md';
 
-const PainPointSubmissionModal = ({ isOpen, onClose, onSuccess }) => {
+const PainPointSubmissionModal = ({ isOpen, onClose, onSuccess, initialDisease = '', initialStageId = '' }) => {
   const [formData, setFormData] = useState({
-    disease_name: '',
-    stage_id: '',
+    disease_name: initialDisease,
+    stage_id: initialStageId,
     description: '',
     existing_solutions: '',
     sources: '',
     coverage: ''
   });
+
+  // Also update when props change (in case modal is reused)
+  useEffect(() => {
+    if (isOpen) {
+      setFormData(prev => ({
+        ...prev,
+        disease_name: initialDisease || prev.disease_name,
+        stage_id: initialStageId || prev.stage_id
+      }));
+    }
+  }, [isOpen, initialDisease, initialStageId]);
+
   const [diseases, setDiseases] = useState([]);
   const [stages, setStages] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -175,7 +187,8 @@ const PainPointSubmissionModal = ({ isOpen, onClose, onSuccess }) => {
                 color: COLORS.gray,
                 outline: 'none',
                 background: COLORS.white,
-                transition: 'border-color 0.3s ease'
+                transition: 'border-color 0.3s ease',
+                boxSizing: 'border-box'
               }}
               onFocus={(e) => e.target.style.borderColor = COLORS.primaryTeal}
               onBlur={(e) => e.target.style.borderColor = COLORS.lightGray}
@@ -210,10 +223,10 @@ const PainPointSubmissionModal = ({ isOpen, onClose, onSuccess }) => {
                 borderRadius: '12px',
                 fontSize: '1rem',
                 color: COLORS.gray,
-                outline: 'none',
                 background: COLORS.white,
                 transition: 'border-color 0.3s ease',
-                opacity: formData.disease_name ? 1 : 0.6
+                opacity: formData.disease_name ? 1 : 0.6,
+                boxSizing: 'border-box'
               }}
               onFocus={(e) => e.target.style.borderColor = COLORS.primaryTeal}
               onBlur={(e) => e.target.style.borderColor = COLORS.lightGray}
@@ -249,10 +262,10 @@ const PainPointSubmissionModal = ({ isOpen, onClose, onSuccess }) => {
                 borderRadius: '12px',
                 fontSize: '1rem',
                 color: COLORS.gray,
-                outline: 'none',
                 transition: 'border-color 0.3s ease',
                 resize: 'vertical',
-                minHeight: '100px'
+                minHeight: '100px',
+                boxSizing: 'border-box'
               }}
               onFocus={(e) => e.target.style.borderColor = COLORS.primaryTeal}
               onBlur={(e) => e.target.style.borderColor = COLORS.lightGray}
@@ -282,10 +295,10 @@ const PainPointSubmissionModal = ({ isOpen, onClose, onSuccess }) => {
                 borderRadius: '12px',
                 fontSize: '1rem',
                 color: COLORS.gray,
-                outline: 'none',
                 transition: 'border-color 0.3s ease',
                 resize: 'vertical',
-                minHeight: '80px'
+                minHeight: '80px',
+                boxSizing: 'border-box'
               }}
               onFocus={(e) => e.target.style.borderColor = COLORS.primaryTeal}
               onBlur={(e) => e.target.style.borderColor = COLORS.lightGray}
@@ -316,7 +329,8 @@ const PainPointSubmissionModal = ({ isOpen, onClose, onSuccess }) => {
                 fontSize: '1rem',
                 color: COLORS.gray,
                 outline: 'none',
-                transition: 'border-color 0.3s ease'
+                transition: 'border-color 0.3s ease',
+                boxSizing: 'border-box'
               }}
               onFocus={(e) => e.target.style.borderColor = COLORS.primaryTeal}
               onBlur={(e) => e.target.style.borderColor = COLORS.lightGray}

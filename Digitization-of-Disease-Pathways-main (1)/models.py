@@ -9,6 +9,8 @@ class PainPointCreate(BaseModel):
     sources: Optional[str] = None
     coverage: Optional[str] = None
     existing_solutions: Optional[str] = None
+    urgency: Optional[str] = "low"
+    tags: Optional[str] = ""
 
 class SolutionResponse(BaseModel):
     id: int
@@ -27,6 +29,8 @@ class PainPointResponse(BaseModel):
     coverage: Optional[str] = None              # NEW
     existing_solutions: Optional[str] = None    # NEW
     status: str = "approved"
+    urgency: Optional[str] = "low"
+    tags: Optional[str] = ""
     created_at: datetime
     solutions: List[SolutionResponse] = []
     
@@ -90,6 +94,10 @@ class PathwayPainPoint(BaseModel):
     coverage: Optional[str] = None              # NEW
     existing_solutions: Optional[str] = None    # NEW
     status: str = "approved"
+    urgency: Optional[str] = "low"
+    tags: Optional[str] = ""
+    urgency_breakdown: Optional[dict] = None
+    tags_breakdown: Optional[dict] = None
     solutions: SolutionsByType
 
 class PathwayStage(BaseModel):

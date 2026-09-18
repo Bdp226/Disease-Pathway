@@ -4,6 +4,7 @@ import PainPointModal from './PainPointModal.jsx';
 import StakeholderSection from './StakeholderSection.jsx';
 import FormattedText from './FormattedText.jsx';
 import LoadMoreButton from './LoadMoreButton.jsx';
+import PainPointSubmissionModal from './PainPointSubmissionModal.jsx';
 import { COLORS, getStageColors } from '../utils/constants.js';
 
 const PinterestLayout = ({ 
@@ -17,10 +18,12 @@ const PinterestLayout = ({
   onShowLessPainPoints,
   expandedStages = {},
   loadingStages = {},
-  stageErrors = {}
+  stageErrors = {},
+  diseaseName = ''
 }) => {
   const [selectedPainPoint, setSelectedPainPoint] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [currentAddStage, setCurrentAddStage] = useState(null);
 
   useEffect(() => {
     const styleId = 'pinterest-animations';
@@ -112,6 +115,32 @@ const PinterestLayout = ({
                     >
                       {stageData.name}
                     </h1>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCurrentAddStage(stageData);
+                      }}
+                      style={{
+                        marginTop: '1rem',
+                        padding: '0.5rem 1rem',
+                        backgroundColor: 'transparent',
+                        color: stageColors.primary,
+                        border: `1px solid ${stageColors.primary}`,
+                        borderRadius: '20px',
+                        cursor: 'pointer',
+                        fontSize: '0.9rem',
+                        fontWeight: '600',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        transition: 'all 0.2s ease'
+                      }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = `${stageColors.primary}20`}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+                    >
+                      + Add Pain Point
+                    </button>
                   </div>
 
                   <div style={{ flex: 1 }}>
@@ -158,6 +187,7 @@ const PinterestLayout = ({
                     display: 'grid',
                     gridTemplateColumns: 'repeat(3, 1fr)',
                     gap: '1.5rem',
+                    alignItems: 'stretch',
                     opacity: isLoading ? 0.7 : 1,
                     transition: 'opacity 0.3s ease'
                   }}
@@ -210,6 +240,17 @@ const PinterestLayout = ({
         isOpen={modalOpen}
         onClose={closeModal}
         isDarkTheme={isDarkTheme}
+      />
+
+      <PainPointSubmissionModal
+        isOpen={!!currentAddStage}
+        onClose={() => setCurrentAddStage(null)}
+        initialDisease={diseaseName}
+        initialStageId={currentAddStage ? String(currentAddStage.id) : ''}
+        onSuccess={(msg) => {
+          alert(msg);
+          setCurrentAddStage(null);
+        }}
       />
     </div>
   );

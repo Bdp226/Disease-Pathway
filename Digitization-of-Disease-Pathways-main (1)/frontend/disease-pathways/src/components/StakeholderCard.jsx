@@ -10,6 +10,12 @@ const StakeholderCard = ({
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
+  // Reset state if the image path changes (crucial for hot-reloading)
+  React.useEffect(() => {
+    setImageError(false);
+    setImageLoaded(false);
+  }, [imagePath]);
+
   // Extract first word as fallback text
   const fallbackText = stakeholder.trim().split(' ')[0].charAt(0).toUpperCase();
 
@@ -44,21 +50,22 @@ const StakeholderCard = ({
       }}>
         {/* NEW: Image Icon Circle */}
         <div style={{
-          width: '50px',  // Smaller than emoji (was ~60px)
-          height: '50px',
+          width: '52px',
+          height: '52px',
           borderRadius: '50%',
-          background: `linear-gradient(135deg, ${COLORS.white})`,
+          background: `linear-gradient(135deg, ${stageColors?.primary || COLORS.primaryTeal}, ${stageColors?.accent || COLORS.primaryTealLight})`,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: '1.5rem',
           flexShrink: 0,
-          boxShadow: `0 4px 8px ${stageColors?.accent || COLORS.primaryTeal}40`,
+          border: `2px solid ${stageColors?.accent || stageColors?.primary || COLORS.primaryTeal}`,
+          boxShadow: `0 0 15px ${stageColors?.accent || COLORS.primaryTeal}60, inset 0 0 10px ${stageColors?.primary || COLORS.primaryTeal}30`,
           position: 'relative',
           overflow: 'hidden'
         }}>
-          {/* Loading state */}
-          {!imageLoaded && !imageError && (
+          {/* Loading / Fallback state (placed behind the image) */}
+          {!imageError && (
             <div style={{
               position: 'absolute',
               top: '50%',
@@ -66,7 +73,8 @@ const StakeholderCard = ({
               transform: 'translate(-50%, -50%)',
               color: COLORS.white,
               fontSize: '1.2rem',
-              fontWeight: '600'
+              fontWeight: '600',
+              zIndex: 0
             }}>
               {fallbackText}
             </div>
@@ -77,8 +85,7 @@ const StakeholderCard = ({
             <img 
               src={imagePath}
               alt={stakeholder}
-              loading="eager"  // Lazy loading for performance
-              onLoad={() => setImageLoaded(true)}
+              loading="eager"
               onError={() => {
                 console.warn(`Failed to load image: ${imagePath}`);
                 setImageError(true);
@@ -88,7 +95,9 @@ const StakeholderCard = ({
                 height: '100%',
                 objectFit: 'cover',
                 borderRadius: '50%',
-                display: imageLoaded ? 'block' : 'none'
+                position: 'relative',
+                zIndex: 1,
+                opacity: 1
               }}
             />
           )}

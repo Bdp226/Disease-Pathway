@@ -8,6 +8,7 @@ from datetime import datetime
 import os
 from pydantic import BaseModel
 import csv
+import re
 import httpx
 import pandas as pd
 import warnings
@@ -22,6 +23,10 @@ import traceback
 import logging
 from pythonjsonlogger import jsonlogger
 from prometheus_fastapi_instrumentator import Instrumentator
+import httpx
+import warnings
+
+
 
 # Configure structured JSON Logging for Datadog/Splunk
 logger = logging.getLogger()
@@ -77,6 +82,7 @@ from auth.models import AdminResponse, UserMe
 
 # Import chat router
 from routers.chat import router as chat_router
+from ml_features import router as ml_router
 from routers.diseases_router import router as diseases_router
 
 # Create disease data tables on startup
@@ -103,6 +109,8 @@ from middleware.error_handler import global_exception_handler
 
 app.add_middleware(CorrelationIdMiddleware)
 app.add_exception_handler(Exception, global_exception_handler)
+# Include the Premium ML Router
+app.include_router(ml_router)
 # --------------------------------------------
 
 # Enable CORS
@@ -612,8 +620,8 @@ async def chat_with_model(request: ChatRequest, db: Session = Depends(get_db)):
             "- Solution: A proposed intervention (digital, automation, clinical) to address a pain point.\n\n"
             "CRITICAL INSTRUCTIONS:\n"
             "1. You have access to tools to search the pathway data. Always use them to find answers.\n"
-            "2. Use 'vector_search_tool' for semantic/general queries. Use 'graph_search_tool' for structural questions involving relationships between stages, pain points, and solutions.\n"
-            "3. ANTI-HALLUCINATION: If the tools return no relevant information, YOU MUST state exactly: 'I do not have enough information to answer that.' DO NOT invent or guess information.\n"
+            "2. Use 'full_context_tool' to read the pathway. Use 'graph_search_tool' for structural questions involving relationships between stages, pain points, and solutions.\n"
+            "3. ANTI-HALLUCINATION: If the tools return no relevant information for a medical query, state exactly: 'I do not have enough information to answer that.' DO NOT invent information. However, for casual greetings (e.g., 'hello', 'hi'), respond politely without using tools.\n"
             "4. FORMATTING: Structure your answers professionally using bullet points. Use bold text to highlight key medical terms, stages, or pain points. Maintain a clinical and objective tone.\n\n"
             f"Current disease focus: {disease_name}"
         )
@@ -817,27 +825,47 @@ async def semantic_search(request: SearchRequest, db: Session = Depends(get_db))
         store = VECTOR_STORES.get(key) or VECTOR_STORES.get("global")
 
         if not store:
-            # Fallback: simple DB text search
+            # Fallback: DB text search with real TF-IDF-style relevance scoring
             db_ops = DatabaseOperations(db)
             diseases = db_ops.get_all_diseases()
             results = []
             query_lower = request.query.lower()
+            query_terms = [t for t in re.findall(r'\b[a-z]+\b', query_lower) if len(t) > 2]
+
             for disease in diseases:
                 for stage in disease.stages:
                     for pp in stage.pain_points:
-                        if (query_lower in (pp.description or "").lower() or
-                            query_lower in disease.name.lower() or
-                            query_lower in stage.name.lower()):
-                            results.append({
-                                "text": pp.description,
-                                "disease": disease.name,
-                                "stage": stage.name,
-                                "pain_point_id": pp.id,
-                                "severity": "medium",
-                                "tags": [],
-                                "relevance_score": 0.5,
-                                "source": "db_text_search"
-                            })
+                        desc = (pp.description or "").lower()
+                        disease_name_lower = disease.name.lower()
+                        stage_name_lower = stage.name.lower()
+
+                        if not (query_lower in desc or query_lower in disease_name_lower or query_lower in stage_name_lower):
+                            continue
+
+                        # Compute a real relevance score: term frequency normalized by document length
+                        doc_words = re.findall(r'\b[a-z]+\b', desc)
+                        doc_len = max(len(doc_words), 1)
+                        term_hits = sum(desc.count(t) for t in query_terms)
+                        # Normalize: hits per 100 words, capped at 1.0
+                        raw_score = min((term_hits / doc_len) * 10, 1.0)
+                        # Boost if disease/stage name also matches
+                        if query_lower in disease_name_lower or query_lower in stage_name_lower:
+                            raw_score = min(raw_score + 0.2, 1.0)
+                        relevance_score = round(raw_score, 2)
+
+                        results.append({
+                            "text": pp.description,
+                            "disease": disease.name,
+                            "stage": stage.name,
+                            "pain_point_id": pp.id,
+                            "severity": getattr(pp, 'urgency', 'medium') or 'medium',
+                            "tags": [],
+                            "relevance_score": relevance_score,
+                            "source": "db_text_search"
+                        })
+
+            # Sort by score descending before returning
+            results.sort(key=lambda x: x["relevance_score"], reverse=True)
             return {"results": results[:request.k], "query": request.query, "source": "db_fallback"}
 
         results = adv_rag.perform_hybrid_search(query=request.query, faiss_store=store, k=request.k)

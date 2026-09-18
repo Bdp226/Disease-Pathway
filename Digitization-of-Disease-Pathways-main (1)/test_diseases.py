@@ -1,7 +1,17 @@
-import urllib.request
-try:
-    with urllib.request.urlopen('http://127.0.0.1:8000/diseases') as response:
-        print(f"Status: {response.status}")
-        print(response.read().decode('utf-8'))
-except Exception as e:
-    print(f"Error: {e}")
+from database import get_db, DatabaseOperations, engine, SessionLocal
+from cache_manager import cache
+
+def test():
+    db = SessionLocal()
+    try:
+        db_ops = DatabaseOperations(db)
+        pathway_data = db_ops.get_disease_pathway_data('cad')
+        print("Data fetched successfully!")
+        print("Stages:", len(pathway_data.get('stages', {})))
+    except Exception as e:
+        print("Error fetching data:", e)
+    finally:
+        db.close()
+
+if __name__ == "__main__":
+    test()

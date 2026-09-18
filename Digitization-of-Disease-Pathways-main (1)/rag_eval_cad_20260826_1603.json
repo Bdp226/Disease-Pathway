@@ -1,0 +1,76 @@
+{
+  "status": "success",
+  "disease": "cad",
+  "k": 5,
+  "evaluated_at": "2026-08-26T10:33:13.810729",
+  "total_queries": 20,
+  "metrics": {
+    "hit_rate_1": 0.55,
+    "hit_rate_3": 0.8,
+    "hit_rate_5": 0.8,
+    "mrr": 0.65,
+    "precision_1": 0.55,
+    "precision_3": 0.5667,
+    "precision_5": 0.57,
+    "ndcg_3": 0.8785,
+    "ndcg_5": 0.8981,
+    "p50_latency_ms": 76.98,
+    "p95_latency_ms": 8463.78,
+    "avg_latency_ms": 1231.6,
+    "total_queries": 20,
+    "cross_encoder_delta": {
+      "avg_rank_delta": 0.0,
+      "reranked_queries": 0,
+      "note": "CrossEncoder not available"
+    },
+    "faiss_baseline_mrr_estimate": 0.65,
+    "mrr_improvement_pct": 0.0
+  },
+  "query_breakdown": {
+    "L1": {
+      "queries": [
+        "q01",
+        "q02",
+        "q03",
+        "q04"
+      ],
+      "count": 4
+    },
+    "L2": {
+      "queries": [
+        "q05",
+        "q06",
+        "q07",
+        "q08"
+      ],
+      "count": 4
+    },
+    "L3": {
+      "queries": [
+        "q09",
+        "q10",
+        "q11",
+        "q12"
+      ],
+      "count": 4
+    },
+    "L4": {
+      "queries": [
+        "q13",
+        "q14",
+        "q15"
+      ],
+      "count": 3
+    },
+    "L5": {
+      "queries": [
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ],
+      "count": 5
+    }
+  }
+}

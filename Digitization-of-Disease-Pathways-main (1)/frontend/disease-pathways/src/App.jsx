@@ -20,6 +20,7 @@ import './styles/globals.css';
 import './styles/components.css';
 
 import ErrorBoundary from './components/ErrorBoundary.jsx';
+import ChatbotWidget from './components/ChatbotWidget.jsx';
 
 // Protected Route Component
 const ProtectedRoute = ({ children, adminOnly = false }) => {
@@ -48,6 +49,8 @@ function App() {
         background: '#000' 
       }}>
         <ErrorBoundary>
+          
+        <ChatbotWidget />
         
         {/* --- Conditional Navbar Logic --- */}
         <Routes>
@@ -99,9 +102,10 @@ function App() {
           </Routes>
         </main>
         
-        {/* Conditional Footer - Hide on login page */}
+        {/* Conditional Footer - Hide on login and admin pages */}
         <Routes>
           <Route path="/login" element={null} />
+          <Route path="/admin" element={null} />
           <Route path="*" element={<Footer />} />
         </Routes>
         </ErrorBoundary>

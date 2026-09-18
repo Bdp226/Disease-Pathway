@@ -15,6 +15,7 @@ from models import (
     SolutionsByType
 )
 from csv_utils import generate_pathway_csv
+from cache_manager import cache
 
 router = APIRouter(
     prefix="/diseases",
@@ -25,6 +26,12 @@ router = APIRouter(
 async def get_all_diseases(db: Session = Depends(get_db)):
     """Get list of all diseases - Public endpoint"""
     try:
+        # 1. Check Distributed Cache
+        cache_key = "api:diseases:all"
+        cached_data = cache.get(cache_key)
+        if cached_data:
+            return cached_data
+            
         db_ops = DatabaseOperations(db)
         diseases = db_ops.get_all_diseases()
         result = []
@@ -40,6 +47,8 @@ async def get_all_diseases(db: Session = Depends(get_db)):
                 total_pain_points=total_pain_points
             ))
         
+        # 2. Store in Cache (1 hour TTL)
+        cache.set(cache_key, [r.dict() for r in result], expire_seconds=3600)
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error fetching diseases: {str(e)}")
@@ -48,12 +57,19 @@ async def get_all_diseases(db: Session = Depends(get_db)):
 async def get_disease_details(disease_name: str, db: Session = Depends(get_db)):
     """Get detailed disease information - Public endpoint"""
     try:
+        cache_key = f"api:disease:{disease_name.lower()}"
+        cached_data = cache.get(cache_key)
+        if cached_data:
+            return cached_data
+
         db_ops = DatabaseOperations(db)
         disease = db_ops.get_disease_by_name(disease_name.lower())
         
         if not disease:
             raise HTTPException(status_code=404, detail=f"Disease '{disease_name}' not found")
 
+        disease_resp = DiseaseResponse.from_orm(disease)
+        cache.set(cache_key, disease_resp.dict(), expire_seconds=3600)
         return disease
     except HTTPException:
         raise
@@ -68,6 +84,11 @@ async def get_disease_pathway(
 ):
     """Get disease pathway data formatted for visualization - Public endpoint"""
     try:
+        cache_key = f"api:pathway:{disease_name.lower()}:full_{full}"
+        cached_data = cache.get(cache_key)
+        if cached_data:
+            return cached_data
+            
         db_ops = DatabaseOperations(db)
         
         if full:
@@ -101,6 +122,10 @@ async def get_disease_pathway(
                     sources=pain_point_data.get('sources'),
                     coverage=pain_point_data.get('coverage'),
                     existing_solutions=pain_point_data.get('existing_solutions'),
+                    urgency=pain_point_data.get('urgency'),
+                    tags=pain_point_data.get('tags'),
+                    urgency_breakdown=pain_point_data.get('urgency_breakdown'),
+                    tags_breakdown=pain_point_data.get('tags_breakdown'),
                     solutions=solutions
                 ))
 
@@ -113,13 +138,17 @@ async def get_disease_pathway(
             )
             total_pain_points += len(pain_points)
 
-        return PathwayVisualizationResponse(
+        response = PathwayVisualizationResponse(
             disease_name=disease_name,
             stages=stages,
             total_stages=len(stages),
             total_pain_points=total_pain_points,
             total_solutions=total_solutions
         )
+        
+        # Cache the pathway response for faster subsequent loads
+        cache.set(cache_key, response.dict(), expire_seconds=3600)
+        return response
 
     except HTTPException:
         raise
@@ -152,3 +181,53 @@ async def download_pathway_csv(disease_name: str, db: Session = Depends(get_db))
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error generating CSV: {str(e)}")
+@router.get("/{disease_name}/similar")
+async def get_similar_diseases(disease_name: str, top_k: int = 3, db: Session = Depends(get_db)):
+    """Get similar diseases based on pain point textual overlap (BM25)"""
+    try:
+        from ml_utils import similarity_engine
+        
+        # If engine not initialized with data, build the corpus
+        if not similarity_engine.disease_names:
+            db_ops = DatabaseOperations(db)
+            all_diseases = db_ops.get_all_diseases()
+            
+            corpus_data = []
+            for d in all_diseases:
+                # Get all text for this disease
+                text_chunks = []
+                for stage in d.stages:
+                    for pp in stage.pain_points:
+                        text_chunks.append(pp.description or "")
+                
+                corpus_data.append({
+                    "name": d.name.lower(),
+                    "text": " ".join(text_chunks)
+                })
+            
+            similarity_engine.fit(corpus_data)
+            
+        # Get query text
+        db_ops = DatabaseOperations(db)
+        query_disease = db_ops.get_disease_by_name(disease_name.lower())
+        if not query_disease:
+            raise HTTPException(status_code=404, detail=f"Disease '{disease_name}' not found")
+            
+        # Construct query text
+        query_text_chunks = []
+        for stage in query_disease.stages:
+            for pp in stage.pain_points:
+                query_text_chunks.append(pp.description or "")
+        query_text = " ".join(query_text_chunks)
+        
+        # Get similarities
+        similar = similarity_engine.get_similar(query_text, exclude_name=disease_name.lower(), top_k=top_k)
+        
+        return {"similar_diseases": similar}
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Error calculating similarity: {str(e)}")

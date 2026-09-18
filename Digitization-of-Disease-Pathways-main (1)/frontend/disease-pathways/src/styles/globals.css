@@ -16,17 +16,37 @@
   font-display: swap;
 }
 
+/* ── BRAND TOKENS (preserved + extended) ── */
 :root {
-  --primary-teal: #009999ff;
-  --primary-teal-light: #87d2d2ff;
+  /* Original brand colors — unchanged */
+  --primary-teal: #009999;
+  --primary-teal-light: #87d2d2;
   --primary-teal-dark: #00ACC1;
-  --accent-orange: #ec6702ff;
-  --accent-orange-light: #ecb591ff;
+  --accent-orange: #ec6702;
+  --accent-orange-light: #ecb591;
   --accent-orange-dark: #ec6702;
   --white: #FFFFFF;
   --black: #000000;
   --gray: #808080;
   --light-gray: #bfbfbf;
+  --dark-gray: #333333;
+
+  /* Extended dark palette */
+  --surface-0: #000000;
+  --surface-1: #0d0d0d;
+  --surface-2: #1a1a1a;
+  --surface-3: #242424;
+
+  /* Glow shadows (CSS var convenience) */
+  --shadow-teal-glow: 0 0 20px rgba(0,153,153,0.4), 0 0 60px rgba(0,153,153,0.15);
+  --shadow-orange-glow: 0 0 20px rgba(236,103,2,0.4), 0 0 60px rgba(236,103,2,0.15);
+  --shadow-card-dark: 0 8px 32px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.3);
+
+  /* Glassmorphism tokens */
+  --glass-bg: rgba(255,255,255,0.04);
+  --glass-bg-hover: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.10);
+  --glass-blur: blur(20px);
 }
 
 * {
@@ -36,9 +56,9 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--white);
-  color: var(--black);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--black);
+  color: var(--white);
   line-height: 1.6;
 }
 
@@ -48,12 +68,14 @@ body {
   padding: 0 20px;
 }
 
+/* ── BUTTON SYSTEM ── */
 .btn {
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  font-family: inherit;
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
@@ -61,63 +83,126 @@ body {
 }
 
 .btn-primary {
-  background: var(--primary-teal);
+  background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
   color: var(--white);
+  box-shadow: 0 4px 15px rgba(0,153,153,0.3);
 }
-
 .btn-primary:hover {
-  background: var(--primary-teal-dark);
+  box-shadow: var(--shadow-teal-glow);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background: var(--accent-orange);
+  background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-dark));
   color: var(--white);
+  box-shadow: 0 4px 15px rgba(236,103,2,0.3);
 }
-
 .btn-secondary:hover {
-  background: var(--accent-orange-dark);
+  box-shadow: var(--shadow-orange-glow);
   transform: translateY(-2px);
 }
 
+/* ── TYPOGRAPHY HELPERS ── */
 .siemens-header {
   font-family: 'SHBree', sans-serif;
   font-weight: 700;
 }
 
+.text-gradient-teal {
+  background: linear-gradient(135deg, #00c8c8, var(--primary-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
-/* Mobile Responsive */
+.text-gradient-orange {
+  background: linear-gradient(135deg, var(--accent-orange-light), var(--accent-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── GLASSMORPHISM UTILITIES ── */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel:hover {
+  background: var(--glass-bg-hover);
+  border-color: rgba(0,153,153,0.35);
+  box-shadow: var(--shadow-teal-glow);
+}
+
+/* ── ANIMATION KEYFRAMES ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0,153,153,0.3); }
+  50%       { box-shadow: 0 0 30px rgba(0,153,153,0.7), 0 0 60px rgba(0,153,153,0.25); }
+}
+@keyframes orangeGlowPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(236,103,2,0.3); }
+  50%       { box-shadow: 0 0 30px rgba(236,103,2,0.7), 0 0 60px rgba(236,103,2,0.25); }
+}
+@keyframes shimmerBar {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes ringPulse {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* ── ANIMATION UTILITY CLASSES ── */
+.animate-fade-up { animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) both; }
+.animate-fade-in { animation: fadeIn 0.4s ease both; }
+.animate-glow    { animation: glowPulse 2.5s ease-in-out infinite; }
+.animate-count-up{ animation: countUp 0.8s cubic-bezier(0.34,1.56,0.64,1) both; }
+
+/* Shimmer text */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.2) 0%,
+    rgba(255,255,255,0.9) 40%,
+    rgba(255,255,255,0.2) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerBar 2.5s linear infinite;
+}
+
+/* ── MOBILE RESPONSIVE ── */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 15px;
-  }
-  
-  /* Hero section responsive */
+  .container { padding: 0 15px; }
+
   section > div[style*="display: flex"] {
     flex-direction: column !important;
     gap: 2rem !important;
   }
-  
-  section > div[style*="display: flex"] > div {
-    flex: 1 !important;
-  }
-  
-  /* Disease grid responsive */
+  section > div[style*="display: flex"] > div { flex: 1 !important; }
   div[style*="grid-template-columns: repeat(3, 1fr)"] {
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;
   }
-  
-  /* Typography responsive */
-  h1 {
-    font-size: 2rem !important;
-  }
-  
-  h2 {
-    font-size: 1.8rem !important;
-  }
-  
-  .navbar ul {
-    gap: 1.5rem !important;
-  }
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.8rem !important; }
+  .navbar ul { gap: 1.5rem !important; }
 }
+

@@ -13,8 +13,8 @@ from main import VECTOR_STORES
 # Initialize the MCP Server
 mcp = FastMCP("Disease Pathway MCP Server")
 
-# Initialize our Advanced RAG with the same embeddings model
-embeddings = OllamaEmbeddings(model="nomic-embed-text")
+# Initialize our Advanced RAG with the Ollama embeddings model
+embeddings = OllamaEmbeddings(model="tinyllama")
 advanced_rag = AdvancedRAG(embeddings_model=embeddings)
 
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Info } from 'lucide-react';
 import { API_BASE_URL, COLORS } from '../utils/constants.js';
 
 const SEVERITY_COLORS = {
@@ -46,7 +47,7 @@ const SimilarDiseases = ({ diseaseName }) => {
         {similar.map(d => (
           <a
             key={d.name}
-            href={`/diseases/${d.name}`}
+            href={`/pathway/${d.name}`}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -71,9 +72,33 @@ const SimilarDiseases = ({ diseaseName }) => {
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
-            {d.name.replace(/-/g, ' ')}
-            <span style={{ fontSize: '0.7rem', opacity: 0.7 }}>
-              {Math.round(d.similarity * 100)}% match
+            <span style={{ fontWeight: 600 }}>{d.name.replace(/-/g, ' ')}</span>
+            <span style={{ opacity: 0.7 }}> {Math.round(d.similarity * 100)}% Match</span>
+            <span
+              title={`Similarity Metrics Breakdown:\nModel: BM25 Lexical Intersection\nShared terms found: ${d.overlapping_terms && d.overlapping_terms.length > 0 ? d.overlapping_terms.join(', ') : 'None'}\n\nThe percentage reflects the normalized lexical overlap score between the pain points of these two diseases.`}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '4px',
+                borderRadius: '6px',
+                background: 'rgba(0, 255, 204, 0.1)',
+                color: '#00ffcc',
+                cursor: 'help',
+                marginLeft: '6px',
+                border: '1px solid rgba(0, 255, 204, 0.2)',
+                transition: 'all 0.2s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(0, 255, 204, 0.25)';
+                e.currentTarget.style.borderColor = 'rgba(0, 255, 204, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(0, 255, 204, 0.1)';
+                e.currentTarget.style.borderColor = 'rgba(0, 255, 204, 0.2)';
+              }}
+            >
+              <Info size={14} />
             </span>
           </a>
         ))}
@@ -110,14 +135,14 @@ const AnalyticsDashboard = () => {
 
   return (
     <div style={{
-      background: 'rgba(0,0,0,0.3)',
-      backdropFilter: 'blur(12px)',
+      background: COLORS.white,
       borderRadius: '20px',
       padding: '2rem',
-      border: `1px solid ${COLORS.primaryTeal}20`
+      boxShadow: '0 10px 40px rgba(0, 0, 0, 0.05)',
+      border: `1px solid ${COLORS.lightGray}`
     }}>
       <h2 style={{
-        color: COLORS.white,
+        color: COLORS.gray,
         fontSize: '1.4rem',
         fontWeight: '700',
         marginBottom: '1.5rem',
@@ -143,7 +168,7 @@ const AnalyticsDashboard = () => {
                 <div style={{ width: '80px', fontSize: '0.78rem', color: SEVERITY_COLORS[sev], fontWeight: '600', textTransform: 'capitalize' }}>
                   {sev}
                 </div>
-                <div style={{ flex: 1, background: 'rgba(255,255,255,0.05)', borderRadius: '4px', height: '8px', overflow: 'hidden' }}>
+                <div style={{ flex: 1, background: `${COLORS.lightGray}50`, borderRadius: '4px', height: '8px', overflow: 'hidden' }}>
                   <div style={{
                     width: `${pct}%`,
                     height: '100%',
@@ -196,8 +221,9 @@ const AnalyticsDashboard = () => {
               <div key={disease} style={{
                 padding: '6px 14px',
                 borderRadius: '10px',
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                background: COLORS.white,
+                border: `1px solid ${COLORS.lightGray}`,
+                boxShadow: '0 2px 10px rgba(0,0,0,0.02)',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center'

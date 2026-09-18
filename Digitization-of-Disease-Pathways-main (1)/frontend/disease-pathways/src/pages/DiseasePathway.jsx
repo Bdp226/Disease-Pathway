@@ -6,7 +6,6 @@
   import LoadingSpinner from '../components/LoadingSpinner.jsx';
   import MinimalNavbar from '../components/MinimalNavbar.jsx';
   import FloatingWidget from '../components/FloatingWidget.jsx';
-  import ChatbotWidget from '../components/ChatbotWidget.jsx';
   import { SimilarDiseases } from '../components/AnalyticsDashboard.jsx';
 
   const DiseasePathway = () => {
@@ -152,8 +151,11 @@
         background: COLORS.black
       }}>
 
-        {/* Chatbot Widget */}
-        <ChatbotWidget/>
+        {/* Floating Action Buttons (fixed, bottom-right) */}
+        <FloatingWidget
+          diseaseName={pathwayData.disease_name}
+          stageColors={getStageColors(0, 1)}
+        />
 
         {/* Disease Header */}
         <div style={{
@@ -195,15 +197,6 @@
               {pathwayData.disease_name}
             </h1>
             
-            <div style={{ 
-              display: 'flex', 
-              alignItems: 'center' 
-            }}>
-              <FloatingWidget
-                diseaseName={pathwayData.disease_name}
-                stageColors={getStageColors(0, 1)}
-              />
-            </div>
           </div>
         </div>
 

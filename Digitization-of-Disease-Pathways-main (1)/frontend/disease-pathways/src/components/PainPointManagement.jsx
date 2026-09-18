@@ -32,7 +32,7 @@ const PainPointManagement = () => {
       setPage(pageNum);
     } catch (error) {
       console.error('Load pain points error:', error);
-      setMessage(`✗ ${error.message}`);
+      setMessage(`Error: ${error.message}`);
       setTimeout(() => setMessage(''), 5000);
     } finally {
       setLoading(false);
@@ -63,10 +63,10 @@ const PainPointManagement = () => {
     try {
       if (action === 'approve') {
         await painPointAPI.approvePainPoint(painPointId);
-        setMessage('✓ Pain point approved successfully');
+        setMessage('Success: Pain point approved successfully');
       } else {
         await painPointAPI.denyPainPoint(painPointId);
-        setMessage('✓ Pain point denied successfully');
+        setMessage('Success: Pain point denied successfully');
       }
       
       // Refresh the list
@@ -76,14 +76,14 @@ const PainPointManagement = () => {
       }, 1500);
       
     } catch (error) {
-      setMessage(`✗ ${error.message}`);
+      setMessage(`Error: ${error.message}`);
       setTimeout(() => setMessage(''), 5000);
     }
   };
 
   // Handle detail modal update
   const handleDetailUpdate = (status, message) => {
-    setMessage(`✓ ${message}`);
+    setMessage(`Success: ${message}`);
     setTimeout(() => {
       loadPainPoints(selectedStatus, 1, false);
       setMessage('');
@@ -227,11 +227,11 @@ const PainPointManagement = () => {
           borderRadius: '10px',
           fontSize: '0.9rem',
           fontWeight: '500',
-          background: message.includes('✓') 
+          background: message.includes('Success') 
             ? 'rgba(76, 175, 80, 0.1)' 
             : 'rgba(244, 67, 54, 0.1)',
-          color: message.includes('✓') ? '#4caf50' : '#f44336',
-          border: `1px solid ${message.includes('✓') ? '#4caf50' : '#f44336'}30`
+          color: message.includes('Success') ? '#4caf50' : '#f44336',
+          border: `1px solid ${message.includes('Success') ? '#4caf50' : '#f44336'}30`
         }}>
           {message}
         </div>
@@ -241,7 +241,7 @@ const PainPointManagement = () => {
       {painPoints.length > 0 && (
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 2fr 1fr 1fr 1fr 120px',
+          gridTemplateColumns: '1fr 2fr 100px 1fr 1fr 1fr 120px',
           gap: '1rem',
           padding: '1rem',
           background: `${COLORS.gray}08`,
@@ -253,6 +253,7 @@ const PainPointManagement = () => {
         }}>
           <div>Disease</div>
           <div>Pain Point</div>
+          <div>Urgency</div>
           <div>User</div>
           <div>Date</div>
           <div>Status</div>
@@ -287,7 +288,7 @@ const PainPointManagement = () => {
               onClick={() => openDetailModal(painPoint)}
               style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr 2fr 1fr 1fr 1fr 120px',
+                gridTemplateColumns: '1fr 2fr 100px 1fr 1fr 1fr 120px',
                 gap: '1rem',
                 padding: '1rem',
                 background: index % 2 === 1 ? `${COLORS.primaryTeal}05` : COLORS.white,
@@ -322,6 +323,27 @@ const PainPointManagement = () => {
                 lineHeight: '1.4'
               }}>
                 {painPoint.pain_point}
+              </div>
+
+              {/* Urgency Badge */}
+              <div>
+                {painPoint.urgency && (
+                  <span style={{
+                    padding: '4px 8px',
+                    borderRadius: '12px',
+                    fontSize: '0.75rem',
+                    fontWeight: '700',
+                    background: painPoint.urgency.toLowerCase() === 'high' ? 'rgba(255, 77, 79, 0.1)' : 
+                                painPoint.urgency.toLowerCase() === 'medium' ? 'rgba(250, 173, 20, 0.1)' : 'rgba(76, 175, 80, 0.1)',
+                    color: painPoint.urgency.toLowerCase() === 'high' ? '#ff4d4f' : 
+                           painPoint.urgency.toLowerCase() === 'medium' ? '#faad14' : '#4caf50',
+                    border: `1px solid ${painPoint.urgency.toLowerCase() === 'high' ? '#ff4d4f' : 
+                                       painPoint.urgency.toLowerCase() === 'medium' ? '#faad14' : '#4caf50'}40`,
+                    textTransform: 'capitalize'
+                  }}>
+                    {painPoint.urgency}
+                  </span>
+                )}
               </div>
 
               {/* User Name */}

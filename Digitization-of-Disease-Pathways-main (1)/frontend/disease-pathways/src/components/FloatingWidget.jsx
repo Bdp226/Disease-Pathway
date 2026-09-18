@@ -67,7 +67,7 @@ const FloatingWidget = ({ diseaseName, stageColors }) => {
     <>
       <div style={{
         position: 'fixed',
-        bottom: '30px',
+        bottom: '110px',
         right: '30px',
         display: 'flex',
         flexDirection: 'column',
@@ -79,6 +79,7 @@ const FloatingWidget = ({ diseaseName, stageColors }) => {
         <div style={{ position: 'relative', display: 'flex', justifyContent: 'flex-end' }}>
           <div style={tooltipStyle(hoveredBtn === 'add')}>Add Another Pain Point</div>
           <button
+            type="button"
             onClick={() => setIsDialogOpen(true)}
             onMouseEnter={() => setHoveredBtn('add')}
             onMouseLeave={() => setHoveredBtn(null)}
@@ -170,6 +171,7 @@ const FloatingWidget = ({ diseaseName, stageColors }) => {
       >
         {isAuthenticated() ? (
           <button
+            type="button"
             onClick={() => {
               setIsDialogOpen(false);
               setIsPainPointModalOpen(true);

@@ -53,9 +53,14 @@ const clearAuthData = () => {
   localStorage.removeItem(USER_KEY);
 };
 
-const isAuthenticated = () => true; // Bypassed for testing
+const isAuthenticated = () => {
+  return !!localStorage.getItem(TOKEN_KEY);
+};
 const getCurrentUser = () => currentUser;
-const isAdmin = () => true; // Bypassed for demo/testing
+const isAdmin = () => {
+  const user = JSON.parse(localStorage.getItem(USER_KEY) || 'null');
+  return user ? user.is_superuser === true : false;
+};
 
 // Authentication API
 export const authAPI = {
@@ -139,7 +144,7 @@ export const diseaseAPI = {
 
   getDiseaseDetails: async (diseaseName) => {
     try {
-      const response = await api.get(`/diseases/${diseaseName}`);
+      const response = await api.get(`/diseases/${encodeURIComponent(diseaseName)}`);
       return response.data;
     } catch (error) {
       console.error('API Error:', error.response?.data || error.message);
@@ -149,7 +154,8 @@ export const diseaseAPI = {
 
   getDiseasePathway: async (diseaseName, full = false) => {
     try {
-      const url = `/diseases/${diseaseName}/pathway${full ? '?full=true' : ''}`;
+      const encodedName = encodeURIComponent(diseaseName);
+      const url = `/diseases/${encodedName}/pathway${full ? '?full=true' : ''}`;
       const response = await api.get(url);
       
       return response.data;
@@ -161,7 +167,7 @@ export const diseaseAPI = {
 
   getDiseaseRaw: async (diseaseName) => {
     try {
-      const response = await api.get(`/diseases/${diseaseName}/raw`);
+      const response = await api.get(`/diseases/${encodeURIComponent(diseaseName)}/raw`);
       return response.data;
     } catch (error) {
       console.error('API Error:', error.response?.data || error.message);
@@ -172,7 +178,7 @@ export const diseaseAPI = {
   // CSV download (Public)
   downloadDiseaseCSV: async (diseaseName) => {
     try {
-      const response = await api.get(`/diseases/${diseaseName}/download-csv`, {
+      const response = await api.get(`/diseases/${encodeURIComponent(diseaseName)}/download-csv`, {
         responseType: 'blob'
       });
       
@@ -238,7 +244,7 @@ export const diseaseAPI = {
         throw new Error('Admin access required');
       }
 
-      const response = await api.delete(`/diseases/${diseaseName}`);
+      const response = await api.delete(`/diseases/${encodeURIComponent(diseaseName)}`);
       return response.data;
     } catch (error) {
       if (error.response?.status === 403 || error.response?.status === 401) {
@@ -414,6 +420,29 @@ export const contactUsAPI = {
   }
 };
 
+// NEW: Machine Learning API
+export const mlAPI = {
+  getRiskClassification: async (text) => {
+    try {
+      const response = await api.post('/ml/classify', { text });
+      return response.data;
+    } catch (error) {
+      console.error('Classification Error:', error);
+      throw error;
+    }
+  },
+  getRecommendations: async (diseaseName, query) => {
+    try {
+      const disease = (diseaseName || 'cad').toLowerCase();
+      const response = await api.post(`/ml/${disease}/recommend`, { query, top_k: 2 });
+      return response.data;
+    } catch (error) {
+      console.error('Recommendation Error:', error);
+      throw error;
+    }
+  }
+};
+
 // Export helper functions
 export {
   isAuthenticated,
@@ -421,3 +450,4 @@ export {
   isAdmin,
   clearAuthData
 };
+

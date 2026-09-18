@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { MdHealthAndSafety, MdExpandMore, MdLogout, MdAdminPanelSettings } from 'react-icons/md';
+import GlobalSearch from './GlobalSearch.jsx';
 import { COLORS } from '../utils/constants.js';
 import { authAPI, isAuthenticated, getCurrentUser, isAdmin } from '../utils/api.js';
 import ContactUsModal from './ContactUsModal';
@@ -85,7 +86,7 @@ const Navbar = ({ isHome }) => {
   };
 
   const navLinkStyle = (path) => ({
-    color: isActive(path) ? COLORS.accentOrange : COLORS.gray,
+    color: isActive(path) ? COLORS.accentOrange : 'rgba(255,255,255,0.75)',
     textDecoration: 'none',
     fontSize: '0.95rem',
     fontWeight: '600',
@@ -111,15 +112,16 @@ const Navbar = ({ isHome }) => {
           left: 0,
           right: 0,
           zIndex: 1100,
-          padding: '1rem 2.5rem',
-          background: COLORS.white,
-          borderBottom: `1px solid ${COLORS.lightGray}`,
-          boxShadow: shouldShow ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none',
-          
+          padding: '0.85rem 2.5rem',
+          background: shouldShow ? 'rgba(5,5,5,0.85)' : 'transparent',
+          backdropFilter: shouldShow ? 'blur(24px)' : 'none',
+          WebkitBackdropFilter: shouldShow ? 'blur(24px)' : 'none',
+          borderBottom: shouldShow ? '1px solid rgba(255,255,255,0.08)' : 'none',
+          boxShadow: shouldShow ? '0 1px 0 rgba(255,255,255,0.05), 0 4px 24px rgba(0,0,0,0.4)' : 'none',
           // Animation logic
           transform: shouldShow ? 'translateY(0)' : 'translateY(-100%)',
           opacity: shouldShow ? 1 : 0,
-          transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease',
+          transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, background 0.3s ease',
           pointerEvents: shouldShow ? 'auto' : 'none'
         }}
       >
@@ -152,12 +154,15 @@ const Navbar = ({ isHome }) => {
             />
           </Link>
 
-          {/* Navigation Links */}
+          {/* Navigation Links + Search */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
             gap: '2.5rem'
           }}>
+            {/* Global Semantic Search */}
+            <GlobalSearch isDarkTheme={false} />
+            
             <Link
               to="/"
               style={navLinkStyle('/')}

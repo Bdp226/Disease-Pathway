@@ -7,20 +7,33 @@ from datetime import datetime
 from typing import Optional
 import os
 import urllib,pyodbc
+from dotenv import load_dotenv
+import ml_utils
+load_dotenv()
+
 # Database setup
 SQLITE_DATABASE_URL = "sqlite:///./disease_pathway.db"
-server ='a0057-ittdatabase2024-dev.database.windows.net'  
-database = 'a0057-isedasqldb01-dev'               
-username = 'isedasqldbuser'                   
-password = 'N6eWkET@WiUYA>[/>Nh!14BiKe(f(k28'                    
-driver = 'ODBC Driver 17 for SQL Server'
-password_encoded = urllib.parse.quote_plus(password)
-connection_string = (
+
+# Securely load Azure SQL credentials from environment variables
+use_azure = os.environ.get('USE_AZURE_SQL', 'false').lower() == 'true'
+server = os.environ.get('DB_SERVER')
+database = os.environ.get('DB_NAME')
+username = os.environ.get('DB_USER')
+password = os.environ.get('DB_PASSWORD')
+driver = os.environ.get('DB_DRIVER', 'ODBC Driver 17 for SQL Server')
+
+if use_azure and all([server, database, username, password]):
+    password_encoded = urllib.parse.quote_plus(password)
+    CONNECTION_URL = (
         f"mssql+pyodbc://{username}:{password_encoded}@{server}/"
         f"{database}?driver={urllib.parse.quote_plus(driver)}"
         f"&Encrypt=yes&TrustServerCertificate=no&Connection Timeout=30"
     )
-engine = create_engine(SQLITE_DATABASE_URL, connect_args={"check_same_thread": False})
+    engine = create_engine(CONNECTION_URL)
+else:
+    # Fallback to local SQLite if Azure credentials are not provided
+    engine = create_engine(SQLITE_DATABASE_URL, connect_args={"check_same_thread": False})
+
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
@@ -63,6 +76,8 @@ class PainPoint(Base):
     coverage = Column(Text, nullable=True)              
     existing_solutions = Column(Text, nullable=True)    
     status = Column(String(20), default="approved")     
+    urgency = Column(String(20), default="low")         
+    tags = Column(String(200), nullable=True)           
 
     created_at = Column(DateTime, default=datetime.now())
     
@@ -195,7 +210,9 @@ class DatabaseOperations:
                     row_number=row_number,
                     sources=row_data.get('sources', ''),
                     coverage=row_data.get('coverage', ''),
-                    existing_solutions=row_data.get('existing_solutions', '')
+                    existing_solutions=row_data.get('existing_solutions', ''),
+                    urgency=ml_utils.compute_urgency(row_data['pain_point']),
+                    tags=ml_utils.compute_tags(row_data['pain_point'])
                 )
                 self.db.add(pain_point)
             else:
@@ -204,6 +221,8 @@ class DatabaseOperations:
                 pain_point.sources = row_data.get('sources', '')
                 pain_point.coverage = row_data.get('coverage', '')
                 pain_point.existing_solutions = row_data.get('existing_solutions', '')
+                pain_point.urgency = ml_utils.compute_urgency(row_data['pain_point'])
+                pain_point.tags = ml_utils.compute_tags(row_data['pain_point'])
             
             self.db.commit()
             self.db.refresh(pain_point)
@@ -240,7 +259,8 @@ class DatabaseOperations:
 
     def get_disease_by_name(self, disease_name: str):
         """Get disease with all stages and data"""
-        return self.db.query(Disease).filter(Disease.name == disease_name).first()
+        from sqlalchemy import func
+        return self.db.query(Disease).filter(func.lower(Disease.name) == disease_name.lower()).first()
 
     def get_all_diseases(self):
         """Get all diseases"""
@@ -283,6 +303,10 @@ class DatabaseOperations:
                     'sources': pain_point.sources,
                     'coverage': pain_point.coverage,              # NEW
                     'existing_solutions': pain_point.existing_solutions,  # NEW
+                    'urgency': pain_point.urgency,
+                    'tags': pain_point.tags,
+                    'urgency_breakdown': ml_utils.compute_urgency_breakdown(pain_point.description),
+                    'tags_breakdown': ml_utils.compute_tags_breakdown(pain_point.description),
                     'solutions': {
                         'digitalization': [],
                         'automation': [],
@@ -330,6 +354,10 @@ class DatabaseOperations:
                     'sources': pain_point.sources,
                     'coverage': pain_point.coverage,              # NEW
                     'existing_solutions': pain_point.existing_solutions,  # NEW
+                    'urgency': pain_point.urgency,
+                    'tags': pain_point.tags,
+                    'urgency_breakdown': ml_utils.compute_urgency_breakdown(pain_point.description),
+                    'tags_breakdown': ml_utils.compute_tags_breakdown(pain_point.description),
                     'solutions': {
                         'digitalization': [],
                         'automation': [],
@@ -376,7 +404,9 @@ class DatabaseOperations:
             sources=sources,
             coverage=coverage,
             existing_solutions=existing_solutions,
-            status=status
+            status=status,
+            urgency=ml_utils.compute_urgency(description),
+            tags=ml_utils.compute_tags(description)
         )
         self.db.add(new_pp)
         

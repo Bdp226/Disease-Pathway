@@ -60,21 +60,7 @@ const GlassmorphicNavbar = ({ stages, diseaseName, onStageClick }) => {
           alignItems: 'center',
         }}
       >
-        {/* Disease Name */}
-        <h2
-          style={{
-            fontFamily: "SHBree",
-            color: COLORS.accentOrange,
-            fontSize: '1.5rem',
-            fontWeight: '700',
-            marginBottom: '1rem',
-            textTransform: 'capitalize',
-            textAlign: 'center',
-            textShadow: '0 0 8px rgba(236,103,2,0.6)',
-          }}
-        >
-          {diseaseName}
-        </h2>
+        {/* Disease Name removed to prevent duplication with DiseasePathway.jsx h1 */}
 
         {/* Horizontal Stage Stepper */}
         <div
@@ -137,23 +123,7 @@ const GlassmorphicNavbar = ({ stages, diseaseName, onStageClick }) => {
           })}
         </div>
 
-        {/* Current Stage Label */}
-        <div style={{ marginTop: '1rem', minHeight: '1.5rem' }}>
-          <span
-            style={{
-              color: getStageColors(currentScrollStage, totalStages).primary,
-              fontSize: '1rem',
-              fontWeight: '600',
-              textTransform: 'capitalize',
-              textShadow: `0 0 10px ${getStageColors(
-                currentScrollStage,
-                totalStages
-              ).primary}40`,
-            }}
-          >
-            {stageNames[currentScrollStage] || stageNames[0]}
-          </span>
-        </div>
+        {/* Current Stage Label removed to prevent duplication with the highlighted button */}
       </div>
     </div>
   );
