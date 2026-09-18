@@ -1,7 +1,7 @@
 # Disease Pathway 
 
 ## What's New in This Version?
-We have heavily refactored the original codebase to align with FAANG-grade system design principles, observability, and frontend best practices. 
+We have heavily refactored the original codebase to align with enterprise-grade system design principles, observability, and frontend best practices. 
 
 ### 1. Architectural Modularity (Backend)
 - **Separation of Concerns:** Refactored the monolithic `main.py` by extracting route handlers into a modular `routers/` directory (e.g., `diseases_router.py`, `chat.py`). This makes the codebase scalable, easier to test, and ready for microservices.
@@ -20,10 +20,18 @@ We have heavily refactored the original codebase to align with FAANG-grade syste
 ### 4. Version Control Optimization
 - **Clean Repository:** Introduced a strict `.gitignore` to exclude `node_modules`, `__pycache__`, and virtual environments, shrinking the repository size and improving CI/CD pipeline efficiency.
 
+### 5. Latest Updates (Current Version)
+- **Machine Learning & RAG Enhancements:** Added `ml_features.py` and `ml_utils.py` for advanced data analytics. Introduced RAG evaluation scripts (`evaluate_rag.py`) and metrics to rigorously test the chatbot's retrieval performance.
+- **New UI Components:** Introduced `AnimatedStatCounter` for dynamic statistics and `GlobalSearch` for comprehensive in-app searching.
+- **End-to-End Testing:** Integrated Cypress for E2E testing (`cypress.config.js`, `home.cy.js`) to ensure UI reliability and prevent regressions.
+- **Rich Media Assets:** Added a comprehensive suite of new stakeholder and medical icons under `public/NewIcons/` for a more polished UI.
+- **Database Management Utilities:** Included multiple new python scripts (`alter_db.py`, `cleanup_db.py`, `delete_specific_diseases.py`, `reprocess_db.py`) for easier database maintenance and data migrations.
+- **Infrastructure & CI/CD:** Added GitHub Actions CI workflow (`.github/workflows/ci.yml`), NGINX configuration (`nginx.conf`), and enhanced `docker-compose.yml` for robust deployment.
+
 ---
 
-<details>
-<summary><b>Original README (Before Refactoring)</b></summary>
+
+
 
 # Disease Pathway
 A web application for managing disease pathway data with Excel import and user submission capabilities.
@@ -911,4 +919,4 @@ cd frontend/disease-pathways
 npm install
 npm run dev
 ```
-</details>
+
