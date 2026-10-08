@@ -1,6 +1,6 @@
 @echo off
 echo ==============================================
-echo FAANG Disease Pathways - FULL SYSTEM STARTUP
+echo Disease Pathways - FULL SYSTEM STARTUP
 echo ==============================================
 
 echo [1/4] Checking Python installation...

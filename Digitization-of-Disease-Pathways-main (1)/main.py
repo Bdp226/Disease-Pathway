@@ -587,80 +587,8 @@ def graph_search_tool(query: str) -> str:
 
 agent_tools = [vector_search_tool, full_context_tool, csv_export_tool, list_diseases_tool, get_stats_tool, graph_search_tool]
 
-@app.post("/chat")
-async def chat_with_model(request: ChatRequest, db: Session = Depends(get_db)):
-    try:
-        ollama_model = MODEL_MAPPING.get(request.model)
-        if ollama_model is None:
-            raise HTTPException(status_code=400, detail="Only the Llama3 model is available for chat")
-        disease_name = (request.disease_name or "").strip().lower()
-        
-        if not disease_name:
-            raise HTTPException(status_code=400, detail="`disease_name` is required for chat context")
+# Legacy /chat handler removed in favor of chat_router in routers/chat.py which handles streaming, multi-route agent, greetings, semantic caching, and optional disease_name.
 
-        # 1. Retrieve or Initialize Conversational History
-        session_id = request.session_id
-        if session_id not in MEMORY_STORES:
-            MEMORY_STORES[session_id] = []
-        
-        # 2. Initialize LLM (Ensure it supports tool calling if using Llama3)
-        llm = ChatOllama(
-            model=ollama_model,
-            temperature=0,
-            num_ctx=8192
-        )
-
-        # 3. Create Agent
-        system_msg = (
-            f"You are a strict, factual medical AI assistant specialized in '{disease_name}' disease pathways.\n"
-            "FRAMEWORK DEFINITION:\n"
-            "- Disease Pathway: The patient journey from diagnosis to treatment.\n"
-            "- Stage: A distinct phase in the patient journey (e.g., Diagnosis, Treatment).\n"
-            "- Pain Point: A specific clinical or operational challenge within a stage.\n"
-            "- Solution: A proposed intervention (digital, automation, clinical) to address a pain point.\n\n"
-            "CRITICAL INSTRUCTIONS:\n"
-            "1. You have access to tools to search the pathway data. Always use them to find answers.\n"
-            "2. Use 'full_context_tool' to read the pathway. Use 'graph_search_tool' for structural questions involving relationships between stages, pain points, and solutions.\n"
-            "3. ANTI-HALLUCINATION: If the tools return no relevant information for a medical query, state exactly: 'I do not have enough information to answer that.' DO NOT invent information. However, for casual greetings (e.g., 'hello', 'hi'), respond politely without using tools.\n"
-            "4. FORMATTING: Structure your answers professionally using bullet points. Use bold text to highlight key medical terms, stages, or pain points. Maintain a clinical and objective tone.\n\n"
-            f"Current disease focus: {disease_name}"
-        )
-        
-        # LangGraph prebuilt ReAct agent handles the reasoning loop
-        agent_executor = create_react_agent(
-            llm, 
-            tools=agent_tools, 
-            prompt=system_msg
-        )
-
-        # 4. Format Input
-        messages = [HumanMessage(content=request.message)]
-        
-        # 5. Asynchronous Execution
-        # The agent loop will automatically call our tools if needed
-        result = await agent_executor.ainvoke({"messages": messages})
-        
-        # The last message is the agent's final response
-        final_response = result["messages"][-1].content
-
-        # 6. Save current turn to Memory Store
-        MEMORY_STORES[session_id].append({"role": "user", "content": request.message})
-        MEMORY_STORES[session_id].append({"role": "assistant", "content": final_response})
-
-        return {
-            "response": final_response,
-            "disease_name": disease_name,
-            "model": ollama_model,
-            "agent_used": True,
-            "session_id": session_id
-        }
-
-    except Exception as e:
-        import traceback
-        traceback.print_exc()
-        raise HTTPException(status_code=500, detail=str(e))
-
-    
 # SYSTEM ENDPOINTS
 
 @app.get("/health")
