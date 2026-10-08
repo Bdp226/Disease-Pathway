@@ -6,6 +6,32 @@ A research-oriented, enterprise-grade platform for disease pathway digitization,
 
 Disease Pathway Platform transforms semi-structured clinical pathway assets into a queryable, auditable, and scalable knowledge system. The platform combines deterministic data engineering (Excel ingestion, relational normalization, dual-database access controls) with retrieval-augmented generation (RAG), semantic caching, and interactive analytics to support decision-making across product, clinical operations, and innovation teams.
 
+## Recent Changes (Easy to Understand)
+
+If you want a quick summary of what was actually done recently, this is the simplest view:
+
+| Area | What We Changed | Why It Helps in Practice |
+| :--- | :--- | :--- |
+| Chatbot Stability | Removed an old conflicting chat endpoint and kept one clear chat flow managed by the router. | Fewer random chat failures and more predictable answers. |
+| AI Quality Path | Kept a multi-route approach (Vector, SQL, CSV) and improved routing clarity. | The system can pick the best data source for each question type. |
+| Speed | Enabled semantic caching with FAISS support for repeated/similar questions. | Faster responses for common queries and lower model load. |
+| Frontend Experience | Added global search, animated stats, and improved pathway interaction components. | Users can find information faster and navigate more smoothly. |
+| Testing and Delivery | Added CI workflow and Cypress E2E test assets. | Better release confidence and fewer UI regressions. |
+| Operations | Expanded Docker/compose and NGINX deployment assets and utility maintenance scripts. | Easier deployment and more practical maintenance workflows. |
+| Documentation | Upgraded README to include architecture, workflows, metrics, novelty, and references. | Faster onboarding for engineers, reviewers, and stakeholders. |
+
+### What You Will Notice as a User
+
+- Chat responds more consistently and is less likely to fail on normal greetings.
+- Pathway browsing is easier with improved UI components and search behavior.
+- System behavior is now better documented, making support and handover easier.
+
+### What You Will Notice as an Engineer
+
+- Clearer architecture boundaries and ownership of chat behavior.
+- Better traceability of changes from July to October through commit-linked timeline.
+- Stronger base for KPI tracking, evaluation reporting, and enterprise hardening.
+
 ## Repository Goals
 
 | Goal | Description | Why It Matters |
@@ -25,6 +51,28 @@ Disease Pathway Platform transforms semi-structured clinical pathway assets into
 | Frontend Discovery | Limited cross-page discoverability | Global search and interactive pathway views | Faster user navigation and data access |
 | Reliability | Partial graceful fallback behavior | Explicit no-context responses, cache fallback behavior, operational startup fixes | Improved resilience under degraded dependencies |
 | Documentation | Fragmented architecture explanations | Research-grade architecture, workflows, KPI framework, references | Faster onboarding and design clarity |
+
+## Last 3 Months: Verified Change Timeline (Jul-Oct 2026)
+
+This section documents what changed in the last three months with commit-level references.
+
+| Date | Commit | Scope | Description | Measurable/Operational Effect |
+| :--- | :--- | :--- | :--- | :--- |
+| 2026-07-26 | `5bba7a0` | Platform baseline | Established enterprise-leaning project structure, end-to-end app wiring, and initial architecture standardization. | Created stable baseline for modular iteration and production hardening. |
+| 2026-07-26 | `74043ce` | Documentation | Expanded architectural documentation and refactoring narrative. | Improved engineering onboarding and design traceability. |
+| 2026-09-08 | `5066127` | Documentation refresh | Revised project-level README and operational guidance. | Better runbook clarity for local setup and deployment preparation. |
+| 2026-09-19 | `44e8220` | Major feature and infra wave | Added CI workflow, RAG evaluation assets, ML utility modules, Cypress E2E tests, richer frontend components (`GlobalSearch`, `AnimatedStatCounter`), icon packs, router updates, Docker/compose and NGINX updates, and vector-store updates for CAD. | Significant jump in product completeness, test surface, and deployment readiness. |
+| 2026-09-19 | `2c52252` | Docs quality | Refined README professionalism and structure. | Improved external readability for stakeholders. |
+| 2026-10-08 | `bf0136f` | Reliability fix | Removed conflicting legacy `/chat` path and aligned behavior to router-managed chat flow; cleaned startup/readme wording. | Eliminated inconsistent chat behavior and reduced user-facing chat failures. |
+| 2026-10-08 | `274fa95` | Architecture docs | Added architecture and workflow diagrams in README. | Stronger system-design communication for reviewers and enterprise audiences. |
+| 2026-10-08 | `3b8c799` | Research-grade docs | Elevated README to research-grade format with KPI framework, novelty, and references. | Enables structured evaluation and executive-level technical communication. |
+
+### September 2026 Major Delta (`44e8220`) - What Actually Landed
+
+- Backend and infrastructure additions: CI workflow, enhanced Docker/compose footprint, NGINX config, new utility scripts for DB maintenance and data reprocessing.
+- AI and evaluation assets: RAG evaluation script, ML helper modules, updated retrieval logic files, refreshed CAD vector store artifacts.
+- Frontend upgrades: global search, animated metrics, chatbot widget improvements, navigation/layout updates, style-system updates, and broader UI coverage.
+- Testing expansion: Cypress E2E configuration and scenario coverage.
 
 ## System Architecture
 
@@ -137,6 +185,23 @@ The following metrics are designed to evaluate system quality and operational ma
 | Dual Database Security Boundary | Auth and domain data separated by design | Better governance and lower blast radius |
 | Streamed Chat UX | Progressive token rendering in UI | Improved perceived responsiveness and interaction quality |
 | Ingestion-to-Index Pipeline | Structured ingest tightly coupled with vector index refresh | Faster pathway availability after updates |
+
+### Expanded Novelty Descriptions
+
+1. Multi-route evidence orchestration:
+The system does not rely on a single retrieval mode. It selects among vector retrieval, SQL aggregation, or full-context extraction based on query type. This is a practical novelty for mixed clinical/product analytics questions because it minimizes over-reliance on one retrieval substrate.
+
+2. Semantic cache before generation:
+Embedding-similarity cache lookup is attempted before LLM token generation. For repeated and semantically similar questions, this can collapse end-to-end latency and reduce local model load, which is critical in constrained on-prem environments.
+
+3. Ingestion-index coupling:
+Structured pathway ingestion and vector index refresh are tied into a unified workflow. This reduces stale-context windows where newly uploaded pathway data is present in SQL but absent from semantic retrieval.
+
+4. Router-owned chat reliability:
+By removing competing `/chat` handlers and consolidating behavior in `routers/chat.py`, the API eliminates ambiguity in request handling logic and lowers the probability of inconsistent user experiences.
+
+5. Research-ready evaluation framing:
+The repository includes a KPI framework, reporting template, and evaluation hooks so quality tracking can evolve from ad-hoc testing to repeatable benchmark practice.
 
 ## Enterprise and Production Readiness Matrix
 
